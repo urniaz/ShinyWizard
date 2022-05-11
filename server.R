@@ -25,18 +25,18 @@ shinyServer(function(input, output, session) {
     
     observeEvent(input$jumpTop2, {
         showTab( inputId = "NavBar", target = "p2")
-        showTab( inputId = "NavBar", target = "p3")
-        showTab( inputId = "NavBar", target = "p4")
         updateTabsetPanel(session, "NavBar",
                           selected = "p2")
     })
     
     observeEvent(input$jumpTop3, {
+        showTab( inputId = "NavBar", target = "p3")
         updateTabsetPanel(session, "NavBar",
                           selected = "p3")
     })
     
     observeEvent(input$jumpTop4, {
+        showTab( inputId = "NavBar", target = "p4")
         updateTabsetPanel(session, "NavBar",
                           selected = "p4")
     })
