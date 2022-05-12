@@ -1,5 +1,11 @@
+# Clear Environment
+rm(list = ls(all.names = TRUE))
+
+# Load configuration file
+config <- yaml::yaml.load_file('config.yaml')
+
 # Package names
-packages <- c("devtools", "shiny", "shinythemes", "shinydashboard", "shinyjs")
+packages <- c("devtools", "shiny", "shinythemes", "shinydashboard", "shinyjs", "yaml")
 
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
@@ -10,6 +16,4 @@ if (any(installed_packages == FALSE)) {
 # Packages loading
 invisible(lapply(packages, library, character.only = TRUE))
 
-# lncRna
-install_github("prodakt/lncRna")
-library("lncRna")
+

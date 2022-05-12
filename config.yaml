@@ -1,0 +1,13 @@
+AppTitle: 'Simple R Shiny Wizard App'
+AppSubTitle: 'Simple R Shiny Wizard App'
+WindowTitle: 'Simple R Shiny Wizard App'
+LogoVisible: TRUE
+LogoFilename: 'logo.png'
+LogoWidht: 60
+LogoHeight: 60
+ShinyTheme: "flatly" 
+NavTabName: "⚪"
+NavTabElementsName: "Start; StepI; Step II; Step III"
+ShowButtons: TRUE
+ButtonsAlignment: "center"
+
