@@ -4,7 +4,7 @@ AppSubTitle: 'Simple R Shiny Wizard App'
 WindowTitle: 'Simple R Shiny Wizard App'
 # --- Logo ---
 LogoVisible: TRUE
-LogoFilename: 'logo.png'
+LogoFilePath: 'img/logo.png'
 LogoWidht: 60
 LogoHeight: 60
 # --- CSS style ---
