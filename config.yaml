@@ -1,13 +1,26 @@
+# --- App Titles ---
 AppTitle: 'Simple R Shiny Wizard App'
 AppSubTitle: 'Simple R Shiny Wizard App'
 WindowTitle: 'Simple R Shiny Wizard App'
+# --- Logo ---
 LogoVisible: TRUE
 LogoFilename: 'logo.png'
 LogoWidht: 60
 LogoHeight: 60
+# --- CSS style ---
 ShinyTheme: "flatly" 
+# --- Navigation ---
 NavTabName: "⚪"
 NavTabElementsName: "Intro; StepI; Step II; Step III"
+# --- Next/Prev buttons
 ShowButtons: TRUE
 ButtonsAlignment: "center"
+ButtonsStyle: "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: white;"
+# --- Footer ---
+FooterVisible: TRUE
+FooterHTML: "<i>Copyrights <b>© 2022</b> by the author</i>"
+FooterHeight: 40
+FooterStyle: "position: fixed; padding: 10px 30px 10px 10px; bottom: 0; width: 100%; background: white; text-align: right;"
+
+
 

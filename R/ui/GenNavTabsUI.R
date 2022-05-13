@@ -11,7 +11,7 @@ GenNavTabsUI <- function(){
     tabs[[i]] <-  tabPanel(TabsNames[i], 
                   value = paste0("tab", i),
                   try(source(paste0("R/tabs/tab",i,"/ui.R"), local = TRUE)$value),
-                  if (config$ShowButtons) next_prev_button(i, length(TabsNames))
+                  div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsNames)))
     )
   } 
   

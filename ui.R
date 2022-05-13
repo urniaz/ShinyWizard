@@ -19,6 +19,9 @@ shinyUI(fluidPage(
     GenTitlePanel(),
     
     # Generate Nav Bar
-    GenNavTabsUI()
+    GenNavTabsUI(),
+    
+    # Footer
+    GenFooter()
 
 ))
