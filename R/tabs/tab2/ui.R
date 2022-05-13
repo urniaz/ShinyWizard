@@ -1,15 +1,10 @@
-# ns all ids! 
+# Assign the dedicated ID for the tab/module, the same as in server file 
+ns <- NS("tab1")
 
-counterButton <- function(id) {
-  ns <- NS(id)
-  tagList(
-    actionButton(ns("buttonA"), label = "alert")
-  )
-}
-
+# UI code goes here ...
 fluidPage(
-  HTML('<h1>Welcome!</h1>
-      <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p>
-    '),
-  counterButton("tab2")
+  tagList(
+    actionButton(inputId = ns("tab1button"), #<--- remember to ns() all IDs, the IDs corresponds to output in server file 
+                 label = "alert")
+  )
 )

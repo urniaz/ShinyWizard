@@ -7,7 +7,7 @@ LogoWidht: 60
 LogoHeight: 60
 ShinyTheme: "flatly" 
 NavTabName: "⚪"
-NavTabElementsName: "Start; StepI; Step II; Step III"
+NavTabElementsName: "Intro; StepI; Step II; Step III"
 ShowButtons: TRUE
 ButtonsAlignment: "center"
 

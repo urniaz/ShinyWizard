@@ -8,5 +8,5 @@ counterButton <- function(id, label = "Counter") {
 }
 
 fluidPage(
-  counterButton("tab3", "Counter #1")
+  counterButton("tab3", "Counter +1")
 )
