@@ -1,17 +1,13 @@
-counterServer <- function(id) {
-  moduleServer(
-    id,
+moduleServer(
+    id = "tab1",
+    
     function(input, output, session) {
-      count <- reactiveVal(0)
-      observeEvent(input$button, {
-        count(count() + 1)
+      
+      observeEvent(input$buttonA, {
+        
+        shinyjs::alert("done!!!!")
+        
       })
-      output$out <- renderText({
-        count()
-      })
-      count
+      
     }
-  )
-}
-
-counterServer("counter1")
+)

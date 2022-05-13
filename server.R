@@ -15,6 +15,7 @@ shinyServer(function(input, output, session) {
     
     # Source tabs functions directory
     sapply(paste0("R/tabs/",list.files("R/tabs"),"/server.R"), source)
+        
     
     # Observe Events on Next Prev Buttons
     observe_event_next_prev_buttons(input, output, session)

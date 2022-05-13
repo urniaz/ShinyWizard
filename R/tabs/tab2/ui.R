@@ -1,12 +1,15 @@
-# Sidebar with a slider input for number of bins
-counterButton <- function(id, label = "Counter") {
+# ns all ids! 
+
+counterButton <- function(id) {
   ns <- NS(id)
   tagList(
-    actionButton(ns("button"), label = label),
-    verbatimTextOutput(ns("out"))
+    actionButton(ns("buttonA"), label = "alert")
   )
 }
 
 fluidPage(
-  counterButton("counter1", "Counter #1")
+  HTML('<h1>Welcome!</h1>
+      <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p>
+    '),
+  counterButton("tab2")
 )
