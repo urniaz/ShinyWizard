@@ -15,9 +15,9 @@ fluidPage(
     plotOutput(ns("distPlot"))),
     column(8, fluidRow(
                 column(6,
-                       HTML("<b>fdsafgdsgdsfd</b><hr/>")),
+                       HTML("<b>ui.R</b><hr/>")),
                 column(6,
-                       HTML("<b>fdsafgdsgdsfd</b><hr/>"))
+                       HTML("<b>server.R</b><hr/>"))
                 )
              )
           )

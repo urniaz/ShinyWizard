@@ -3,12 +3,14 @@
 GenNavTabsUI <- function(){
   # Read tabs names
   TabsNames <- strsplit(config$NavTabElementsName, ";")[[1]]
+  Icons <- strsplit(config$NavTabIcons, ";")[[1]]
   tabs <- NULL
   
   for (i in seq_along(TabsNames)) {
     
     
     tabs[[i]] <-  tabPanel(TabsNames[i], 
+                  icon = icon(if (is.na(Icons[i])){NULL}else{Icons[i]}), # <---
                   value = paste0("tab", i),
                   try(source(paste0("R/tabs/tab",i,"/ui.R"), local = TRUE)$value),
                   div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsNames)))
