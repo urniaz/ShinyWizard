@@ -1,14 +1,19 @@
 #' Run ShinyWizzard App
 #'
-#' @param dir directory to tabs, when NULL run demo
+#' @param loc locectory to tabs, when NULL run demo
+#' 
+#' @export
 
-RunShinyWizzard <- function(dir = NULL){
+RunShinyWizzard <- function(loc = NULL){
   
-  # Dir
-  if (is.null(dir)){ dir <- "inst/" }else{
-    if (dir.exists(dir)){ stop("App directory ", dir, "does not exist!")}
+  # loc
+  if (is.null(loc)){ loc <- NULL }else{
+    if (loc.exists(loc)){ stop("App locectory ", loc, " does not exist!")}
   }
   
-  runApp(dir)
+  print(wd())
+  
+  shinyOptions(Apploc = loc)
+  shiny::runApp(system.file("inst/", package = "ShinyWizzard", mustWork = TRUE))
   
 }

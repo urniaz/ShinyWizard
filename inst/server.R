@@ -14,7 +14,7 @@ shinyServer(function(input, output, session) {
     sapply(paste0("core/server/",list.files("core/server")), source)
     
     # Load tabs server
-    load_tabs_server(dir = NULL)
+    load_tabs_server(dir = getShinyOption("AppDir"))
     
     # Observe Events on Next Prev Buttons
     observe_event_next_prev_buttons(input, output, session)

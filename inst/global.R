@@ -1,5 +1,5 @@
 # Clear Environment
-rm(list = ls(all.names = TRUE))
+# rm(list = ls(all.names = TRUE))
 
 # Load configuration file
 config <- yaml::yaml.load_file('config.yaml')

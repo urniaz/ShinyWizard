@@ -19,7 +19,7 @@ shinyUI(fluidPage(
     GenTitlePanel(),
     
     # Generate Nav Bar
-    GenNavTabsUI(dir = NULL), 
+    GenNavTabsUI(dir = getShinyOption("AppDir")), 
     
     # Footer
     GenFooter()
