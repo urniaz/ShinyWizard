@@ -11,7 +11,7 @@ source("global.R")
 shinyServer(function(input, output, session) {
     
     # Load server functions directory
-    sapply(paste0("R/server/",list.files("R/server")), source)
+    sapply(paste0("core/server/",list.files("core/server")), source)
     
     # Load tabs server
     load_tabs_server()

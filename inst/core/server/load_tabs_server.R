@@ -2,11 +2,11 @@
 
 load_tabs_server <- function(){
   
-tabs <- list.files("R/tabs")
+tabs <- list.files("core/tabs")
 
 for (i in seq_along(tabs)){
   
-  FilePath <- paste0("R/tabs/",tabs[i],"/server.R")
+  FilePath <- paste0("core/tabs/",tabs[i],"/server.R")
   
   FileContent <- read_file(file = FilePath)
   

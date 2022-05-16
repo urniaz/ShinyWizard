@@ -8,7 +8,7 @@
 source("global.R")
 
 # Load server functions directory
-sapply(paste0("R/ui/",list.files("R/ui")), source)
+sapply(paste0("core/ui/",list.files("core/ui")), source)
 
 # Define UI 
 shinyUI(fluidPage(

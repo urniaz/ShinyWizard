@@ -5,7 +5,7 @@ GenFooter <- function(){
  if (config$FooterVisible){
   div(style = config$FooterStyle,
       
-      HTML(config$FooterHTML)
+      HTML(paste0("Created with ShinyWizzard.", config$FooterHTML))
   )
   }
 }
