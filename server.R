@@ -10,12 +10,11 @@ source("global.R")
 # Define server logic required to draw a histogram
 shinyServer(function(input, output, session) {
     
-    # Source server functions directory
+    # Load server functions directory
     sapply(paste0("R/server/",list.files("R/server")), source)
     
-    # Source tabs functions directory
-    sapply(paste0("R/tabs/",list.files("R/tabs"),"/server.R"), source)
-        
+    # Load tabs server
+    load_tabs_server()
     
     # Observe Events on Next Prev Buttons
     observe_event_next_prev_buttons(input, output, session)

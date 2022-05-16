@@ -1,6 +1,7 @@
-# Sidebar with a slider input for number of bins
-counterButton <- function(id, label = "Counter") {
-  ns <- NS(id)
+# TabName: Intro
+# TabIcon: table
+
+counterButton <- function(label = "Counter") {
   tagList(
     actionButton(ns("button"), label = label),
     verbatimTextOutput(ns("out"))
@@ -8,5 +9,5 @@ counterButton <- function(id, label = "Counter") {
 }
 
 fluidPage(
-  counterButton("tab3", "Counter +1")
+  counterButton( "Counter +1")
 )

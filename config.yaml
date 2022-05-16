@@ -7,12 +7,9 @@ ShinyTheme: "flatly"
 # --- Logo ---
 LogoVisible: TRUE
 LogoFilePath: 'img/logo.png'
-LogoWidht: 60
-LogoHeight: 60
+LogoStyle: "height: 60px; wigth:60px;"
 # --- Navigation ---
 NavTabName: "⚪"
-NavTabElementsName: "Intro; StepI; Step II; Step III"
-NavTabIcons: "bar-chart-o;list-alt;table" # https://shiny.rstudio.com/reference/shiny/0.14/icon.html
 # --- Next/Prev buttons
 ShowButtons: TRUE
 ButtonsAlignment: "center"

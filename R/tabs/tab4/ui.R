@@ -1,9 +1,6 @@
-# Sidebar with a slider input for number of bins
-tab4ui <- function(id) {
-       
-  ns <- NS(id) # Remember to ns() all ids! 
-  # <---
-  
+# TabName: Intro
+# TabIcon: bar-chart-o
+
 fluidPage(
   fluidRow(column(4, 
     sliderInput(ns("bins"),
@@ -22,6 +19,3 @@ fluidPage(
              )
           )
 )
-}
-
-tab4ui("tab4")

@@ -1,6 +1,4 @@
-moduleServer(
-    id = "tab4",
-    function(input, output, session) {
+
       
       # <---
       
@@ -16,8 +14,6 @@ moduleServer(
       })
       
       # <---
-    }
-)
 
       
 

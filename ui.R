@@ -7,7 +7,7 @@
 # Source Env
 source("global.R")
 
-# Source Directory
+# Load server functions directory
 sapply(paste0("R/ui/",list.files("R/ui")), source)
 
 # Define UI 

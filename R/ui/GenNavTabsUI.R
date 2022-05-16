@@ -1,22 +1,37 @@
 #' Generate Tabs UI 
 
 GenNavTabsUI <- function(){
-  # Read tabs names
-  TabsNames <- strsplit(config$NavTabElementsName, ";")[[1]]
-  Icons <- strsplit(config$NavTabIcons, ";")[[1]]
+  
+  # List tabs
+  TabsFiles <- list.files("R/tabs")
   tabs <- NULL
   
-  for (i in seq_along(TabsNames)) {
+  for (i in seq_along(TabsFiles)){
     
+    FilePath <- paste0("R/tabs/",TabsFiles[i],"/ui.R")
     
-    tabs[[i]] <-  tabPanel(TabsNames[i], 
-                  icon = icon(if (is.na(Icons[i])){NULL}else{Icons[i]}), # <---
-                  value = paste0("tab", i),
-                  try(source(paste0("R/tabs/tab",i,"/ui.R"), local = TRUE)$value),
-                  div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsNames)))
-    )
-  } 
-  
+    # Extract values from comments 
+    FileContent <- read_file(file = FilePath)
+      TabName <- str_match(FileContent, "# TabName:\\s*(.*?)\\s*\n")[1,2]
+      TabIcon <- str_match(FileContent, "# TabIcon:\\s*(.*?)\\s*\n")[1,2]
+      
+    if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
+      
+      # Rebuild file
+      pre <- paste0("ns <- NS('tab",i,"')")
+      temp <- tempfile()
+      write_file(paste0(pre,FileContent),temp)
+      
+      tabs[[i]] <-  tabPanel(if(is.na(TabName)){paste0("Tab",i)}else{TabName},
+                             icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon)},
+                             value = paste0("tab", i),
+                             try(source(temp, local = TRUE)$value),
+                             div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
+      )
+      
+    }
+ }
+
   # Navigation Bar
   tabs$id <- NS("NavBar", "tabs") # NavBar id = NavBar-tabs
   tabs$theme <- shinytheme(config$ShinyTheme)
