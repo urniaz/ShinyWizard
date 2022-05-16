@@ -1,12 +1,18 @@
 #' Loading function for tabs
+#' @param dir directory to tabs, when NULL run demo
 
-load_tabs_server <- function(){
+load_tabs_server <- function(dir = NULL){
   
-tabs <- list.files("core/tabs")
+# Dir
+if (is.null(dir)){ dir <- "core/tabs/" }else{
+  if (dir.exists(dir)){ stop("App directory ", dir, "does not exist!")}
+}
+
+tabs <- list.files(dir)
 
 for (i in seq_along(tabs)){
   
-  FilePath <- paste0("core/tabs/",tabs[i],"/server.R")
+  FilePath <- paste0(dir,tabs[i],"/server.R")
   
   FileContent <- read_file(file = FilePath)
   
