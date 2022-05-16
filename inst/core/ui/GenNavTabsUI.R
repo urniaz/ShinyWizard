@@ -1,4 +1,5 @@
 #' Generate Tabs UI 
+#' 
 #' @param dir directory to tabs, when NULL run demo
 
 GenNavTabsUI <- function(dir = NULL){

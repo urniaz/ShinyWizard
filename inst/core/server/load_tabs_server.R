@@ -1,4 +1,5 @@
 #' Loading function for tabs
+#' 
 #' @param dir directory to tabs, when NULL run demo
 
 load_tabs_server <- function(dir = NULL){

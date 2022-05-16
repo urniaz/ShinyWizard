@@ -1,14 +1,14 @@
 #' Run ShinyWizzard App
 #'
-#' @param location 
+#' @param dir directory to tabs, when NULL run demo
 
-RunShinyWizzard() <- function(location = NULL){
+RunShinyWizzard <- function(dir = NULL){
   
+  # Dir
+  if (is.null(dir)){ dir <- "inst/" }else{
+    if (dir.exists(dir)){ stop("App directory ", dir, "does not exist!")}
+  }
   
-  
-  
-  # NULL run demo
-  
-  # Run App
+  runApp(dir)
   
 }
