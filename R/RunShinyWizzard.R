@@ -1,10 +1,10 @@
-#' Run ShinyWizzard App
+#' Run ShinyWizzard app
 #'
-#' @param loc locectory to tabs, when NULL run demo
+#' @param loc directory to external tabs, when NULL run demo
 #' 
 #' @export
 
-RunShinyWizzard <- function(loc = NULL){
+RunShinyWizzard <- function(loc = ""){
   
   # Copy source code to temp
   TempPath <- tempdir()
@@ -20,6 +20,7 @@ RunShinyWizzard <- function(loc = NULL){
     
   }else{stop("The directory", loc ," does not exists!")}
   
+  # Run app
   shiny::runApp(paste0(TempPath, "/source"))
   
 }
