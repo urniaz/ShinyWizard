@@ -1,24 +1,17 @@
 #' Generate Tabs UI 
-#' 
-#' @param dir directory to tabs, when NULL run demo
 
-GenNavTabsUI <- function(dir = NULL){
-  
-  # Dir
-  if (is.null(dir)){ dir <- "core/tabs/" }else{
-    if (dir.exists(dir)){ stop("App directory ", dir, "does not exist!")}
-  }
+GenNavTabsUI <- function(){
   
   # List tabs
-  TabsFiles <- list.files(dir)
+  TabsFiles <- list.files("core/tabs/")
   tabs <- NULL
   
   for (i in seq_along(TabsFiles)){
     
-    FilePath <- paste0(dir,TabsFiles[i],"/ui.R")
+    FilePath <- paste0("core/tabs/",TabsFiles[i],"/ui.R")
     
     # Extract values from comments 
-    FileContent <- read_file(file = FilePath)
+    FileContent <-readr::read_file(file = FilePath)
       TabName <- str_match(FileContent, "# TabName:\\s*(.*?)\\s*\n")[1,2]
       TabIcon <- str_match(FileContent, "# TabIcon:\\s*(.*?)\\s*\n")[1,2]
       
