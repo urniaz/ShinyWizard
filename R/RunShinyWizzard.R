@@ -14,9 +14,9 @@ RunShinyWizzard <- function(loc = ""){
   if ((loc != "")){
    if (dir.exists(loc)){
      # Clear demo data
-     file.remove(paste0(TempPath, "/core/tabs/"))
+     file.remove(paste0(TempPath, "/source/core/tabs/"))
      # Copy 
-     file.copy(loc, paste0(TempPath, "/core/tabs/"), recursive=TRUE)
+     file.copy(loc, paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
    }else{stop("The directory", loc ," does not exists!")}
   }
   
