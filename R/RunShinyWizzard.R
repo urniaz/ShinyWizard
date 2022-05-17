@@ -15,6 +15,6 @@ RunShinyWizzard <- function(loc = NULL){
   
   Apploc <<- loc
   
-  shiny::runApp(system.file("inst/", package = "ShinyWizzard", mustWork = TRUE))
+  shiny::runApp(paste0(system.file(package = "ShinyWizzard"),"/inst/"))
   
 }
