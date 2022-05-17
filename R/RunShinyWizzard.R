@@ -13,9 +13,8 @@ RunShinyWizzard <- function(loc = NULL){
     if (loc.exists(loc)){ stop("App locectory ", loc, " does not exist!")}
   }
   
- 
+  Apploc <<- loc
   
-  shinyOptions(Apploc = loc)
   shiny::runApp(system.file("inst/", package = "ShinyWizzard", mustWork = TRUE))
   
 }
