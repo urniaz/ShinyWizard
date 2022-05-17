@@ -6,7 +6,7 @@
 
 RunShinyWizzard <- function(loc = NULL){
   
-  message(wd())
+  message(getwd())
   
   # loc
   if (is.null(loc)){ loc <- NULL }else{
