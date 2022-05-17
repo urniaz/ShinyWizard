@@ -19,7 +19,7 @@ RunShinyWizzard <- function(loc = ""){
      # Copy 
      file.copy(loc, paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
      file.copy(paste0(TempPath, "/source/core/tabs/", basename(loc)), paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
-   }else{stop("The directory", loc ," does not exists!")}
+   }else{stop("The directory ", loc ," does not exists!")}
   }
   
   # Run app
