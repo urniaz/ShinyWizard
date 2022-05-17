@@ -23,6 +23,6 @@ RunShinyWizzard <- function(loc = ""){
   }
   
   # Run app
-  shiny::runApp(paste0(TempPath, "/source"))
+  shiny::runApp(paste0(TempPath, "/source/"))
   
 }
