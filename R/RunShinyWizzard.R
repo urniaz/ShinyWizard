@@ -6,6 +6,11 @@
 
 RunShinyWizzard <- function(loc = NULL){
   
-  shiny::runApp(system.file(package = "ShinyWizzard"))
+  # Copy source code to temp
+  TempPath <- tempdir()
+  file.copy(system.file("source", package = "ShinyWizzard"), TempPath, recursive=TRUE)
+  
+  
+  shiny::runApp(TempPath)
   
 }
