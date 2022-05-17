@@ -16,9 +16,11 @@ RunShinyWizzard <- function(loc = ""){
      # Clear demo data
      unlink(paste0(TempPath, "/source/core/tabs/"), recursive = TRUE)
      dir.create(paste0(TempPath,"/source/core/tabs/"), showWarnings = FALSE)
-     # Copy 
-     file.copy(loc, paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
-     file.copy(paste0(TempPath, "/source/core/tabs/", basename(loc)), paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
+     # Copy
+     temp <- getwd()
+     setwd(loc)
+     file.copy(".", paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
+     setwd(temp)
    }else{stop("The directory ", loc ," does not exists!")}
   }
   
