@@ -20,6 +20,8 @@ RunShinyWizzard <- function(loc = ""){
    }else{stop("The directory", loc ," does not exists!")}
   }
   
+  dir(TempPath)
+  dir(paste0(TempPath, "/core/tabs/"))
   # Run app
   shiny::runApp(paste0(TempPath, "/source"))
   
