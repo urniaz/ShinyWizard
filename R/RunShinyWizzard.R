@@ -11,6 +11,6 @@ RunShinyWizzard <- function(loc = NULL){
   file.copy(system.file("source", package = "ShinyWizzard"), TempPath, recursive=TRUE)
   
   
-  shiny::runApp(paste0(TempPath), "/source")
+  shiny::runApp(paste0(TempPath, "/source"))
   
 }
