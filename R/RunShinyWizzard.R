@@ -11,7 +11,7 @@ RunShinyWizzard <- function(loc = ""){
   file.copy(system.file("source", package = "ShinyWizzard"), TempPath, recursive=TRUE)
   
   # Copy project file if any 
-  if (&& (loc != "")){
+  if ((loc != "")){
    if (dir.exists(loc)){
      # Clear demo data
      file.remove(paste0(TempPath, "/core/tabs/"))
