@@ -15,13 +15,12 @@ RunShinyWizzard <- function(loc = ""){
    if (dir.exists(loc)){
      # Clear demo data
      unlink(paste0(TempPath, "/source/core/tabs/"), recursive = TRUE)
+     dir.create(paste0(TempPath,"/source/core/tabs/"), showWarnings = FALSE)
      # Copy 
      file.copy(loc, paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
    }else{stop("The directory", loc ," does not exists!")}
   }
   
-  print(dir(TempPath))
-  print(dir(paste0(TempPath, "/source/core/tabs/")))
   # Run app
   shiny::runApp(paste0(TempPath, "/source"))
   
