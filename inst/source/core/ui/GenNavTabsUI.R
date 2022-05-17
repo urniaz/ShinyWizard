@@ -6,6 +6,9 @@ GenNavTabsUI <- function(){
   TabsFiles <- list.files("core/tabs/")
   tabs <- NULL
   
+  print(TabsFiles)
+  print("tu")
+  
   for (i in seq_along(TabsFiles)){
     
     FilePath <- paste0("core/tabs/",TabsFiles[i],"/ui.R")
