@@ -21,7 +21,7 @@ RunShinyWizzard <- function(loc = ""){
   }
   
   print(dir(TempPath))
-  print(dir(paste0(TempPath, "/core/tabs/")))
+  print(dir(paste0(TempPath, "/source/core/tabs/")))
   # Run app
   shiny::runApp(paste0(TempPath, "/source"))
   
