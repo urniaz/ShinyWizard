@@ -1,14 +1,14 @@
-#' Run ShinyWizzard app
+#' Run ShinyWizard app
 #'
 #' @param loc directory to external tabs, when NULL run demo
 #' 
 #' @export
 
-RunShinyWizzard <- function(loc = ""){
+RunShinyWizard <- function(loc = ""){
   
   # Copy source code to temp
   TempPath <- tempdir()
-  file.copy(system.file("source", package = "ShinyWizzard"), TempPath, recursive=TRUE)
+  file.copy(system.file("source", package = "ShinyWizard"), TempPath, recursive=TRUE)
   
   # Copy project file if any 
   if ((loc != "")){
