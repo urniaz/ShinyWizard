@@ -22,15 +22,15 @@ RunShinyWizard <- function(loc = ""){
    # Dir loc exists 
    if (dir.exists(loc)){
      if (dir.exists(paste0(loc, "/tabs/")) && file.exists(paste0(loc, "config.yaml"))){
-     # Clear demo data
+     # Clear demo data & copy tabs
      unlink(paste0(TempPath, "/source/tabs/"), recursive = TRUE)
      dir.create(paste0(TempPath,"/source/tabs/"), showWarnings = FALSE)
-     # Copy Tabs
      file.copy(paste0(loc, "/tabs/"), paste0(TempPath, "/source/"), recursive=TRUE)
-     # Copy config.yaml
+     # Clear demo config & copy config.yaml
      unlink(paste0(TempPath, "/source/config.yaml"), recursive = TRUE)
      file.copy(paste0(loc, "config.yaml"), paste0(TempPath, "/source/"), recursive=TRUE)
-     
+     # Copy www and overwrite 
+     file.copy(paste0(loc, "/www/"), paste0(TempPath, "/source/"), recursive=TRUE, overwrite = TRUE)
      }else{ stop("The directory should contain at least 'tabs' folder and config.yaml file!")}
    }else{stop("The directory ", loc ," does not exists!")}
   }
