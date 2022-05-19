@@ -24,7 +24,6 @@ RunShinyWizard <- function(loc = ""){
      dir.create(paste0(TempPath,"/source/tabs/"), showWarnings = FALSE)
      # Copy Tabs
      file.copy(paste0(loc, "/tabs/"), paste0(TempPath, "/source/"), recursive=TRUE)
-     setwd(temp)
      # Copy config.yaml
      unlink(paste0(TempPath, "/source/config.yaml"), recursive = TRUE)
      file.copy(paste0(loc, "config.yaml"), paste0(TempPath, "/source/"), recursive=TRUE)
