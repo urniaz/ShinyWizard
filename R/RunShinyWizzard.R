@@ -30,6 +30,7 @@ RunShinyWizard <- function(loc = ""){
      unlink(paste0(TempPath, "/source/config.yaml"), recursive = TRUE)
      file.copy(paste0(loc, "config.yaml"), paste0(TempPath, "/source/"), recursive=TRUE)
      # Copy www and overwrite 
+     unlink(paste0(TempPath, "/source/www/"), recursive = TRUE)
      file.copy(paste0(loc, "/www/"), paste0(TempPath, "/source/"), recursive=TRUE, overwrite = TRUE)
      }else{ stop("The directory should contain at least 'tabs' folder and config.yaml file!")}
    }else{stop("The directory ", loc ," does not exists!")}
