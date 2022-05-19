@@ -1,9 +1,10 @@
 # --- App Titles ---
-AppTitle: 'Shiny Wizard Demo'
-AppSubTitle: 'Shiny Wizard Demo'
-WindowTitle: 'Shiny Wizard Demo'
+AppTitle: 'Shiny Wizard App'
+AppSubTitle: 'Shiny Wizard App'
+WindowTitle: 'Shiny Wizard App'
 # --- CSS style ---
-ShinyTheme: "flatly" 
+ShinyTheme: "flatly" # Also try one of #https://github.com/rstudio/shinythemes
+CustomCSS: ""
 # --- Logo ---
 LogoVisible: TRUE
 LogoFilePath: 'img/logo.png'
