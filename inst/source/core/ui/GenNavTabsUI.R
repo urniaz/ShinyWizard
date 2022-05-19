@@ -3,12 +3,12 @@
 GenNavTabsUI <- function(){
   
   # List tabs
-  TabsFiles <- list.files("core/tabs/")
+  TabsFiles <- list.files("tabs/")
   tabs <- NULL
   
   for (i in seq_along(TabsFiles)){
     
-    FilePath <- paste0("core/tabs/",TabsFiles[i],"/ui.R")
+    FilePath <- paste0("tabs/",TabsFiles[i],"/ui.R")
     
     # Extract values from comments 
     FileContent <-readr::read_file(file = FilePath)

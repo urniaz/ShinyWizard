@@ -7,7 +7,7 @@ observe_event_next_prev_buttons <- function(input, output, session){
         updateTabsetPanel(session, "NavBar-tabs", selected = paste0("tab", to))
       })  
     }
-    ids <- seq_along(list.files("core/tabs"))
+    ids <- seq_along(list.files("tabs"))
     lapply(ids[-1], function(i) changePage(i, i - 1))
     lapply(ids[-length(ids)], function(i) changePage(i, i + 1))
  

@@ -8,19 +8,28 @@ RunShinyWizard <- function(loc = ""){
   
   # Copy source code to temp
   TempPath <- tempdir()
+  
+  # Copy all original files
   file.copy(system.file("source", package = "ShinyWizard"), TempPath, recursive=TRUE)
   
-  # Copy project file if any 
+  # Copy user project files, if any 
   if ((loc != "")){
+   # add slash if not provided
+   if (substring(loc, nchar(loc)) != "/"){ loc = paste0(loc, "/")}
+   # Dir loc exists 
    if (dir.exists(loc)){
+     if (dir.exists(paste0(loc, "/tabs/")) && file.exists(paste0(loc, "config.yaml"))){
      # Clear demo data
      unlink(paste0(TempPath, "/source/core/tabs/"), recursive = TRUE)
      dir.create(paste0(TempPath,"/source/core/tabs/"), showWarnings = FALSE)
-     # Copy
-     temp <- getwd()
-     setwd(loc)
-     file.copy(".", paste0(TempPath, "/source/core/tabs/"), recursive=TRUE)
+     # Copy Tabs
+     file.copy(paste0(loc, "/tabs/"), paste0(TempPath, "/source/core/"), recursive=TRUE)
      setwd(temp)
+     # Copy config.yaml
+     unlink(paste0(TempPath, "/source/core/"), recursive = TRUE)
+     file.copy(paste0(loc, "config.yaml"), paste0(TempPath, "/source/core/"), recursive=TRUE)
+     
+     }else{ stop("The directory should contain at least config.yaml and 'tabs' folder!")}
    }else{stop("The directory ", loc ," does not exists!")}
   }
   

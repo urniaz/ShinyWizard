@@ -3,7 +3,7 @@ AppTitle: 'Shiny Wizard App'
 AppSubTitle: 'Shiny Wizard App'
 WindowTitle: 'Shiny Wizard App'
 # --- CSS style ---
-ShinyTheme: "darkly" # Also try one of #https://github.com/rstudio/shinythemes
+ShinyTheme: "flatly" # Also try one of #https://github.com/rstudio/shinythemes
 CustomCSS: ""
 # --- Logo ---
 LogoVisible: TRUE
