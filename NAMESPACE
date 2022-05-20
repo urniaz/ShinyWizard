@@ -3,3 +3,4 @@
 export(RunShinyWizard)
 export(ShinyWizzardIncludeCSSAndTheme)
 export(ShinyWizzardTheme)
+export(ShinyWizzardThemeSelector)
