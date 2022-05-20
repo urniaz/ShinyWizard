@@ -12,5 +12,3 @@ ShinyWizzardIncludeCSSAndTheme <- function(){
    
   
 }
-
-ShinyWizzardTheme
