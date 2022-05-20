@@ -12,6 +12,9 @@ sapply(paste0("core/ui/",list.files("core/ui")), source)
 
 # Define UI 
 shinyUI(fluidPage(
+    # Include Theme & CSS
+    ShinyWizzardIncludeCSSAndTheme(),
+    
     # Use JS
     useShinyjs(),
     
