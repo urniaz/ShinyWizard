@@ -20,6 +20,10 @@ ShinyWizzardTheme <- function(name = ""){
    }
 }
 
+#' 
+#'
+#' @export
+
 ShinyWizzardThemeSelector <- function() {
   shiny::fixedPanel(
     top = "15px",

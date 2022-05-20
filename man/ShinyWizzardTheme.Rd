@@ -2,7 +2,7 @@
 % Please edit documentation in R/ShinyWizzardTheme.R
 \name{ShinyWizzardTheme}
 \alias{ShinyWizzardTheme}
-\title{Run ShinyWizard app}
+\title{Return dir / show available ShinyWizard templates}
 \usage{
 ShinyWizzardTheme(name = "")
 }
@@ -10,5 +10,5 @@ ShinyWizzardTheme(name = "")
 \item{name}{the theme name to be applied. None argument provided returns all available themes.}
 }
 \description{
-Run ShinyWizard app
+Return dir / show available ShinyWizard templates
 }
