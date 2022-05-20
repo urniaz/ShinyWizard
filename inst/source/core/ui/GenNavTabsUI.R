@@ -23,7 +23,7 @@ GenNavTabsUI <- function(){
       write_file(paste0(pre,FileContent),temp)
       
       tabs[[i]] <-  tabPanel(if(is.na(TabName)){paste0("Tab",i)}else{TabName},
-                             icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon)},
+                             icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
                              div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
