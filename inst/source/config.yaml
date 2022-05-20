@@ -13,11 +13,11 @@ NavTabName: "⚪"
 # --- Next/Prev buttons
 ShowButtons: TRUE
 ButtonsAlignment: "center" # left, right
-ButtonsStyle: "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%"
+ButtonsStyle: "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;"
 # --- Footer ---
 FooterVisible: TRUE
 FooterHTML: "<i>Copyrights <b>© 2022</b> by the author</i>"
-FooterStyle: "position: fixed; padding: 10px 30px 10px 10px; bottom: 0; height: 30; width: 100%; text-align: right"
+FooterStyle: "position: fixed; padding: 10px 30px 10px 10px; bottom: 0; height: 30; width: 100%; background: inherited; text-align: right"
 
 
 
