@@ -7,11 +7,11 @@
 ShinyWizzardTheme <- function(name = ""){
   
   templatesPath <- system.file("templates", package = "ShinyWizard")
-  templatesList <- list.files(templatesPath)
+  templatesList <- list.files(paste0(templatesPath, "/css/"))
    if ( name == ""){
      return(templatesList)
    }else{
-     if(file.exists(paste0(templatesPath, "/", name, "/bootstrap.min.css"))){
+     if(file.exists(paste0(templatesPath, "/css/", name, ".min.css"))){
        return(paste0(templatesPath, "/", name, "/bootstrap.min.css"))
      }else{ 
        stop("The template name '", name, "' is not avaliable. Please use one of ", paste(ShinyWizzardTheme(), collapse=", "))}
