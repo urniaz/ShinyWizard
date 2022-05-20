@@ -2,7 +2,7 @@
 #'
 #' @param name the theme name to be applied. None argument provided returns all available themes.
 #' 
-#' @export
+# @export
 
 ShinyWizzardIncludeCSSAndTheme <- function(){
   

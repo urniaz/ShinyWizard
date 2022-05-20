@@ -2,7 +2,7 @@
 #'
 #' @param name the theme name to be applied. None argument provided returns all available themes.
 #' 
-#' @export
+# @export
 
 ShinyWizzardTheme <- function(name = ""){
   
@@ -35,7 +35,7 @@ ShinyWizzardThemeSelector <- function() {
         div(class = "panel-heading", "Select theme:"),
         div(class = "panel-body",
             selectInput("shinytheme-selector", NULL,
-                        c("default", ShinyWizzardTheme()),
+                        c("default", allThemes()),
                         selectize = FALSE
             )
         )
@@ -69,3 +69,4 @@ ShinyWizzardThemeSelector <- function() {
     )
   )
 }
+
