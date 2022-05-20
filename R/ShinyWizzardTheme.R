@@ -26,9 +26,9 @@ ShinyWizzardTheme <- function(name = ""){
 
 ShinyWizzardThemeSelector <- function() {
   shiny::fixedPanel(
-    top = "15px",
-    right = "15px",
-    draggable = TRUE,
+    # top = "15px",
+    # right = "15px",
+    # draggable = TRUE,
     style = "width: 250px; z-index: 100000;",
     div(class = "panel panel-danger",
         style = "box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);",
