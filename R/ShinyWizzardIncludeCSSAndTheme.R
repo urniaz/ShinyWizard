@@ -7,7 +7,7 @@
 ShinyWizzardIncludeCSSAndTheme <- function(){
   
    if(config$ShinyWizzardTheme != ""){
-      includeCSS(config$ShinyWizzardTheme)
+      includeCSS(ShinyWizzardTheme(config$ShinyWizzardTheme))
    }
    
   
