@@ -34,6 +34,7 @@ GenNavTabsUI <- function(){
 
   # Navigation Bar
   tabs$id <- NS("NavBar", "tabs") # NavBar id = NavBar-tabs
+  tabs$theme <- ShinyWizzardIncludeCSSAndTheme()
   tabs$title <- config$NavTabName
   tabs <- do.call("navbarPage", tabs)
   tabs
