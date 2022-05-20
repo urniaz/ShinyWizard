@@ -25,8 +25,6 @@ shinyUI(fluidPage(
     GenNavTabsUI(), 
     
     # Footer
-    GenFooter(),
-    
-    ShinyWizzardThemeSelector()
+    GenFooter()
 
 ))

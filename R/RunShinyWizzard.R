@@ -37,6 +37,7 @@ RunShinyWizard <- function(loc = ""){
   }
   
   # Run app
+  
   shiny::runApp(paste0(TempPath, "/source/"))
   
 }
