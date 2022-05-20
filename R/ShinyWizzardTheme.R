@@ -11,7 +11,6 @@ ShinyWizzardTheme <- function(name = ""){
    if ( name == ""){
      return(templatesList)
    }else{
-      print("tu")
      if(file.exists(paste0(templatesPath, "/", name, "/bootstrap.min.css"))){
        return(paste0(templatesPath, "/", name, "/bootstrap.min.css"))
      }else{ 
