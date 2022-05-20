@@ -1,4 +1,4 @@
-#' Run ShinyWizard app
+#' Return dir / show available ShinyWizard templates
 #'
 #' @param name the theme name to be applied. None argument provided returns all available themes.
 #' 
