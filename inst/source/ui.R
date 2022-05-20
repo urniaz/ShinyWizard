@@ -27,6 +27,6 @@ shinyUI(fluidPage(
     # Footer
     GenFooter(),
     
-    shinythemes::themeSelector()
+    ShinyWizzardThemeSelector()
 
 ))
