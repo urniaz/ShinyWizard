@@ -35,7 +35,7 @@ ShinyWizzardThemeSelector <- function() {
         div(class = "panel-heading", "Select theme:"),
         div(class = "panel-body",
             selectInput("shinytheme-selector", NULL,
-                        c("default", allThemes()),
+                        c("default", ShinyWizzardTheme()),
                         selectize = FALSE
             )
         )

@@ -28,7 +28,6 @@ GenNavTabsUI <- function(){
                              try(source(temp, local = TRUE)$value),
                              div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
       )
-      
     }
  }
 
