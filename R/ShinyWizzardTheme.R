@@ -34,14 +34,14 @@ ShinyWizzardThemeSelector <- function() {
         style = "box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);",
         div(class = "panel-heading", "Select theme:"),
         div(class = "panel-body",
-            selectInput("ShinyWizzardTheme-selector", NULL,
-                        c("default", ShinyWizzardTheme()),
+            selectInput("shinytheme-selector", NULL,
+                        c("default", allThemes()),
                         selectize = FALSE
             )
         )
     ),
     tags$script(
-      "$('#ShinyWizzardTheme-selector')
+      "$('#shinytheme-selector')
   .on('change', function(el) {
     var allThemes = $(this).find('option').map(function() {
       if ($(this).val() === 'default')
@@ -55,7 +55,7 @@ ShinyWizzardThemeSelector <- function() {
       curTheme = 'bootstrap';
       curThemePath = 'shared/bootstrap/css/bootstrap.min.css';
     } else {
-      curThemePath = '", system.file("templates", package = "ShinyWizard"), "/css/' + curTheme + '.min.css';
+      curThemePath = 'shinythemes/css/' + curTheme + '.min.css';
     }
     // Find the <link> element with that has the bootstrap.css
     var $link = $('link').filter(function() {
