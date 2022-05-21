@@ -1,3 +1,5 @@
 # You can access the value of the widget with input$text, e.g.
-output$value <- renderText({ input[ns("AppTitleInput")] })
+output$v <- renderText({ input[ns("AppTitleInput")] })
 
+print(output)
+print(input)
