@@ -7,7 +7,8 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-   shiny::tags$input(id = "AppTitleInput", onchange = "document.getElementById('AppTitle').textContent = document.getElementById('AppTitleInput').value;") 
+   tags$input(id = "AppTitleInput", onchange = "document.getElementById('AppTitle').textContent = document.getElementById('AppTitleInput').value;"),
+   textOutput("demo_text", container = tags$h3)
   )
 )
 
