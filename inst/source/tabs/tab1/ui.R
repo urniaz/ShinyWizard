@@ -7,7 +7,7 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-   tags$div(id = ns("value-tab"), textOutput(ns("value"))),
+   tags$div(style= "height:100px; background:red;", textOutput("value")),
    tags$input(id = ns("AppTitleInput"), onchange = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;"))
    
   )
