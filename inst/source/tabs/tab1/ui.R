@@ -7,12 +7,11 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-    textInput("AppTitleInput", 
-              label = "Name", 
-              value = "", 
-              width = "100%",
-              placeholder = "Your Name")
+    # Copy the line below to make a text input box
+    textInput("text", label = h3("Text input"), value = "Enter text..."),
     
+    hr(),
+    fluidRow(column(3, verbatimTextOutput("value")))
     
   )
 )
