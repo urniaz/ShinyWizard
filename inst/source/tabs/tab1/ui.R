@@ -7,7 +7,7 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-   tags$input(id = "AppTitleInput", onchange = "javascript: document.getElementById('AppTitle').value = document.getElementById('AppTitleInput').value;") 
+   tags$input(id = "AppTitleInput", onchange = "javascript: document.getElementById('AppTitle').value = 'dupa';") 
   )
 )
 
