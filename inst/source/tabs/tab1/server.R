@@ -1,0 +1,1 @@
+output$demo_text <- input$AppTitleInput
