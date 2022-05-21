@@ -7,11 +7,7 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-    # Copy the line below to make a text input box
-    textInput("text", label = h3("Text input"), value = "Enter text..."),
-    
-    verbatimTextOutput("value")
-    
+   tags$input(id = ns("AppTitleInput"), onchange = "document.getElementById('AppTitle').textContent = document.getElementById('AppTitleInput').value;") 
   )
 )
 
