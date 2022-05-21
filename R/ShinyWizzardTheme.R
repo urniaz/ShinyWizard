@@ -70,3 +70,8 @@ ShinyWizzardThemeSelector <- function() {
   )
 }
 
+allThemes <- function() {
+  themes <- dir(system.file("shinythemes/css", package = "shinythemes"),
+                ".+\\.min.css")
+  sub(".min.css", "", themes)
+}
