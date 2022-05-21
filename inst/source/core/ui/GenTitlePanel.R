@@ -3,7 +3,9 @@
 GenTitlePanel <- function(){
   titlePanel(windowTitle = config$WindowTitle,
              fluidRow(
-               column(11, config$AppTitle, tags$h5(config$AppSubTitle)), 
-               column(1, img(style = config$LogoStyle, src = config$LogoFilePath))
+               column(11, 
+                      tags$div(id = "AppTitle", config$AppTitle), tags$h5(id = "AppSubTitle", config$AppSubTitle)), 
+               column(1, 
+                      img(id ="LogoFilePath", style = config$LogoStyle, src = config$LogoFilePath))
              ))
 }
