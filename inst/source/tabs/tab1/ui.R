@@ -7,7 +7,7 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-   tags$input(id = ns("AppTitleInput"), onchange = "document.getElementById('",ns("AppTitle"),"').textContent = document.getElementById('AppTitleInput').value;"), 
+   tags$input(id = ns("AppTitleInput"), onchange = "document.getElementById('AppTitle').textContent = document.getElementById('",ns(AppTitleInput),"').value;"), 
    verbatimTextOutput("value")
   )
 )
