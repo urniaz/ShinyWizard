@@ -5,3 +5,9 @@ HTML('<h1>Welcome!</h1>
       <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p>
     ')
 
+fluidPage(
+  fluidRow(
+   tags$input(id = "AppTitleInput", onchange = "javascript: document.getElementById('AppTitle').value = document.getElementById('AppTitleInput').value;") 
+  )
+)
+
