@@ -7,8 +7,13 @@ HTML('<h1>Welcome!</h1>
 
 fluidPage(
   fluidRow(
-   tags$input(id = "AppTitleInput", onchange = "document.getElementById('AppTitle').textContent = document.getElementById('AppTitleInput').value;"),
-   textOutput("demo_text", container = tags$h3)
+    textInput("AppTitleInput", 
+              label = "Name", 
+              value = "", 
+              width = "100%",
+              placeholder = "Your Name")
+    
+    
   )
 )
 
