@@ -9,7 +9,7 @@ fluidPage(
   fluidRow(
    tags$div(style= "height:100px; background:red;", textOutput(ns("v"))),
    tags$div(class="form-group shiny-input-container",
-   tags$input(id = ns("AppTitleInput"), type = "text", class= "form-control input-text", onchange = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;"))),
+   tags$input(id = ns("AppTitleInput"), type = "text", class= "form-control input-text", onkeydown = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;"))),
   )
 )
 
