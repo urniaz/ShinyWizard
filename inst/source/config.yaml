@@ -9,6 +9,7 @@ LogoVisible: TRUE
 LogoFilePath: "img/logo.png"
 LogoStyle: "height: 60px; wigth:60px; float:right; vertical-align:middle"
 # --- Navigation ---
+NavTabsVisible: TRUE
 NavTabName: "⚪"
 # --- Next/Prev buttons
 ShowButtons: TRUE
