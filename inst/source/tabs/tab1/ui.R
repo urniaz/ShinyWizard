@@ -9,7 +9,7 @@ fluidPage(
   fluidRow(
    tags$div(style= "height:100px; background:red;", textOutput("v")),
    #tags$input(id = ns("AppTitleInput"), onchange = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;"))
-   shiny::textInput(inputId = ns("AppTitleInput"))
+   shiny::textInput(inputId = ns("AppTitleInput"), label = "sdwewe")
   )
 )
 
