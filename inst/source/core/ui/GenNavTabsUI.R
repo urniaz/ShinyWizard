@@ -33,7 +33,7 @@ GenNavTabsUI <- function(){
 
   # Navigation Bar
   tabs$id <- NS("NavBar", "tabs") # NavBar id = NavBar-tabs
-  tabs$style <- if (NavTabsVisible){""}else{"display:none;"}
+  tabs$style <- if (Config$NavTabsVisible){""}else{"display:none;"}
   tabs$theme <-  shinytheme(config$ShinyWizzardTheme) #ShinyWizzardTheme(config$ShinyWizzardTheme) # ShinyWizzardIncludeCSSAndTheme()
   tabs$title <- config$NavTabName
   tabs <- do.call("navbarPage", tabs)
