@@ -13,3 +13,4 @@ fluidPage(
   )
 )
 
+# zawsze ns() do id !!!!! lacznie z output kady id z ns() !!!!!
