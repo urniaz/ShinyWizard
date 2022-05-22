@@ -2,4 +2,3 @@
 output$v <- renderText({ input$AppTitleInput2 })
 
 print(input)
-print(output)

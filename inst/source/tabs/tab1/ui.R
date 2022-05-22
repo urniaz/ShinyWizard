@@ -8,7 +8,7 @@ HTML('<h1>Welcome!</h1>
 fluidPage(
   fluidRow(
    tags$div(style= "height:100px; background:red;", textOutput(ns("v"))),
-   tags$input(id = ns("AppTitleInput"), class= "shiny-bound-input", onchange = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
+   tags$input(id = ns("AppTitleInput"), class= "form-control shinyjs-resettable shiny-bound-input", onchange = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
    shiny::textInput(inputId = ns("AppTitleInput2"), label = "sdwewe")
   )
 )
