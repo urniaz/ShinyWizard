@@ -1,8 +1,4 @@
+# You can access the value of the widget with input$text, e.g.
+output$v <- renderText({ input$AppTitleInput })
 
-      # ---> Your code goes here ...
-      observeEvent(input$tab1button, {
-        
-        shinyjs::alert("Well done!")
-        
-      })
-      # <--- 
+print(input)

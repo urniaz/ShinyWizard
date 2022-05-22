@@ -1,9 +1,8 @@
 
-      count <- reactiveVal(0)
-      observeEvent(input$button, {
-        count(count() + 1)
+      # ---> Your code goes here ...
+      observeEvent(input$tab1button, {
+        
+        shinyjs::alert("Well done!")
+        
       })
-      output$out <- renderText({
-        count()
-      })
-      count
+      # <--- 

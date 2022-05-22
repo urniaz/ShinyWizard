@@ -1,13 +1,9 @@
-# TabName: Step III
-# TabIcon: table
-
-counterButton <- function(label = "Counter") {
-  tagList(
-    actionButton(ns("button"), label = label),
-    verbatimTextOutput(ns("out"))
-  )
-}
+# TabName: Step I
 
 fluidPage(
-  counterButton( "Counter +1")
+  tagList(
+    actionButton(inputId = ns("tab1button"), #<--- remember to ns() all IDs, the IDs corresponds to output in server file 
+                 label = "alert"),
+    ShinyWizzardThemeSelector()
+  )
 )
