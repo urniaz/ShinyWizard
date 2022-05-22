@@ -13,7 +13,7 @@ fluidPage(
    tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text"), #, onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
    
    tags$script(paste0("document.getElementById('",ns("AppTitleInput"),"').addEventListener('onkeyup', function() {
-         document.getElementById('",ns("AppTitleInput"),"').textContent = document.getElementById('",ns('AppTitle'),"').value;});")),
+         document.getElementById('",ns("AppTitleInput"),"').textContent = document.getElementById('",'AppTitle',"').value;});")),
    
    # AppSubTitle
    tags$label("Application Subtitle ", class="control-label", `for`=ns("AppSubTitle")),
