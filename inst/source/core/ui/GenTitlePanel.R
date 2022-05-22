@@ -1,7 +1,7 @@
 #' Generate Title Panel
 
 GenTitlePanel <- function(){
-  titlePanel(windowTitle = config$WindowTitle,
+  titlePanel(windowTitle = if (config$AppTitle != ""){ config$AppTitle }else{ "ShinyWizard App" },
              fluidRow(
                column(11, 
                       tags$div(id = "AppTitle", style= if (config$AppTitleVisible){}else{print("display:none;")}, config$AppTitle), 
