@@ -12,12 +12,14 @@ fluidPage(
    tags$label("Application Title", class="control-label", `for`=ns("AppTitleInput")),
    tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text", onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
    
+   tags$script(paste0("document.getElementById('",ns("AppTitleInput"),"').addEventListener('onkeyup', function() {
+         document.getElementById('",ns("AppTitleInput"),"').textContent = document.getElementById('",ns('AppTitle'),"').value;});")),
+   
    # AppSubTitle
    tags$label("Application Subtitle ", class="control-label", `for`=ns("AppSubTitle")),
    tags$input(id = ns("AppSubTitle"), value = config$AppSubTitle, type = "text", class= "form-control input-text"),
-   
-   tags$script(paste0("document.getElementById('AppSubTitle').onkeyup = {document.getElementById('AppSubTitle').textContent = document.getElementById('",ns('AppSubTitle'),"').value;}"))
   )
 )
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
+
