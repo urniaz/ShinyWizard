@@ -10,7 +10,7 @@ fluidPage(
 
    # AppTitleInput  
    tags$label("Application Title", class="control-label", `for`=ns("AppTitleInput")),
-   tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text")) #, onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
+   tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text"), #, onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
    
    tags$script(paste0("document.getElementById('",ns("AppTitleInput"),"').addEventListener('onkeyup', function() {
          document.getElementById('",ns("AppTitleInput"),"').textContent = document.getElementById('",ns('AppTitle'),"').value;});")),
