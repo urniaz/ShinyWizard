@@ -7,7 +7,7 @@ AppSubTitleVisible: TRUE
 # --- CSS style ---
 ShinyWizzardTheme: "flatly"
 # --- Logo ---
-LogoVisible: FALSE
+LogoVisible: TRUE
 LogoFilePath: "img/logo.png"
 LogoStyle: "height: 60px; wigth:60px; float:right; vertical-align:middle"
 # --- Navigation ---
