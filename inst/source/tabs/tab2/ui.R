@@ -12,8 +12,9 @@ fluidPage(
    tags$label("Application Title", class="control-label", `for`=ns("AppTitleInput")),
    tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text"), #, onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
    
-   tags$script(paste0("document.getElementById('",ns("AppTitleInput"),"').addEventListener('onkeyup', function() {
-         document.getElementById('",ns("AppTitleInput"),"').textContent = document.getElementById('",'AppTitle',"').value;});")),
+   tags$script(paste0("/*jslint browser:true*/
+   document.getElementById('",ns("AppTitleInput"),"').addEventListener('onkeyup', function() {
+         document.getElementById('AppTitle').textContent = document.getElementById('",ns("AppTitleInput"),"').value;});")),
    
    # AppSubTitle
    tags$label("Application Subtitle ", class="control-label", `for`=ns("AppSubTitle")),
