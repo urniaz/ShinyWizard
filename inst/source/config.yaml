@@ -1,8 +1,9 @@
 # --- App Titles ---
-AppTitle: "Shiny Wizard App"
-AppTitleVisible: FALSE
-AppSubTitle: "Shiny Wizard App"
 WindowTitle: "Shiny Wizard App"
+AppTitle: "Shiny Wizard App"
+AppTitleVisible: TRUE
+AppSubTitle: "Shiny Wizard App"
+AppSubTitleVisible: TRUE
 # --- CSS style ---
 ShinyWizzardTheme: "flatly"
 # --- Logo ---
