@@ -32,7 +32,7 @@ GenNavTabsUI <- function(){
                              icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
-                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons) next_prev_button(i, length(TabsFiles)))
+                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons) next_prev_button(i, length(TabsFiles), ButtonsAlignment))
       )
     }
  }
@@ -47,7 +47,7 @@ GenNavTabsUI <- function(){
 }
 
 #' Generate next prev buttons 
-next_prev_button <- function(i, len){
+next_prev_button <- function(i, len, ButtonsAlignment){
   
   PrevButton <- NULL
   PrevButton <- if (i > 1) actionButton(NS("NavBar", paste0("go_", i, "_", i-1)), "Prev")
