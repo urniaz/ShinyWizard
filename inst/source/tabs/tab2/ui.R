@@ -31,7 +31,6 @@ fluidPage(
    tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",ns("LogoFilePathInput"),"').addEventListener('input', function() {
                document.getElementById('LogoFilePath').src = document.getElementById('",ns("LogoFilePathInput"),"').value;});")),
-# 
 
 # FooterText
    textInput(inputId = ns("FooterTextInput"),
@@ -40,6 +39,9 @@ fluidPage(
    tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",ns("FooterTextInput"),"').addEventListener('input', function() {
                document.getElementById('FooterText').textContent = document.getElementById('",ns("FooterTextInput"),"').value;});")),
+
+# Theme selector
+   ShinyWizzardThemeSelector()
   )
 )
 
