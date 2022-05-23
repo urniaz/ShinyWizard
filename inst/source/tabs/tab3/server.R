@@ -1,6 +1,6 @@
 
       # ---> Your code goes here ...
-      observeEvent(input$tab1button, {
+      observeEvent(input$info_3, {
         
           sendSweetAlert(
             session = session,
