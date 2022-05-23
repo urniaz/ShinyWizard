@@ -31,18 +31,19 @@ fluidPage(
    tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",ns("LogoFilePathInput"),"').addEventListener('input', function() {
                document.getElementById('LogoFilePath').src = document.getElementById('",ns("LogoFilePathInput"),"').value;});")),
+# 
 
-# NavTabName
-   textInput(inputId = ns("NavTabNameInput"),
-          label = "Menu name",
-          value = config$NavTabName),
+# FooterText
+   textInput(inputId = ns("FooterTextInput"),
+          label = "Footer",
+          value = config$FooterText),
    tags$script(paste0("/*jslint browser:true*/
-               document.getElementById('",ns("NavTabNameInput"),"').addEventListener('input', function() {
-               document.getElementById('navbar-brand').textContent = document.getElementById('",ns("NavTabNameInput"),"').value;});")),
+               document.getElementById('",ns("FooterTextInput"),"').addEventListener('input', function() {
+               document.getElementById('FooterText').textContent = document.getElementById('",ns("FooterTextInput"),"').value;});")),
   )
 )
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
 
-# FooterText
+# 
 

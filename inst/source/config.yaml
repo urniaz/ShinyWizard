@@ -12,6 +12,3 @@ ShowButtons: TRUE
 ButtonsAlignment: "center" # left, right
 # --- Footer ---
 FooterText: ""
-
-
-
