@@ -10,7 +10,7 @@ fluidPage(
 
 # AppTitleInput  
    textInput(inputId = ns("AppTitleInput"),
-             label = "Application Title",
+             label = "Title",
              value = config$AppTitle),
    tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",ns("AppTitleInput"),"').addEventListener('input', function() {
@@ -18,12 +18,19 @@ fluidPage(
    
 # AppSubTitle
    textInput(inputId = ns("AppSubTitleInput"),
-             label = "Application Subtitle",
+             label = "Subtitle",
              value = config$AppSubTitle),
    tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",ns("AppSubTitleInput"),"').addEventListener('input', function() {
                document.getElementById('AppSubTitle').textContent = document.getElementById('",ns("AppSubTitleInput"),"').value;});")),
 
+# LogoFilePath
+   textInput(inputId = ns("LogoFilePathInput"),
+          label = "Logo",
+          value = config$LogoFilePath),
+   tags$script(paste0("/*jslint browser:true*/
+               document.getElementById('",ns("LogoFilePathInput"),"').addEventListener('input', function() {
+               document.getElementById('LogoFilePath').src = document.getElementById('",ns("LogoFilePathInput"),"').value;});")),
   )
 )
 
