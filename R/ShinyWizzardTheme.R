@@ -25,11 +25,11 @@ ShinyWizzardTheme <- function(name = ""){
 #' @export
 
 ShinyWizzardThemeSelector <- function() {
-
+  fluidRow(align="center",
     selectInput("shinytheme-selector", "NULL",
                 c(allThemes()),
                 selectize = FALSE
-               )
+               ),
     
     tags$script(
       "$('#shinytheme-selector')
@@ -58,6 +58,7 @@ ShinyWizzardThemeSelector <- function() {
     $link.attr('href', curThemePath);
   });"
     )
+  )  
   
 }
 
