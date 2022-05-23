@@ -30,16 +30,11 @@ ShinyWizzardThemeSelector <- function() {
     # right = "15px",
     # draggable = TRUE,
     style = "width: 250px; z-index: 100000;",
-    div(class = "panel ",
-        # style = "box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);",
-        div(class = "panel-heading", "Select theme:"),
-        div(class = "panel-body",
-            selectInput("shinytheme-selector", NULL,
-                        c(allThemes()),
-                        selectize = FALSE
-            )
-        )
-    ),
+    selectInput("shinytheme-selector", "NULL",
+                c(allThemes()),
+                selectize = FALSE
+               ),
+    
     tags$script(
       "$('#shinytheme-selector')
   .on('change', function(el) {
