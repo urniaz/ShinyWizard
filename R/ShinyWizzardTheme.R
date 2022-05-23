@@ -26,7 +26,7 @@ ShinyWizzardTheme <- function(name = ""){
 
 ShinyWizzardThemeSelector <- function() {
   fluidRow(align="center",
-    selectInput("shinytheme-selector", "NULL",
+    selectInput("shinytheme-selector", "Theme",
                 c(allThemes()),
                 selectize = FALSE
                ),
