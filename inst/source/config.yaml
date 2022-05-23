@@ -4,7 +4,7 @@ AppSubTitle: "Shiny Wizard App" # when "" is not displayed !!!
 # --- CSS style ---
 ShinyWizzardTheme: "flatly"
 # --- Logo ---
-LogoFilePath: "img/logo.png"  # when "" is not displayed !!!
+LogoFilePath: img/logo.png  # when "" is not displayed !!!
 # --- Navigation ---
 NavTabName: "⚪"
 # --- Footer ---
