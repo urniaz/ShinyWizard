@@ -1,11 +1,11 @@
 # --- App Titles ---
-AppTitle: "Shiny Wizard App"    # when "" is not displayed !!!
-AppSubTitle: "Shiny Wizard App" # when "" is not displayed !!!
+AppTitle: Shiny Wizard App    # when "" is not displayed !!!
+AppSubTitle: Shiny Wizard App # when "" is not displayed !!!
 # --- CSS style ---
-ShinyWizzardTheme: "flatly"
+ShinyWizzardTheme: flatly
 # --- Logo ---
 LogoFilePath: img/logo.png  # when "" is not displayed !!!
 # --- Navigation ---
-NavTabName: "⚪"
+NavTabName: ⚪
 # --- Footer ---
-FooterText: ""
+FooterText: 
