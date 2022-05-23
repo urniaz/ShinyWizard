@@ -25,15 +25,11 @@ ShinyWizzardTheme <- function(name = ""){
 #' @export
 
 ShinyWizzardThemeSelector <- function() {
-  shiny::fixedPanel(
-    # top = "15px",
-    # right = "15px",
-    # draggable = TRUE,
-    # style = "width: 250px; z-index: 100000;",
+
     selectInput("shinytheme-selector", "NULL",
                 c(allThemes()),
                 selectize = FALSE
-               ),
+               )
     
     tags$script(
       "$('#shinytheme-selector')
@@ -62,7 +58,7 @@ ShinyWizzardThemeSelector <- function() {
     $link.attr('href', curThemePath);
   });"
     )
-  )
+  
 }
 
 allThemes <- function() {
