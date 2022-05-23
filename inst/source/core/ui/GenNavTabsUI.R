@@ -19,7 +19,7 @@ GenNavTabsUI <- function(){
       ShowButtons <- str_match(FileContent, "# ShowButtons:\\s*(.*?)\\s*\n")[1,2]
           if (is.na(ShowButtons)){ ShowButtons <- TRUE}
       ButtonsAlignment <- str_match(FileContent, "# ButtonsAlignment:\\s*(.*?)\\s*\n")[1,2]
-          if (is.na(ShowButtons)){ ButtonsAlignment <- "center" }
+          if (is.na(ButtonsAlignment)){ ButtonsAlignment <- "center" }
       
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
@@ -32,7 +32,7 @@ GenNavTabsUI <- function(){
                              icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
-                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons) next_prev_button(i, length(TabsFiles), ButtonsAlignment))
+                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons){ next_prev_button(i, length(TabsFiles), ButtonsAlignment)} )
       )
     }
  }
