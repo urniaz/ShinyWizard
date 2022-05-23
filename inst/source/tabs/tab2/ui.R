@@ -6,7 +6,7 @@ HTML('<h1>Welcome!</h1>
     ')
 
 fluidPage(
-  fluidRow(
+  fluidRow(align="center",
 
 # AppTitleInput  
    textInput(inputId = ns("AppTitleInput"),

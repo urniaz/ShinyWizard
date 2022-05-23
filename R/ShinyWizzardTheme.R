@@ -29,7 +29,7 @@ ShinyWizzardThemeSelector <- function() {
     # top = "15px",
     # right = "15px",
     # draggable = TRUE,
-    style = "width: 250px; z-index: 100000;",
+    # style = "width: 250px; z-index: 100000;",
     selectInput("shinytheme-selector", "NULL",
                 c(allThemes()),
                 selectize = FALSE
