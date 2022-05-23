@@ -5,7 +5,6 @@ AppSubTitle: "Shiny Wizard App" # when "" is not displayed !!!
 ShinyWizzardTheme: "flatly"
 # --- Logo ---
 LogoFilePath: "img/logo.png"  # when "" is not displayed !!!
-LogoStyle: "height: 60px; wigth:60px; float:right; vertical-align:middle"
 # --- Navigation ---
 NavTabName: "⚪"
 # --- Next/Prev buttons
