@@ -17,7 +17,9 @@ GenNavTabsUI <- function(){
       TabIcon <- str_match(FileContent, "# TabIcon:\\s*(.*?)\\s*\n")[1,2]
       # --- Next/Prev buttons
       ShowButtons <- str_match(FileContent, "# ShowButtons:\\s*(.*?)\\s*\n")[1,2]
+          if (is.na(ShowButtons)){ ShowButtons <- TRUE}
       ButtonsAlignment <- str_match(FileContent, "# ButtonsAlignment:\\s*(.*?)\\s*\n")[1,2]
+          if (is.na(ShowButtons)){ ButtonsAlignment <- "center" }
       
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
