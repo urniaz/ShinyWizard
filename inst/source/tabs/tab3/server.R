@@ -5,7 +5,7 @@
           sendSweetAlert(
             session = session,
             title = "Information",
-            text = "<b>Something</b> helpful",
+            text = HTML("<b>Something</b> helpful"),
             type = "info"
           )
  
