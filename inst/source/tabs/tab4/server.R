@@ -7,3 +7,5 @@
         count()
       })
       count
+      
+      config$AppTitle <- " akahsajkdksdjsadasdasdas!!!"
