@@ -1,4 +1,10 @@
-# TabName: Step I
+# --- Navigation ---
+# TabName: Tabs
+# TabIcon: list-check
+
+# --- Next/Prev buttons
+# ShowButtons: TRUE
+# ButtonsAlignment: center
 
 fluidPage(
   tagList(
