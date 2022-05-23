@@ -2,10 +2,7 @@
 
 GenFooter <- function(){
   
- if (config$FooterVisible){
-  div(style = config$FooterStyle,
-      
-      HTML(paste0("Created with ShinyWizzard.", config$FooterHTML))
-  )
-  }
+  # Changing this part without written permission is a violation of the license.
+  HTML(paste0("<div style='position: fixed; padding: 10px 30px 10px 10px; bottom: 0; height: 30; width: 100%; background: inherited; text-align: right'>Created with ShinyWizzard. <div id ='FooterText'>", config$FooterText, "</div></div>"))
+
 }

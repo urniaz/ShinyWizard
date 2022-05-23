@@ -8,19 +8,25 @@ HTML('<h1>Welcome!</h1>
 fluidPage(
   fluidRow(
 
-   # AppTitleInput  
-   tags$label("Application Title", class="control-label", `for`=ns("AppTitleInput")),
-   tags$input(id = ns("AppTitleInput"), value = config$AppTitle, type = "text", class= "form-control input-text"), #, onkeyup = paste0("document.getElementById('AppTitle').textContent = document.getElementById('",ns('AppTitleInput'),"').value;")),
-   
+# AppTitleInput  
+   textInput(inputId = ns("AppTitleInput"),
+             label = "Application Title",
+             value = config$AppTitle),
    tags$script(paste0("/*jslint browser:true*/
-   document.getElementById('",ns("AppTitleInput"),"').addEventListener('input', function() {
-         document.getElementById('AppTitle').textContent = document.getElementById('",ns("AppTitleInput"),"').value;});")),
+               document.getElementById('",ns("AppTitleInput"),"').addEventListener('input', function() {
+               document.getElementById('AppTitle').textContent = document.getElementById('",ns("AppTitleInput"),"').value;});")),
    
-   # AppSubTitle
-   tags$label("Application Subtitle ", class="control-label", `for`=ns("AppSubTitle")),
-   tags$input(id = ns("AppSubTitle"), value = config$AppSubTitle, type = "text", class= "form-control input-text"),
+# AppSubTitle
+   textInput(inputId = ns("AppSubTitleInput"),
+             label = "Application Subtitle",
+             value = config$AppSubTitle),
+   tags$script(paste0("/*jslint browser:true*/
+               document.getElementById('",ns("AppSubTitleInput"),"').addEventListener('input', function() {
+               document.getElementById('AppSubTitle').textContent = document.getElementById('",ns("AppSubTitleInput"),"').value;});")),
+
   )
 )
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
 
+# FooterText

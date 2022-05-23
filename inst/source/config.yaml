@@ -1,13 +1,10 @@
 # --- App Titles ---
-AppTitle: "Shiny Wizard App"
-AppTitleVisible: TRUE
-AppSubTitle: "Shiny Wizard App"
-AppSubTitleVisible: TRUE
+AppTitle: "Shiny Wizard App"    # when "" is not displayed !!!
+AppSubTitle: "Shiny Wizard App" # when "" is not displayed !!!
 # --- CSS style ---
 ShinyWizzardTheme: "flatly"
 # --- Logo ---
-LogoVisible: TRUE
-LogoFilePath: "img/logo.png"
+LogoFilePath: "img/logo.png"  # when "" is not displayed !!!
 LogoStyle: "height: 60px; wigth:60px; float:right; vertical-align:middle"
 # --- Navigation ---
 NavTabName: "⚪"
@@ -16,9 +13,7 @@ ShowButtons: TRUE
 ButtonsAlignment: "center" # left, right
 ButtonsStyle: "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;"
 # --- Footer ---
-FooterVisible: TRUE
-FooterHTML: "<i>Copyrights <b>© 2022</b> by the author</i>"
-FooterStyle: "position: fixed; padding: 10px 30px 10px 10px; bottom: 0; height: 30; width: 100%; background: inherited; text-align: right"
+FooterText: ""
 
 
 
