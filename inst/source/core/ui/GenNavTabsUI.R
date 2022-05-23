@@ -33,7 +33,7 @@ GenNavTabsUI <- function(){
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
                              div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons){ next_prev_button(i, length(TabsFiles), ButtonsAlignment)} ),
-                             GenInfoIcon(id = NS("NavBar",paste0("info_", i)))
+                             GenInfoIcon(id = NS(paste0("tab", i),"info"))
       )
     }
  }
