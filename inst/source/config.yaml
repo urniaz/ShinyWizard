@@ -10,7 +10,6 @@ NavTabName: "⚪"
 # --- Next/Prev buttons
 ShowButtons: TRUE
 ButtonsAlignment: "center" # left, right
-ButtonsStyle: "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;"
 # --- Footer ---
 FooterText: ""
 

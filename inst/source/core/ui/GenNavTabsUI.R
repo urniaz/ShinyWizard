@@ -26,7 +26,7 @@ GenNavTabsUI <- function(){
                              icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
-                             div(style = config$ButtonsStyle, if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
+                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
       )
     }
  }
