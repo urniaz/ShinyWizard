@@ -1,5 +1,10 @@
+# --- Navigation ---
 # TabName: Configuration
 # TabIcon: cog
+
+# --- Next/Prev buttons
+# ShowButtons: TRUE
+# ButtonsAlignment: "center"
 
 HTML('<h1>Welcome!</h1>
       <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p>

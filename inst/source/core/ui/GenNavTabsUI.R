@@ -12,8 +12,12 @@ GenNavTabsUI <- function(){
     
     # Extract values from comments 
     FileContent <-readr::read_file(file = FilePath)
+      # --- Navigation ---
       TabName <- str_match(FileContent, "# TabName:\\s*(.*?)\\s*\n")[1,2]
       TabIcon <- str_match(FileContent, "# TabIcon:\\s*(.*?)\\s*\n")[1,2]
+      # --- Next/Prev buttons
+      ShowButtons <- str_match(FileContent, "# ShowButtons:\\s*(.*?)\\s*\n")[1,2]
+      ButtonsAlignment <- str_match(FileContent, "# ButtonsAlignment:\\s*(.*?)\\s*\n")[1,2]
       
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
@@ -26,7 +30,7 @@ GenNavTabsUI <- function(){
                              icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
                              value = paste0("tab", i),
                              try(source(temp, local = TRUE)$value),
-                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (config$ShowButtons) next_prev_button(i, length(TabsFiles)))
+                             div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons) next_prev_button(i, length(TabsFiles)))
       )
     }
  }
@@ -49,7 +53,7 @@ next_prev_button <- function(i, len){
   NextButton <- NULL
   NextButton <- if (i < len) actionButton(NS("NavBar", paste0("go_", i, "_", i+1)), "Next")
   
-  switch(config$ButtonsAlignment,
+  switch(ButtonsAlignment,
          "center" = {
            fluidRow(
              column(5,""),

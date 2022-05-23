@@ -7,8 +7,5 @@ ShinyWizzardTheme: "flatly"
 LogoFilePath: "img/logo.png"  # when "" is not displayed !!!
 # --- Navigation ---
 NavTabName: "⚪"
-# --- Next/Prev buttons
-ShowButtons: TRUE
-ButtonsAlignment: "center" # left, right
 # --- Footer ---
 FooterText: ""
