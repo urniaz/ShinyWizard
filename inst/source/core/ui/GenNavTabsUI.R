@@ -20,6 +20,9 @@ GenNavTabsUI <- function(){
           if (is.na(ShowButtons)){ ShowButtons <- TRUE}
       ButtonsAlignment <- str_match(FileContent, "# ButtonsAlignment:\\s*(.*?)\\s*\n")[1,2]
           if (is.na(ButtonsAlignment)){ ButtonsAlignment <- "center" }
+      # --- Info ---
+      InfoTitle <- str_match(FileContent, "# InfoTitle:\\s*(.*?)\\s*\n")[1,2]
+      InfoMessage <- str_match(FileContent, "# InfoMessage:\\s*(.*?)\\s*\n")[1,2]
       
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
@@ -28,12 +31,18 @@ GenNavTabsUI <- function(){
       temp <- tempfile()
       write_file(paste0(pre,FileContent),temp)
       
+      # Generate tabs
       tabs[[i]] <-  tabPanel(if(is.na(TabName)){paste0("Tab",i)}else{TabName},
+                             # Icon
                              icon = if(is.na(TabIcon)){NULL}else{icon(TabIcon, verify_fa = FALSE)},
+                             # Value
                              value = paste0("tab", i),
+                             # Load code
                              try(source(temp, local = TRUE)$value),
+                             # Generate buttons
                              div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons){ next_prev_button(i, length(TabsFiles), ButtonsAlignment)} ),
-                             GenInfoIcon(id = NS(paste0("tab", i),"info_3"))
+                             # Generate info button
+                             if (is.na(InfoMessage) == FALSE){ GenInfoIcon(id = NS(paste0("tab", i),"info"), InfoTitle, InfoMessage) }
       )
     }
  }
