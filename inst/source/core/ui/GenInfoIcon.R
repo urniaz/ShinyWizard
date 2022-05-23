@@ -4,7 +4,7 @@ GenInfoIcon <- function(id){
   fluidRow(
   actionButton(inputId = id, #<--- remember to ns() all IDs, the IDs corresponds to output in server file 
                label = HTML("<i class='fas fa-info-circle'></i>"),
-               style='position: fixed; bottom: 0; right: 0; margin-bottom: 60px; margin-right -15 px; width:80 px; height: 80px; color: #87CEFA, font-weight:600; font-size:medium;' ),
+               style='position: fixed; bottom: 0; right: 0; margin-bottom: 60px; margin-right: -15 px; width: 180 px; height: 80px; color: #87CEFA, font-weight:600; font-size: large;' ),
   
   tags$script(paste0("/*jslint browser:true*/
                document.getElementById('",id,"').addEventListener('click', function() {swal('Good job!', 'You clicked the ",id," button!', 'info');});"))
