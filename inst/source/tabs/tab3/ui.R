@@ -1,6 +1,6 @@
 # --- Navigation ---
 # TabName: Tabs
-# TabIcon: list-check
+# TabIcon: file
 
 # --- Next/Prev buttons
 # ShowButtons: TRUE
