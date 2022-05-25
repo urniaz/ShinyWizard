@@ -9,15 +9,12 @@
 # InfoTitle: tir
 # InfoMessage: mes
 
-HTML('<h1>Welcome!</h1>
-      <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p>
-    ')
-
 fluidPage(
   fluidRow(
      HTML('<center><h1>Welcome!</h1>
-      <p>If youre seeing this page, that means lncRna is installed and running. <strong>Congratulations!</strong> </p></center>
-    ')
+      <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
+    '),
+     shinyDirButton("directory", "Folder select", "Please select a folder")
   )
 )
 

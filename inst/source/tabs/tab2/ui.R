@@ -46,7 +46,7 @@ fluidPage(
                document.getElementById('FooterText').textContent = document.getElementById('",ns("FooterTextInput"),"').value;});")),
 
 # Theme selector
-   ShinyWizzardThemeSelector()
+   ShinyWizard::ShinyWizzardThemeSelector()
   )
 )
 
