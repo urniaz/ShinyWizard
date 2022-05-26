@@ -1,8 +1,8 @@
 # You can access the value of the widget with input$text, e.g.
 
 
-path = readDirectoryInput(session, 'directory')
-updateDirectoryInput(session, 'directory', value = path)
+# path = readDirectoryInput(session, 'directory')
+# updateDirectoryInput(session, 'directory', value = path)
 
 # observeEvent(
 #   ignoreNULL = TRUE,
