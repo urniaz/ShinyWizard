@@ -2,6 +2,7 @@
 
 observeEvent(input$directory, {
   
+  alert("sdsdds")
   output$directorypath <- renderText("ddd")
 })
 
