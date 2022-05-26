@@ -135,8 +135,7 @@ choose.dir.windows <- function(default = NA, caption = NA, useNew = TRUE) {
 }
 
 observeEvent(input$directory, {
-  dir <- choose.dir()
-  output$directorypath <- renderText(dir)
+  choose.dir()
 })
 
 
