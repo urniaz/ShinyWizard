@@ -17,8 +17,9 @@ fluidPage(
        id="avatar" name="avatar" class="form-control">
           </div>'),
      verbatimTextOutput("directorypath"),
-     directoryInput('directory', label = 'select a directory')
-     
+     textInput(inputId = ns("directory"),
+               label = "Title")
+
   )
 )
 
