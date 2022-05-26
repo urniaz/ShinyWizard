@@ -13,9 +13,9 @@ fluidPage(
   fluidRow(
      HTML('<center><h1>Welcome!</h1>
       <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
-    <input type="file"
-       id="avatar" name="avatar">
-          '),
+    <div class="form-group shiny-input-container"><input type="file"
+       id="avatar" name="avatar" class="form-control">
+          </div>'),
      verbatimTextOutput("directorypath")
      
   )
