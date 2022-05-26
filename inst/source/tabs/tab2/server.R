@@ -3,10 +3,11 @@
 # volumes <- c(Home = fs::path_home(), "R Installation" = R.home(), getVolumes()())
 # shinyDirChoose(input, "directory", roots = volumes, session = session, allowDirCreate = TRUE)
 
-shinyDirChoose(input,"button2",roots=getVolumes())
+volumes = getVolumes()
+shinyDirChoose(input, "folderChoose", roots = volumes, session = session)
 
 output$directorypath <- renderPrint({
-  if (is.integer(input$directory)) {
+  if (is.integer(input$folderChoose)) {
     cat("No directory has been selected (shinyDirChoose)")
   } else {
     parseDirPath(volumes, input$directory)
