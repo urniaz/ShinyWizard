@@ -17,7 +17,7 @@ fluidPage(
        id="avatar" name="avatar" class="form-control">
           </div>'),
      verbatimTextOutput("directorypath"),
-     textInput(inputId = ns("directory"),
+    shiny::actionButton(inputId = ns("directory"),
                label = "Title")
 
   )
