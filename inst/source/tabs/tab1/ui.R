@@ -16,7 +16,8 @@ fluidPage(
     <div class="form-group shiny-input-container"><input type="file"
        id="avatar" name="avatar" class="form-control">
           </div>'),
-     verbatimTextOutput("directorypath")
+     verbatimTextOutput("directorypath"),
+     directoryInput('directory', label = 'select a directory')
      
   )
 )
