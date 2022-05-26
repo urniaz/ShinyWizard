@@ -134,6 +134,12 @@ choose.dir.windows <- function(default = NA, caption = NA, useNew = TRUE) {
   return(path)
 }
 
-output$directory <- renderText(choose.dir())
+observeEvent(input$directory){
+  
+  output$directorypath <- renderText(choose.dir())
+  
+}
+
+
 
 print(input)
