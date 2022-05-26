@@ -1,7 +1,7 @@
 # You can access the value of the widget with input$text, e.g.
 
 volumes <- c(Home = fs::path_home(), "R Installation" = R.home(), getVolumes()())
-shinyDirChoose(input, "directory", roots = volumes, session = session, restrictions = system.file(package = "base"), allowDirCreate = FALSE)
+shinyDirChoose(input, "directory", roots = volumes, session = session, allowDirCreate = TRUE)
 
 output$directorypath <- renderPrint({
   if (is.integer(input$directory)) {
