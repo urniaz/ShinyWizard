@@ -14,7 +14,7 @@ fluidPage(
      HTML('<center><h1>Welcome!</h1>
       <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
     '),
-     shinyDirButton("folderChoose","Choose Folder","Choose working directory"),
+     shinyDirButton("data_folder","Choose Folder","Choose working directory"),
      verbatimTextOutput("directorypath")
      
   )

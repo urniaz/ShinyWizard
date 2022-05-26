@@ -3,8 +3,10 @@
 # volumes <- c(Home = fs::path_home(), "R Installation" = R.home(), getVolumes()())
 # shinyDirChoose(input, "directory", roots = volumes, session = session, allowDirCreate = TRUE)
 
-volumes = getVolumes()
-shinyDirChoose(input, "folderChoose", roots = volumes, session = session)
+# volumes = getVolumes()
+# shinyDirChoose(input, "folderChoose", roots = volumes, session = session)
+
+shinyDirChoose(input, 'data_folder', session=session, roots=c(home='~'), filetypes=c('', '.txt'))
 
 output$directorypath <- renderPrint({
   if (is.integer(input$folderChoose)) {
