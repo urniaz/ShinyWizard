@@ -5,7 +5,7 @@ rm(list = ls(all.names = TRUE))
 config <- yaml::yaml.load_file('config.yaml')
 
 # Package names
-packages <- c("devtools", "shiny", "shinythemes", "shinydashboard", "shinyjs", "yaml", "readr", "stringr", "shinyWidgets", "shinyFiles")
+packages <- c("devtools", "shiny", "shinythemes", "shinydashboard", "shinyjs", "yaml", "readr", "stringr", "shinyWidgets")
 
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
