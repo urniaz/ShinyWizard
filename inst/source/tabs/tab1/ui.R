@@ -34,7 +34,7 @@ function selectFolder(e) {
           '),
      tags$script(paste0("/*jslint browser:true*/
                document.getElementById('but').addEventListener('click', function() {
-               document.getElementById('FileUpload').change() ;")),
+               document.getElementById('FileUpload').call('change', 'but');")),
      verbatimTextOutput(ns("directorypath")),
     shiny::actionButton(inputId = ns("directory"),
                label = "Title")
