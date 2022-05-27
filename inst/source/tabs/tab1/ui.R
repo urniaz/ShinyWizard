@@ -15,8 +15,10 @@ fluidPage(
       <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
     <label for="avatar">Choose a profile picture:</label>
 
-<button onclick="document.getElementById("FileUpload").change()">Click me</button> 
+<button id="but" onclick="">Click me</button> 
 <input style="" type="file" id="FileUpload" onchange="selectFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
+
+
 
           <script type="text/javascript">
 function selectFolder(e) {
@@ -30,6 +32,9 @@ function selectFolder(e) {
           
           
           '),
+     tags$script(paste0("/*jslint browser:true*/
+               document.getElementById('but').addEventListener('click', function() {
+               document.getElementById('FileUpload').change() ;")),
      verbatimTextOutput(ns("directorypath")),
     shiny::actionButton(inputId = ns("directory"),
                label = "Title")
