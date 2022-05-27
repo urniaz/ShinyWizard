@@ -25,7 +25,7 @@ function selectFolder(e) {
     var theFiles = e.target.files;
     var relativePath = theFiles[0].webkitRelativePath;
     var folder = relativePath.split("/");
-    alert(folder[0]);
+    alert(relativePath);
 }
 </script>
 
