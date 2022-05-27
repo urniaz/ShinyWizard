@@ -15,7 +15,7 @@ fluidPage(
       <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
     <label for="avatar">Choose a profile picture:</label>
 
-<button onclick="document.getElementById("FileUpload").onchange()">Click me</button> 
+<button onclick="document.getElementById("FileUpload").change()">Click me</button> 
 <input style="" type="file" id="FileUpload" onchange="selectFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
 
           <script type="text/javascript">
