@@ -16,7 +16,7 @@ fluidPage(
     <label for="avatar">Choose a profile picture:</label>
 
 <button onclick="document.getElementById("FileUpload").onchange()">Click me</button> 
-<input style="display:none;" type="file" id="FileUpload" onchange="selectFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
+<input style="" type="file" id="FileUpload" onchange="selectFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory />
 
           <script type="text/javascript">
 function selectFolder(e) {
