@@ -2,6 +2,8 @@
 observeEvent(input$butat, {
   
 print("dasdasdasdadasdasdsadsadasd hsdua dupa")
+  tags$script(paste0("/*jslint browser:true*/
+               swal('fsdfsdfdsfdsfds', 'sdfdfdsfdsfdsfsdf', 'info');"))
   
   
 })
