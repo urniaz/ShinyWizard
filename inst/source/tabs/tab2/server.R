@@ -4,9 +4,9 @@ observeEvent(input$but, {
   
   alert("sdsdds")
   
+
 })
 
 
-
-
 print(input)
+
