@@ -20,7 +20,9 @@ fluidPage(
        "label",
        buttonLabel = "Browse...",
        placeholder = "No file selected"
-     )
+     ),
+     shinyDirButton("dir", "Input directory", "Upload"),
+     verbatimTextOutput("dir", placeholder = TRUE)  
  )
 )
 
