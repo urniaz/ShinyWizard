@@ -13,7 +13,7 @@ fluidPage(
   fluidRow(
      HTML('<center><h1>Welcome!</h1>
       <p>If youre seeing this page, that means ShinyWizard is installed and running. <strong>Congratulations!</strong> </p></center>
-            <a href="#" onclick="javascript:document.getElementById("NavBar-go_2_1").click();">Google Chrome</a>
+            <button id="NavBar-go_1_2" type="button" class="btn btn-default action-button shiny-bound-input">Next</button>
           ')
  )
 )
