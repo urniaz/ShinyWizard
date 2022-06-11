@@ -3,7 +3,7 @@
 # TabIcon: home
 
 # --- Next/Prev buttons
-# ShowButtons: FALSE
+# ShowButtons: TRUE
 
 # --- Info ---
 # InfoTitle: tir
