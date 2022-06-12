@@ -26,7 +26,7 @@ current.tab <- eventReactive(input$tabs, {
   # don't accidentally remove main tab:
   if (!identical(input$tabs, "main")) {
     input$tabs
-    print(input$tabs)
+    print(rv)
   } else {
     NULL
   }
