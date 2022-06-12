@@ -12,12 +12,14 @@
 
 
 fluidPage(
+  ## CONTENT PANEL ----- :
+  div(style="display:inline-block",
+      p("Add a new tab"),
+      actionButton(ns("add"), "Add", icon = icon("plus-circle")),
+      style="float:right"),
+  
   tabsetPanel(id = ns("tabs"),
               tabPanel(title = "Main",
-                       value = "main",
-                       
-                       ## CONTENT PANEL ----- :
-                       p("Add a new tab"),
-                       actionButton(ns("add"), "Add", icon = icon("plus-circle"))
+                       value = "main"
               ))
 )
