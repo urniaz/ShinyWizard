@@ -26,6 +26,9 @@ fluidPage(
               <button id="NavBar-go_1_2" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
             </div>
           </div>
+           <div class="example z-depth-1">
+            .z-depth-1
+        </div>
       '),
      fileInput("projectFile", "Open previous project", accept = ".zip"),
      HTML("</center>")
