@@ -15,12 +15,20 @@ fluidPage(
       <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of next step, below.
       <br />
       <br />
-      <div style="background-color: #cfc ;">
-      <button id="NavBar-go_1_2" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
-      </ div>
-      <div style="background-color: #cfc ;">'),
+      <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#!" class="btn btn-primary">Go somewhere</a>
+              <button id="NavBar-go_1_2" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
+            </div>
+          </div>
+      '),
      fileInput("projectFile", "Open previous project", accept = ".zip"),
-     HTML("</ div></center>")
+     HTML("</center>")
  )
 )
 
