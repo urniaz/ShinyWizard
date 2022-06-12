@@ -14,9 +14,9 @@ observeEvent(input$add, {
                      value = shinyInput("new_tab", rv$counter),
                      
                      ## CONTENT PANEL ----- :
-                     tags$h4(paste("This is tab:", rv$counter)),
-                     p("Remove this tab"),
-                     actionButton(shinyInput("remove_btn", rv$counter), "Remove", icon = icon("minus-circle"))
+                     div(style="display:inline-block; float:right;",
+                         actionButton(shinyInput("remove_btn", rv$counter), "Remove", icon = icon("minus-circle")),
+                     ),
             )
   )
 })
