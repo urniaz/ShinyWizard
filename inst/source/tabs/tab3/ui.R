@@ -10,30 +10,14 @@
 # InfoTitle: tir
 # InfoMessage: mes
 
+
 fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      actionButton(ns("add"), "Add 'Dynamic' tab"),
-      actionButton(ns("remove"), "Remove 'Foo' tab")
-    ),
-    mainPanel(
-      tabsetPanel(id = ns("tabs"),
-                  tabPanel("Hello", 
-                           fluidPage(
-                             fluidRow(
-                               column(12, fluidRow(
-                                 column(6,
-                                        HTML("<b>ui.R</b><hr/>")),
-                                 column(6,
-                                        HTML("<b>server.R</b><hr/>"))
-                               )
-                               )
-                             )
-                           )
-                           ),
-                  
-      )
-    )
-  )
+  tabsetPanel(id = ns("tabs"),
+              tabPanel(title = "Main",
+                       value = "main",
+                       
+                       ## CONTENT PANEL ----- :
+                       p("Add a new tab"),
+                       actionButton(ns("add"), "Add", icon = icon("plus-circle"))
+              ))
 )
-  
