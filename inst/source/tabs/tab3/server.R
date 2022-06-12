@@ -38,7 +38,7 @@ observe({
   if (rv$counter > 0L) {
     lapply(seq(rv$counter), function(x) {
       observeEvent(input[[paste("remove_btn", x, sep = "_")]], {
-        removeTab(inputId = "tabs", target = current.tab())
+        removeTab(inputId = ns("tabs"), target = current.tab())
       })
     })
   }
