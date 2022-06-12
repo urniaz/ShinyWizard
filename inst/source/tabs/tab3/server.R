@@ -26,12 +26,12 @@ current.tab <- eventReactive(input$tabs, {
   # don't accidentally remove main tab:
   if (!identical(input$tabs, "main")) {
     input$tabs
+    print(input$tabs)
   } else {
     NULL
   }
 })
 
-print(input$tabs)
 
 ## OBSERVERS FOR THE REMOVE BTNS:
 observe({
