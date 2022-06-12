@@ -31,6 +31,8 @@ current.tab <- eventReactive(input$tabs, {
   }
 })
 
+print(current.tab)
+
 ## OBSERVERS FOR THE REMOVE BTNS:
 observe({
   if (rv$counter > 0L) {
