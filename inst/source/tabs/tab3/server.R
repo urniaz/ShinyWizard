@@ -8,7 +8,7 @@ observeEvent(input$add, {
 }, ignoreInit = TRUE)
 
 observeEvent(input$add, {
-  appendTab(inputId = ns("tabs"),
+  appendTab(inputId = "tabs",
             tabPanel(title = paste("Tab", rv$counter),
                      value = shinyInput("new_tab", rv$counter),
                      
