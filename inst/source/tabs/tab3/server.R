@@ -1,3 +1,4 @@
+
 shinyInput <- function(name, id) paste(name, id, sep = "_")
 rv <- reactiveValues(counter = 0L)
 
@@ -35,7 +36,7 @@ observe({
   if (rv$counter > 0L) {
     lapply(seq(rv$counter), function(x) {
       observeEvent(input[[paste("remove_btn", x, sep = "_")]], {
-        removeTab(inputId = ns("tabs"), target = current.tab())
+        removeTab(inputId = "tabs", target = current.tab())
       })
     })
   }
