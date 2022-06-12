@@ -3,11 +3,10 @@
 
 observeEvent(input$add, {
   insertTab(inputId = "tabs",
-            tabPanel("Dynamic", "This a dynamically-added tab"),
-            target = "Bar"
+            tabPanel("Dynamic", "This a dynamically-added tab")
   )
 })
 
 observeEvent(input$remove, {
-  removeTab(inputId = "tabs", target = "Foo")
+  removeTab(inputId = "tabs")
 })
