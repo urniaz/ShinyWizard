@@ -11,9 +11,18 @@
 # InfoMessage: mes
 
 
-navbarPage("Navbar page", id = ns("tabs"),
-                 tabPanel(ns("Home"),
-                          actionButton(ns("prepend"), "Prepend a navbarMenu"),
-                          actionButton(ns("append"), "Append a navbarMenu")
-                 )
+fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      actionButton("add", "Add 'Dynamic' tab"),
+      actionButton("remove", "Remove 'Foo' tab")
+    ),
+    mainPanel(
+      tabsetPanel(id = "tabs",
+                  tabPanel("Hello", "This is the hello tab"),
+                  tabPanel("Foo", "This is the foo tab"),
+                  tabPanel("Bar", "This is the bar tab")
+      )
+    )
+  )
 )
