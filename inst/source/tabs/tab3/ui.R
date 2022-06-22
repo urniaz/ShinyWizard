@@ -18,6 +18,6 @@ fluidPage(
                        
                        ## CONTENT PANEL ----- :
                        p("Add a new tab"),
-                       actionButton(ns("add"), "Add", icon = icon("plus-circle"))
+                       actionButton("add", "Add", icon = icon("plus-circle"))
               ))
 )
