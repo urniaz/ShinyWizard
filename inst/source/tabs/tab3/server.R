@@ -1,6 +1,6 @@
 observeEvent(input$add, {
   insertTab(inputId = "tabs",
-            tabPanel("Dynamic", actionButton(ns("remove"), "Remove Dynamic tab")),
+            tabPanel("Dynamic", actionButton(ns("remove"), "Remove 'Foo' tab")),
             target = "Tab"
   )
 })
