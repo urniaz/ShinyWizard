@@ -11,14 +11,9 @@
 # InfoMessage: mes
 
 
-fluidPage(
-  ## CONTENT PANEL ----- :
-  div(style="display:inline-block; float:right;",
-      actionButton(ns("add"), "Add", icon = icon("plus-circle")),
-      ),
-  
-  tabsetPanel(id = ns("tabs"),
-              tabPanel(title = "Main",
-                       value = "main"
-              ))
+navbarPage("Navbar page", id = ns("tabs"),
+                 tabPanel(ns("Home"),
+                          actionButton(ns("prepend"), "Prepend a navbarMenu"),
+                          actionButton(ns("append"), "Append a navbarMenu")
+                 )
 )
