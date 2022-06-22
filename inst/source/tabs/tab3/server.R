@@ -1,9 +1,12 @@
 observeEvent(input$add, {
-  insertTab(inputId = "tabs",
-            tabPanel("Dynamic", "This a dynamically-added tab"),
-            target = "Bar"
+  appendTab(inputId = "tabs",
+            tabPanel("Dynamic", 
+                     "This a dynamically-added tab",
+                     value = "tab_1")
   )
 })
+
+
 observeEvent(input$remove, {
   removeTab(inputId = "tabs", target = "Foo")
 })
