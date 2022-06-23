@@ -30,7 +30,15 @@ fluidPage(
             .z-depth-1
         </div>
       '),
-     fileInput("projectFile", "Open previous project", accept = ".zip"),
+     sidebarLayout(
+       sidebarPanel(
+         fileInput(ns("file1"), "Choose CSV File", accept = ".csv"),
+         checkboxInput(ns("header"), "Header", TRUE)
+       ),
+       mainPanel(
+         tableOutput(ns("contents"))
+       )
+     ),
      HTML("</center>")
  )
 )
