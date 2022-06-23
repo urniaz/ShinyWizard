@@ -14,11 +14,11 @@
 fluidPage(
   sidebarLayout(
     sidebarPanel(
-      actionButton(ns("add"), "Add 'Dynamic' tab"),
-      actionButton(ns("remove"), "Remove 'Foo' tab")
+      actionButton("add", "Add 'Dynamic' tab"),
+      actionButton("remove", "Remove 'Foo' tab")
     ),
     mainPanel(
-      tabsetPanel(id = ns("tabs"),
+      tabsetPanel(id = "tabs",
                   tabPanel("Hello", "This is the hello tab"),
                   tabPanel("Foo", "This is the foo tab"),
                   tabPanel("Bar", "This is the bar tab")
