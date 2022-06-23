@@ -6,4 +6,3 @@ observeEvent(input$add, {
 observeEvent(input$remove, {
   removeTab(inputId = "tabs", target = "Foo")
 })
-}
