@@ -13,8 +13,8 @@
 
 fluidPage(
   fluidRow(
-    actionLink("newTab", "Append tab"),
-    actionLink("removeTab", "Remove current tab")
+    actionLink(ns("newTab"), "Append tab"),
+    actionLink(ns("removeTab"), "Remove current tab")
   ),
-  tabsetPanel(id="myTabs", type="pills")
+  tabsetPanel(id=ns("myTabs"), type="pills")
 )
