@@ -19,9 +19,7 @@ fluidPage(
     ),
     mainPanel(
       tabsetPanel(id = ns("tabs"),
-                  tabPanel("Hello", "This is the hello tab"),
-                  tabPanel("Foo", "This is the foo tab"),
-                  tabPanel("Bar", "This is the bar tab")
+                  tabPanel("Foo", actionButton(ns("remove"), "Remove 'Foo' tab"))
       )
     )
   )
