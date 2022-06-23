@@ -1,11 +1,8 @@
-rv <- reactiveValues(counter = 0L)
-
-observeEvent(input$add, {
-  rv$counter <- rv$counter + 1L
-  appendTab(inputId = "tabs",
-            tabPanel("Dynamic", paste("This a dynamically-added tab", rv$counter))
-  )
+tabIndex <- reactiveVal(0)
+observeEvent(input$newTab, {
+  tabIndex(tabIndex() + 1)
+  appendTab("myTabs", tabPanel(tabIndex(), tags$p(paste("I'm tab", tabIndex()))), select=TRUE)
 })
-observeEvent(input$remove, {
-  removeTab(inputId = "tabs", target = "Foo")
+observeEvent(input$removeTab, {
+  removeTab("myTabs", target=input$myTabs)
 })

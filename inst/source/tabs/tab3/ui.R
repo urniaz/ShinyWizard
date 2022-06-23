@@ -12,15 +12,9 @@
 
 
 fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      actionButton(ns("add"), "Add 'Dynamic' tab"),
-      actionButton(ns("remove"), "Remove 'Foo' tab")
-    ),
-    mainPanel(
-      tabsetPanel(id = ns("tabs"),
-                  tabPanel("Foo", actionButton(ns("remove"), "Remove 'Foo' tab"))
-      )
-    )
-  )
+  fluidRow(
+    actionLink("newTab", "Append tab"),
+    actionLink("removeTab", "Remove current tab")
+  ),
+  tabsetPanel(id="myTabs", type="pills")
 )
