@@ -1,6 +1,9 @@
 tabIndex <- reactiveVal(0)
+
 observeEvent(input$newTab, {
+  
   tabIndex(tabIndex() + 1)
+  
   appendTab("myTabs", tabPanel(tabIndex(), 
                                textAreaInput(inputId = paste("server-",tabIndex()),
                                              label = paste("Tab ",tabIndex(), "server.R"),
