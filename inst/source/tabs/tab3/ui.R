@@ -13,8 +13,8 @@
 
 fluidPage(
   fluidRow(
-    actionButton(ns("newTab"), "Append tab"),
-    actionButton(ns("removeTab"), "Remove current tab")
+    actionButton(ns("newTab"), "Append tab", icon = icon("area-chart")),
+    actionButton(ns("removeTab"), "Remove current tab", icon = icon("area-chart"))
   ),
   tabsetPanel(id=ns("EditTabs"), type="pills")
 )
