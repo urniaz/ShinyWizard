@@ -4,7 +4,10 @@ observeEvent(input$newTab, {
   appendTab("myTabs", tabPanel(tabIndex(), tags$p(paste("I'm tab", tabIndex()))), select=TRUE)
 })
 observeEvent(input$removeTab, {
-  if (confirmSweetAlert(inputId="conf", text = input$myTabs)){
+   
+  res<- confirmSweetAlert(inputId="conf", text = input$myTabs)
+  
+   if (res){
     removeTab("myTabs", target=input$myTabs)
   }
 })
