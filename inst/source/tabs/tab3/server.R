@@ -17,17 +17,17 @@ observeEvent(input$newTab, {
 observeEvent(input$removeTab, {
    
   res <- ask_confirmation(
-    inputId = "myconfirmation",
+    inputId = "DelTabConfirmation",
     title = paste("Want to",as.character(input$myTabs)," delete ?")
   )
 })
 
-observeEvent(input$myconfirmation, {
+observeEvent(input$DelTabConfirmation, {
   
     removeTab("myTabs", target=input$myTabs)
 })
 
 observeEvent(input$server3, {
   
-  removeTab("myTabs", target=input$myTabs)
+  ask_confirmation("myTabsdsd", title = "dupa", text = "dupa")
 })
