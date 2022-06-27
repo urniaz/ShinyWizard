@@ -4,7 +4,7 @@ observeEvent(input$newTab, {
   
   tabIndex(tabIndex() + 1)
   
-  appendTab("myTabs", tabPanel(tabIndex(), 
+  appendTab("EditTabs", tabPanel(tabIndex(), 
                                textAreaInput(inputId = paste0("tab3-server",tabIndex()),
                                              label = paste("Tab ",tabIndex(), "server.R"),
                                              value = paste("I'm tab", tabIndex()),
@@ -18,16 +18,10 @@ observeEvent(input$removeTab, {
    
   res <- ask_confirmation(
     inputId = "DelTabConfirmation",
-    title = paste("Want to",as.character(input$myTabs)," delete ?")
+    title = paste("Want to",as.character(input$EditTabs)," delete ?")
   )
 })
 
 observeEvent(input$DelTabConfirmation, {
-  
-    removeTab("myTabs", target=input$myTabs)
-})
-
-observeEvent(input$server3, {
-  
-  ask_confirmation("myTabsdsd", title = "dupa", text = "dupa")
+    removeTab("EditTabs", target=input$EditTabs)
 })
