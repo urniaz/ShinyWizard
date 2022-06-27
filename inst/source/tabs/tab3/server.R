@@ -7,7 +7,7 @@ observeEvent(input$removeTab, {
    
   res <- ask_confirmation(
     inputId = "myconfirmation",
-    title = paste("Want to",as.character(input$myTabsm)," delete ?")
+    title = paste("Want to",as.character(input$myTabs)," delete ?")
   )
 })
 
