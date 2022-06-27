@@ -5,7 +5,10 @@ observeEvent(input$newTab, {
 })
 observeEvent(input$removeTab, {
    
-  res<- confirmSweetAlert(inputId="conf", text = input$myTabs)
+  res <- ask_confirmation(
+    inputId = "myconfirmation",
+    title = paste("Want to",input$myTabsm," delete ?")
+  )
   
    if (res){
     removeTab("myTabs", target=input$myTabs)
