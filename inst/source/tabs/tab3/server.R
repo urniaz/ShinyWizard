@@ -8,8 +8,16 @@ observeEvent(input$newTab, {
                                textAreaInput(inputId = paste0("tab3-server",tabIndex()),
                                              label = paste("Tab ",tabIndex(), "server.R"),
                                              value = paste("I'm tab", tabIndex()),
-                                             width = "100%",
-                                             height = "100%")
+                                             width = "50 %",
+                                             height = "100 %",
+                                             resize = "both"),
+                               
+                               textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
+                                             label = paste("Tab ",tabIndex(), "ui.R"),
+                                             value = paste("I'm tab", tabIndex()),
+                                             width = "50 %",
+                                             height = "100 %",
+                                             resize = "both")
                                ), 
             select=TRUE)
 })
