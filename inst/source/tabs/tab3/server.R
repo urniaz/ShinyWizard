@@ -2,10 +2,15 @@ tabIndex <- reactiveVal(0)
 observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   appendTab("myTabs", tabPanel(tabIndex(), 
-                               textAreaInput("caption", "Caption", paste("I'm tab", tabIndex()), width = "100%", height = "100%")
+                               textAreaInput(inputId = paste(ns("server-",tabIndex())),
+                                             label = paste("Tab ",tabIndex(), "server.R"),
+                                             value = paste("I'm tab", tabIndex()),
+                                             width = "100%",
+                                             height = "100%")
                                ), 
             select=TRUE)
 })
+
 observeEvent(input$removeTab, {
    
   res <- ask_confirmation(
