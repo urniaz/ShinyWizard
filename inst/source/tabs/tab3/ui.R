@@ -16,5 +16,6 @@ fluidPage(
     actionButton(ns("newTab"), "Append tab", icon = icon("plus")),
     actionButton(ns("removeTab"), "Remove current tab", icon = icon("minus"))
   ),
-  tabsetPanel(id=ns("EditTabs"), type="pills")
+  tags$br(),
+  tabsetPanel(id=ns("EditTabs"), type="tabs")
 )
