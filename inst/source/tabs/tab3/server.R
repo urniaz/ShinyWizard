@@ -9,8 +9,9 @@ observeEvent(input$removeTab, {
     inputId = "myconfirmation",
     title = paste("Want to",input$myTabsm," delete ?")
   )
+})
+
+observeEvent(input$myconfirmation, {
   
-   if (input$myconfirmation){
     removeTab("myTabs", target=input$myTabs)
-  }
 })
