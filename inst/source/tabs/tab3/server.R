@@ -15,8 +15,8 @@ observeEvent(input$newTab, {
 })
 
 observeEvent(input$removeTab, {
-   
-  res <- ask_confirmation(
+    
+    ask_confirmation(
     inputId = "DelTabConfirmation",
     title = paste("Want to",as.character(input$EditTabs)," delete ?")
   )
