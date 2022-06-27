@@ -10,7 +10,7 @@ observeEvent(input$removeTab, {
     title = paste("Want to",input$myTabsm," delete ?")
   )
   
-   if (res){
+   if (input$myconfirmation){
     removeTab("myTabs", target=input$myTabs)
   }
 })
