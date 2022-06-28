@@ -6,9 +6,7 @@ save_config.yaml <- function(input, output, session){
   #  - Load configuration file orginal
   temp_config <- yaml::yaml.load_file(system.file("source/config.yaml", package = "ShinyWizard"))
   #  - Edit original variables
-  #temp_config$AppTitle <- input$AppTitleInput
-  
-  print(reactive({input$AppTitleInput}))
+  temp_config$AppTitle <- reactive({input$AppTitleInput})
 
   print(temp_config)
  
