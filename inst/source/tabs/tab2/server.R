@@ -2,6 +2,5 @@
 
 
 
-observeEvent(input$AppTitleInput, {print(input$AppTitleInput)
-})
+observeEvent(input$AppTitleInput, {input$AppTitleInput})
 
