@@ -1,5 +1,8 @@
+
+# Current tab index
 tabIndex <- reactiveVal(0)
 
+# Add Tab
 observeEvent(input$newTab, {
   
   tabIndex(tabIndex() + 1)
@@ -23,6 +26,7 @@ observeEvent(input$newTab, {
             select=TRUE)
 })
 
+# Delete Tab --- >
 observeEvent(input$removeTab, {
     
     ask_confirmation(
@@ -34,8 +38,25 @@ observeEvent(input$removeTab, {
 observeEvent(input$DelTabConfirmation, {
     removeTab("EditTabs", target=input$EditTabs)
 })
+# <---
 
+# Run projects
 observeEvent(input$runTabs, {
+  
+  # Copy source code to temp
+  TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
+  
+  # Save config
+  #  - Load configuration file orginal
+  temp_config <- yaml::yaml.load_file(system.file("source/config.yaml", package = "ShinyWizard"))
+  #  - Edit original variables
+  temp_config$AppTitle <- input$AppTitleInput
+  
+  print(temp_config)
+  
+  
+  # # Temp dir tabs
+  # dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
   
   
   

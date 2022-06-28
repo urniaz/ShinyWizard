@@ -13,7 +13,7 @@ RunShinyWizard <- function(loc = ""){
   file.copy(system.file("source", package = "ShinyWizard"), TempPath, recursive=TRUE)
   
   # ZIP file?
-  # unpack and loc is the temp loaction where uppacked
+  # unpack and loc is the temp location where unpacked
   
   # Copy user project files, if any 
   if ((loc != "")){
@@ -21,6 +21,7 @@ RunShinyWizard <- function(loc = ""){
    if (substring(loc, nchar(loc)) != "/"){ loc = paste0(loc, "/")}
    # Dir loc exists 
    if (dir.exists(loc)){
+     # check tabs and config exist
      if (dir.exists(paste0(loc, "/tabs/")) && file.exists(paste0(loc, "config.yaml"))){
      # Clear demo data & copy tabs
      unlink(paste0(TempPath, "/source/tabs/"), recursive = TRUE)
