@@ -47,8 +47,9 @@ observeEvent(input$runTabs, {
   TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
   
   #save_config.yaml(input, output, session)
-  
-  print(isolate(input$AppTitleInput))
+  a <- reactiveValues()
+  print(a)
+  print(isolate(a$AppTitleInput))
   
   # # Temp dir tabs
   # dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
