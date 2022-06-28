@@ -2,5 +2,5 @@
 
 
 
-observeEvent(input$AppTitleInput, {input$AppTitleInput})
+
 
