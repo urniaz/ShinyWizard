@@ -50,7 +50,7 @@ observeEvent(input$runTabs, {
   #  - Load configuration file orginal
   temp_config <- yaml::yaml.load_file(system.file("source/config.yaml", package = "ShinyWizard"))
   #  - Edit original variables
-  temp_config$AppTitle <- input$AppTitleInput
+  temp_config$AppTitle <- input$tab2-AppTitleInput
   
   print(temp_config)
   
