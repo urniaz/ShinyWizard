@@ -2,6 +2,6 @@
 
 
 
-
-print(input$AppTitleInput)
+observe(input$AppTitleInput, {print(input$AppTitleInput)
+})
 
