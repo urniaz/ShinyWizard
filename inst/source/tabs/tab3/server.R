@@ -46,7 +46,7 @@ observeEvent(input$runTabs, {
   # Copy source code to temp
   TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
   
-  save_config.yaml(input, output, session)
+  #save_config.yaml(input, output, session)
   
   print(isolate(input$AppTitleInput))
   

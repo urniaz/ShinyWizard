@@ -8,7 +8,6 @@ save_config.yaml <- function(input, output, session){
   #  - Edit original variables
   temp_config$AppTitle <- isolate(input$AppTitleInput)
 
-  print(temp_config)
  
 }
 
