@@ -5,7 +5,7 @@ observeEvent(input$AppTitleInput, { config$AppTitle <- input$AppTitleInput
 print(config)
 }) #<---- save 
 
-observeEvent(input$AppSubTitleInput, { config$AppTitle <- input$AppSubTitleInput
+observeEvent(input$AppSubTitleInput, { config$AppSubTitle <- input$AppSubTitleInput
 print(config)
 }) #<---- save 
 
