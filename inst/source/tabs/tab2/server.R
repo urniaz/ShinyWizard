@@ -3,4 +3,5 @@
 
 
 
-
+observeEvent(input$AppTitleInput, {print(input$AppTitleInput)})
+observeEvent(input$AppTitleInput, {save_config.yaml(input, output, session)})
