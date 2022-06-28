@@ -8,7 +8,7 @@ save_config.yaml <- function(input, output, session){
   #  - Edit original variables
   #temp_config$AppTitle <- input$AppTitleInput
   
-  print(reactive({input$AppTitleInput})  )
+  print(reactive({input$AppTitleInput}))
 
   print(temp_config)
  
