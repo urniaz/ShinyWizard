@@ -48,7 +48,6 @@ observeEvent(input$runTabs, {
   
   #save_config.yaml(input, output, session)
   
-  print(isolate(a$AppTitleInput))
   
   # # Temp dir tabs
   # dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
