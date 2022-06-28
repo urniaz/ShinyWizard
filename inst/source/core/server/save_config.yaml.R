@@ -9,7 +9,7 @@ save_config.yaml <- function(input, output, session){
   temp_config$AppTitle <- input$AppTitleInput
   
   print(input$AppTitleInput)
-  print(input$tab2-AppTitleInput)
+
   print(temp_config)
  
 }
