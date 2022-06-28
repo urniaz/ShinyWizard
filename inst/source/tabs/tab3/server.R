@@ -34,3 +34,10 @@ observeEvent(input$removeTab, {
 observeEvent(input$DelTabConfirmation, {
     removeTab("EditTabs", target=input$EditTabs)
 })
+
+observeEvent(input$runTabs, {
+  
+  
+  
+})
+
