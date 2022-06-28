@@ -3,5 +3,5 @@
 
 
 
-print(input)
+print(input$AppTitleInput)
 
