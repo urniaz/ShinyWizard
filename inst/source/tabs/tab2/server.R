@@ -1,13 +1,8 @@
 # You can access the value of the widget with input$text, e.g.
 
 
-observeEvent(input$AppTitleInput, { config$AppTitle <- input$AppTitleInput
-print(config)
-}) #<---- save ???
+observeEvent(input$AppTitleInput, { save_config.yaml(input, output, session)}) #<---- save ???
 
-observeEvent(input$AppSubTitleInput, { config$AppSubTitle <- input$AppSubTitleInput
-print(config)
-}) #<---- save ???
-
+observeEvent(input$AppSubTitleInput, { save_config.yaml(input, output, session)}) #<---- save ???
 
 print(input)
