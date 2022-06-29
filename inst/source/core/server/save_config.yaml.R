@@ -13,8 +13,8 @@ save_config.yaml <- function(input, output, session){
   temp_config$FooterText <- input$FooterTextInput
   temp_config$ShinyWizzardTheme <- input$`shinytheme-selector`
  
-  
    print(temp_config)
+   
 }
 
 
