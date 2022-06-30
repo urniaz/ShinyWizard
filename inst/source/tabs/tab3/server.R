@@ -49,10 +49,24 @@ observeEvent(input$runTabs, {
   #save_config.yaml(input, output, session)
   # done on trigger function
   
-  # # Temp dir tabs
-  dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
+  # Temp dir tabs
+  tabs_dir <- paste0(TempPath,"/tabs/")
+  dir.create(tabs_dir, showWarnings = FALSE)
   
+  # for (i in 1:tabIndex()){
+  #   
+  #   try( 
+  #     
+  #     
+  #     
+  #   )
+  #   
+  #   
+  #   
+  # }
   
+  # Run project
+  RunShinyWizard(loc = TempProjPath)
   
 })
 
