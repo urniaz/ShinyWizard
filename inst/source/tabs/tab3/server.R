@@ -11,14 +11,22 @@ observeEvent(input$newTab, {
                                  
                                textAreaInput(inputId = paste0("tab3-server",tabIndex()),
                                              label = paste("Tab ",tabIndex(), "server.R"),
-                                             value = paste("I'm tab", tabIndex()),
+                                             value = "",
                                              width = "50%",
                                              height = "100%",
                                              resize = "both"),
                                
                                textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                              label = paste("Tab ",tabIndex(), "ui.R"),
-                                             value = paste("I'm tab", tabIndex()),
+                                             value = paste("# --- Navigation ---
+                                                            # TabName: Tab", tabIndex(),
+                                                            "# TabIcon: file
+                                                            # --- Next/Prev buttons
+                                                            # ShowButtons: TRUE
+                                                            # ButtonsAlignment: center
+                                                            # --- Info ---
+                                                            # InfoTitle: Tab", tabIndex(),
+                                                           "# InfoMessage: Info about tab"),
                                              width = "50%",
                                              height = "100%",
                                              resize = "both")
