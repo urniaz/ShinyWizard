@@ -47,10 +47,10 @@ observeEvent(input$runTabs, {
   TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
   
   #save_config.yaml(input, output, session)
-  
+  # done on trigger function
   
   # # Temp dir tabs
-  # dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
+  dir.create(paste0(TempPath,"/tabs/"), showWarnings = FALSE)
   
   
   
