@@ -73,7 +73,8 @@ if (tabIndex() >=1){
     }
 
   # Run project
-  system2('R ShinyWizard::RunShinyWizard(loc ="',TempProjPath,'")')
+  write_file('R ShinyWizard::RunShinyWizard(loc ="',TempProjPath,'")', paste0(TempProjPath, "run.R"))
+  rscript(paste0(TempProjPath, "run.R"))
 }
 })
 
