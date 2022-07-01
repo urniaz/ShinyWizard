@@ -18,7 +18,6 @@ observeEvent(input$newTab, {
 # ButtonsAlignment: center
 # --- Info ---
 # InfoTitle: Tab", tabIndex(),
-
 "# InfoMessage: Info about tab"),
                                              width = "50%",
                                              height = "100%",
@@ -57,21 +56,21 @@ observeEvent(input$runTabs, {
   # done on trigger function
   
   # Temp dir tabs
-  tabs_dir <- paste0(TempPath,"/tabs/")
+  tabs_dir <- paste0(TempProjPath,"tabs/")
   dir.create(tabs_dir, showWarnings = FALSE)
   
-  # for (i in 1:tabIndex()){
-  #   
-  #   try( 
-  #     
-  #     
-  #     
-  #   )
-  #   
-  #   
-  #   
-  # }
-  
+   for (i in 1:tabIndex()){
+   
+     try({
+       tabs_dir_n <- paste0(tabs_dir,"tab", i,"/")
+       dir.create(tabs_dir_n, showWarnings = FALSE)
+       write_file(input[paste0("ui",i)], paste0(tabs_dir_n, "/ui.R"))
+      # write_file(,paste0(tabs_dir_n, "/server.R"))
+        })
+     
+     
+    }
+
   # Run project
   RunShinyWizard(loc = TempProjPath)
   
