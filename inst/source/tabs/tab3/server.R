@@ -73,7 +73,7 @@ if (tabIndex() >=1){
     }
 
   # Run project
-  RunShinyWizard(loc = TempProjPath)
+  system2('R ShinyWizard::RunShinyWizard(loc ="',TempProjPath,'")')
 }
 })
 
