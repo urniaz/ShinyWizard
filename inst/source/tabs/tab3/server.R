@@ -21,15 +21,15 @@ observeEvent(input$newTab, {
 "# InfoMessage: Info about tab"),
                                              width = "50%",
                                              height = "100%",
-                                             resize = "both")
-                                             ), select=TRUE)
-  
+                                             resize = "both"),
+
 textAreaInput(inputId = paste0("tab3-server",tabIndex()),
-                label = paste("Tab ",tabIndex(), "server.R"),
-                value = "",
-                width = "50%",
-                height = "100%",
-                resize = "both")
+              label = paste("Tab ",tabIndex(), "server.R"),
+              value = "",
+              width = "50%",
+              height = "100%",
+              resize = "both")
+                              ), select=TRUE)
 })
 
 # Delete Tab --- >
