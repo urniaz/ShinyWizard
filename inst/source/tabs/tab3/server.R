@@ -49,6 +49,7 @@ observeEvent(input$DelTabConfirmation, {
 # Run projects
 observeEvent(input$runTabs, {
   
+if (tabIndex() >=1){
   # Copy source code to temp
   TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
   
@@ -73,6 +74,6 @@ observeEvent(input$runTabs, {
 
   # Run project
   RunShinyWizard(loc = TempProjPath)
-  
+}
 })
 
