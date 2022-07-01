@@ -65,7 +65,7 @@ if (tabIndex() >=1){
      try({
        tabs_dir_n <- paste0(tabs_dir,"tab", i,"/")
        dir.create(tabs_dir_n, showWarnings = FALSE)
-       write_file(input[paste0("ui",i)], paste0(tabs_dir_n, "/ui.R"))
+       write_file(isolate(input[[paste0("ui",i)]]), paste0(tabs_dir_n, "/ui.R"))
       # write_file(,paste0(tabs_dir_n, "/server.R"))
         })
      
