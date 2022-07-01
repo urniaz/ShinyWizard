@@ -36,11 +36,11 @@ RunShinyWizard <- function(loc = ""){
        # Copy www and overwrite 
        unlink(paste0(TempPath, "/source/www/"), recursive = TRUE)
        file.copy(paste0(loc, "/www/"), paste0(TempPath, "/source/"), recursive=TRUE, overwrite = TRUE)
-     }
+     
    }else{stop("The directory ", loc ," does not exists!")}
   }
   
   # Run app
-  system2(shiny::runApp(paste0(TempPath, "/source/")))
+  shiny::runApp(paste0(TempPath, "/source/"))
   
 }
