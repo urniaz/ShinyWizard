@@ -40,9 +40,13 @@ RunShinyWizard <- function(loc = "", port ="", launch.browser = TRUE){
     }else{stop("The directory ", loc ," does not exists!")}
    }
   }
-  # Run app
-  shiny::runApp(paste0(TempPath, "/source/"), launch.browser = TRUE)
   
-  # rstudioapi::jobRunScript("/var/folders/6m/f06g66nj5wv3q5s1k8b4y9180000gn/T//RtmpH2poR1/SWTempProj/run.R")
+  # Run project
   
+  write_file(paste0("shiny::runApp('",paste0(TempPath, "/source/"),"', launch.browser = TRUE)"), paste0(TempPath, "/run.R"))
+  rstudioapi::jobRunScript(paste0(TempPath, "/run.R"))
+  
+  # callr::rscript(paste0(TempProjPath, "run.R"))
+    
+
 }
