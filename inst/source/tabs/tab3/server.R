@@ -13,12 +13,12 @@ observeEvent(input$newTab, {
                                                value = paste("# --- Navigation ---",
 paste0("\n# TabName: Tab", tabIndex()),
 "\n# TabIcon: file
-# --- Next/Prev buttons
+\n# --- Next/Prev buttons
 # ShowButtons: TRUE
 # ButtonsAlignment: center
-# --- Info ---",
-paste0("# InfoTitle: Tab", tabIndex()),
-"# InfoMessage: Info about tab"),
+\n# --- Info ---",
+paste0("\n# InfoTitle: Tab", tabIndex()),
+"\n# InfoMessage: Info about tab"),
                                              width = "50%",
                                              height = "100%",
                                              resize = "both"),
