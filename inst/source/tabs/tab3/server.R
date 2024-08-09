@@ -69,12 +69,11 @@ if (tabIndex() >=1){
        write_file(isolate(input[[paste0("server",i)]]),paste0(tabs_dir_n, "/server.R"))
         })
      
-     
     }
   
   # Run project
   
-  ShinyWizard::RunShinyWizard(loc = TempProjPath)
+  ShinyWizard::RunShinyWizard(loc = paste0("..", TempProjPath))
 
 }
 })

@@ -18,7 +18,8 @@ RunShinyWizard <- function(loc = "", port ="", launch.browser = TRUE){
   # Copy user project files, if any 
   if ((loc != "")){
    # add slash if not provided
-   if (substring(loc, nchar(loc)) != "/"){ loc = paste0(loc, "/")}
+   # if (substring(loc, nchar(loc)) != "/"){ loc = paste0(loc, "/")}
+   loc <- paste0(TempPath,"/SWTempProj")
    # Dir loc exists 
    if (dir.exists(loc)){
      # check tabs and config exist
