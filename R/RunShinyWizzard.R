@@ -41,7 +41,7 @@ RunShinyWizard <- function(loc = "", port ="", launch.browser = TRUE){
    }
   }
   # Run app
-  shiny::runApp(paste0(TempPath, "/source/", launch.browser = TRUE))
+  shiny::runApp(paste0(TempPath, "/source/"), launch.browser = TRUE)
   
   # rstudioapi::jobRunScript("/var/folders/6m/f06g66nj5wv3q5s1k8b4y9180000gn/T//RtmpH2poR1/SWTempProj/run.R")
   
