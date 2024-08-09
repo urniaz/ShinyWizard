@@ -11,8 +11,8 @@ observeEvent(input$newTab, {
                                  textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                label = paste("Tab ",tabIndex(), "ui.R"),
                                                value = paste("# --- Navigation ---",
-paste0("# TabName: Tab", tabIndex()),
-"# TabIcon: file
+paste0("\n# TabName: Tab", tabIndex()),
+"\n# TabIcon: file
 # --- Next/Prev buttons
 # ShowButtons: TRUE
 # ButtonsAlignment: center
