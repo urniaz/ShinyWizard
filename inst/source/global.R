@@ -18,5 +18,4 @@ invisible(lapply(packages, library, character.only = TRUE))
 
 # ShinyWizard
 
-# devtools::install_github("RafalUrniaz/ShinyWizard", ref="package", auth_token = "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")
 library("ShinyWizard")
