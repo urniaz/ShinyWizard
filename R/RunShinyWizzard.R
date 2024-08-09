@@ -23,7 +23,7 @@ RunShinyWizard <- function(loc = "", port ="", launch.browser = TRUE){
    # Dir loc exists 
    if (dir.exists(loc)){
      # check tabs and config exist
-     if (dir.exists(paste0(loc, "/tabs/")) && file.exists(paste0(loc, "config.yaml"))){
+     if (dir.exists(paste0(loc, "/tabs/")) && file.exists(paste0(loc, "/config.yaml"))){
      # Clear demo data & copy tabs
      unlink(paste0(TempPath, "/source/tabs/"), recursive = TRUE)
      dir.create(paste0(TempPath,"/source/tabs/"), showWarnings = FALSE)
