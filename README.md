@@ -4,6 +4,7 @@ ShinyWizard is an interactive shiny app to build DEMO presenations for any packa
 
 Siply run the ShintWizard demo generated with ShinyWiards - carrazy isini t?
 
+** Shiny app distributed as R package **
 
 ```r
 shiny::runGitHub(repo = "LncRnaApp", username = "urniaz", ref = "main")

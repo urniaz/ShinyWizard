@@ -19,4 +19,7 @@ shinyServer(function(input, output, session) {
     # Observe Events on Next Prev Buttons
     observe_event_next_prev_buttons(input, output, session)
     
+    session$onSessionEnded(function() {
+      stopApp()
+    })
 })
