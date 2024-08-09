@@ -75,6 +75,7 @@ if (tabIndex() >=1){
   # Run project
   write_file(paste0('ShinyWizard::RunShinyWizard(loc ="../',TempProjPath,'")'), paste0(TempProjPath, "run.R"))
   callr::rscript(paste0(TempProjPath, "run.R"))
+  shinyjs::alert("ok!")
 }
 })
 
