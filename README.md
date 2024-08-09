@@ -1,7 +1,12 @@
 # Simple R Shiny Wizard App
 
+ShinyWizard is an interactive shiny app to build DEMO presenations for any package. ShinyWizard is distributed as an R package for easy use and compatybilty. 
+
+Siply run the ShintWizard demo generated with ShinyWiards - carrazy isini t?
+
+
 ```r
-shiny::runGitHub(repo = "LncRnaApp", username = "RafalUrniaz", ref = "main")
+shiny::runGitHub(repo = "LncRnaApp", username = "urniaz", ref = "main")
 ```
 
 # Design concept

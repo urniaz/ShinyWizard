@@ -29,3 +29,5 @@ vignettes/*.pdf
 .Renviron
 .DS_Store
 .Rproj.user
+# Priv notebooks
+ShinyWizard.Rmd
