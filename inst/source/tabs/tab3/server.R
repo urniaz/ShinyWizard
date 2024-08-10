@@ -75,7 +75,7 @@ if (tabIndex() >=1){
   
   # Run project
   
-  ShinyWizard::RunShinyWizard(loc = paste0("..", TempProjPath))
+  # ShinyWizard::RunShinyWizard(loc = paste0("..", TempProjPath))
 
 }
 })
