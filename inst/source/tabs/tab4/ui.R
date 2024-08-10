@@ -14,6 +14,6 @@
 fluidPage(
   fluidRow(
     downloadButton(ns("downloadData"), "Download"),
-    verbatimTextOutput(outputId = "result")
+    verbatimTextOutput(outputId = ns("result"))
   )
 )
