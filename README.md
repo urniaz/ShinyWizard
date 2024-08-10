@@ -6,9 +6,7 @@
 
 <table width="100%" border="0">
   <tbody><tr>
-    <td width="80%">ShinyWizard is a <b>Shiny App</b> to build an <b>interactive DEMO presentations</b> for any R package. 
-    
-    ShinyWizard installs and runs as an standard R package.</td>
+    <td width="80%">ShinyWizard is a <b>Shiny App</b> to build an <b>interactive DEMO presentations</b> for any R package. <br><br>ShinyWizard installs and runs as an standard R package.</td>
     <td width="20%"><img src="https://github.com/urniaz/ShinyWizard/blob/package/inst/source/www/img/logo.png"></td>
   </tr>
 </tbody></table>
