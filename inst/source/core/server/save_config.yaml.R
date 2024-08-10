@@ -9,7 +9,6 @@ save_config.yaml <- function(input, output, session){
   #  - Edit original variables
   temp_config$AppTitle <- input$AppTitleInput
   temp_config$AppSubTitle <- input$AppSubTitleInput
-  temp_config$ShinyWizzardTheme <- input$`shinytheme-selector`
   temp_config$LogoFilePath <- input$LogoFilePathInput
   temp_config$FooterText <- input$FooterTextInput
   temp_config$ShinyWizzardTheme <- input$`shinytheme-selector`
