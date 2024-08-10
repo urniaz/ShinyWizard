@@ -70,8 +70,6 @@ if (tabIndex() >=1){
      
     }
   
-  output$tab4-result <- renderText({paste("temp:", TempProjPath)})
-  
   # Run project
   
   # ShinyWizard::RunShinyWizard(loc = paste0("..", TempProjPath))
