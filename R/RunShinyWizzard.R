@@ -47,7 +47,7 @@ RunShinyWizard <- function(loc = NULL){
     
     
     # Run project
-    write_file(paste0("shiny::runApp('",paste0(loc, "/source/"),"', launch.browser = TRUE)"), paste0(TempPath, "/run.R"))
+    write_file(paste0("shiny::runApp('",paste0(loc, "/source/"),"', launch.browser = TRUE)"), paste0(loc, "/run.R"))
     
     rstudioapi::jobRunScript(paste0(loc, "/run.R"))
     
