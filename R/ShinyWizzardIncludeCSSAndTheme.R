@@ -8,7 +8,7 @@ ShinyWizzardIncludeCSSAndTheme <- function(){
   
    if(config$ShinyWizzardTheme != ""){
       includeCSS(ShinyWizzardTheme(config$ShinyWizzardTheme))
-   }esle{cat("no tempate")}
+   }else{cat("no tempate")}
    
   
 }
