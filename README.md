@@ -61,7 +61,7 @@ help(package = "ShinyWizard")
 
 ### 2.2 Examples
 
-
+![](docs/1.png) ![](docs/2.png) ![](docs/3.png) ![](docs/4.png)
 
 ### 2.3 Tutorials
 
