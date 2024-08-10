@@ -70,7 +70,7 @@ if (tabIndex() >=1){
      
     }
   
-  output$result <- renderText({paste("temp:", TempProjPath)})
+  output$tab4-result <- renderText({paste("temp:", TempProjPath)})
   
   # Run project
   
