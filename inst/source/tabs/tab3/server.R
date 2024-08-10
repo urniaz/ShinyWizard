@@ -10,15 +10,17 @@ observeEvent(input$newTab, {
   appendTab("EditTabs", tabPanel(tabIndex(), 
                                  textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                label = paste("Tab ",tabIndex(), "ui.R"),
-                                               value = paste("# --- Navigation ---",
-paste0("\n# TabName: Tab", tabIndex()),
-"\n# TabIcon: file
-\n# --- Next/Prev buttons
-# ShowButtons: TRUE
-# ButtonsAlignment: center
-\n# --- Info ---",
-paste0("\n# InfoTitle: Tab", tabIndex()),
-"\n# InfoMessage: Info about tab"),
+                                               value = "",
+                                                 
+# paste("# --- Navigation ---",
+# paste0("\n# TabName: Tab", tabIndex()),
+# "\n# TabIcon: file
+# \n# --- Next/Prev buttons
+# # ShowButtons: TRUE
+# # ButtonsAlignment: center
+# \n# --- Info ---",
+# paste0("\n# InfoTitle: Tab", tabIndex()),
+# "\n# InfoMessage: Info about tab"),
                                              width = "50%",
                                              height = "100%",
                                              resize = "both"),
