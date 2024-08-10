@@ -1,8 +1,7 @@
-# ShinyWizard 
 ![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/3%25-red?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![CRAN/METACRAN License](https://img.shields.io/cran/l/ShinyWizard)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/ShinyWizard)
 
 
-# kmeRs: K-mers Similarity Score Matrix and HeatMap
+# ShinyWizard
 
 <table width="100%" border="0">
   <tbody><tr>
