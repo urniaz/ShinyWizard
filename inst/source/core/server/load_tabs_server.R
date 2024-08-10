@@ -1,6 +1,6 @@
 #' Loading function for tabs
 
-load_tabs_server <- function(){
+load_tabs_server <- function(input, output, session){
 
 tabs <- list.files("tabs/")
 
