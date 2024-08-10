@@ -6,8 +6,14 @@ Siply run the ShintWizard demo generated with ShinyWiards - carrazy isini t?
 
 ** Shiny app distributed as R package **
 
+# Install 
 ```r
-shiny::runGitHub(repo = "LncRnaApp", username = "urniaz", ref = "main")
+devtools::install_github("urniaz/ShinyWizard", ref="package", force = TRUE)
+library("ShinyWizard")
+```
+# Run app
+```r
+ShinyWizard::RunShinyWizard()
 ```
 
 # Design concept
