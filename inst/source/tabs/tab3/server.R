@@ -59,6 +59,9 @@ if (tabIndex() >=1){
   tabs_dir <- paste0(TempProjPath,"tabs/")
   dir.create(tabs_dir, showWarnings = FALSE)
   
+  # ???
+  save_config.yaml(input, output, session)
+  
    for (i in 1:tabIndex()){
    
      try({
