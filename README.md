@@ -19,6 +19,12 @@ library("ShinyWizard")
 ShinyWizard::RunShinyWizard()
 ```
 
+## Quick Examples 
+
+[Examples](#22-examples)
+
+
+
 [1. Installation](#1-installation)
 
 [2. Documentation](#2-documentation)
