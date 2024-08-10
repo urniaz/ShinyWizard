@@ -9,3 +9,6 @@ output$downloadData <- downloadHandler(
     write.csv(data, file)
   }
 )
+
+output$result <- renderText({paste("config", TempProjPath)})
+
