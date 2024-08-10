@@ -32,13 +32,13 @@ RunShinyWizard <- function(loc = "", port ="", launch.browser = TRUE){
      unlink(paste0(TempPath, "/source/config.yaml"), recursive = TRUE)
      file.copy(paste0(loc, "/config.yaml"), paste0(TempPath, "/source/"), recursive=TRUE)
      }else{ cat("The directory should contain at least 'tabs' folder and config.yaml file!")}
-     if (dir.exists(paste0(loc, "/www/"))){
+     #if (dir.exists(paste0(loc, "/www/"))){
      
      # Copy www and overwrite 
-     unlink(paste0(TempPath, "/source/www/"), recursive = TRUE)
-     file.copy(paste0(loc, "/www/"), paste0(TempPath, "/source/"), recursive=TRUE, overwrite = TRUE)
+  #   unlink(paste0(TempPath, "/source/www/"), recursive = TRUE)
+  #   file.copy(paste0(loc, "/www/"), paste0(TempPath, "/source/"), recursive=TRUE, overwrite = TRUE)
      
-    }else{cat("The directory www ", loc ," does not exists!")}
+   # }else{cat("The directory www ", loc ," does not exists!")}
    }
   }
   
