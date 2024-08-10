@@ -6,8 +6,8 @@
 
 <table width="100%" border="0">
   <tbody><tr>
-    <td width="80%">ShinyWizard is a ** Shiny App ** to build an ** interactive DEMO presentations ** for any R package. ShinyWizard installs and runs as an standard R package.</td>
-    <td width="20%"><img src="https://github.com/urniaz/kmeRs/blob/master/inst/source/www/img/logo.png?raw=true"></td>
+    <td width="80%">ShinyWizard is a **Shiny App** to build an **interactive DEMO presentations** for any R package. ShinyWizard installs and runs as an standard R package.</td>
+    <td width="20%"><img src="https://github.com/urniaz/ShinyWizard/blob/master/inst/source/www/img/logo.png?raw=true"></td>
   </tr>
 </tbody></table>
 
@@ -72,7 +72,7 @@ TBA
 
 Test are implemented as *continuous integration* by CircleCI. Continuous integration is a DevOps software development practice where code changes are regularly merge into a central repository, after which automated builds and tests are run.
 
-The *source* of tests covering the code of the package are available in [/tests/](https://github.com/urniaz/ShinyWizard/blob/master/tests) folder of the repository.
+The *source* of tests covering the code of the package are available in [tests](https://github.com/urniaz/ShinyWizard/blob/master/tests) folder of the repository.
 
 
 ## 4. How to cite
