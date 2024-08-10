@@ -60,7 +60,7 @@ if (tabIndex() >=1){
   dir.create(tabs_dir, showWarnings = FALSE)
   
   # ???
-  save_config.yaml(input, output, session)
+  # save_config.yaml(input, output, session)
   
    for (i in 1:tabIndex()){
    
