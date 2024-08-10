@@ -16,6 +16,7 @@ save_config.yaml <- function(input, output, session){
   
   TempProjPath <- paste0(tempdir(),"/SWTempProj/")
   dir.create(TempProjPath, showWarnings = FALSE)
+  cat(temp_config)
   yaml::write_yaml(temp_config, paste0(TempProjPath,"config.yaml"))
    
 }
