@@ -9,8 +9,6 @@ RunShinyWizard <- function(loc = ""){
   # Copy source code to temp
   TempPath <- tempdir()
   
-  print(TempPath)
-  
   # Copy all original files
   file.copy(system.file("source", package = "ShinyWizard"), TempPath, recursive=TRUE)
   

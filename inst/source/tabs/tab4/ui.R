@@ -13,6 +13,7 @@
 
 fluidPage(
   fluidRow(
-    downloadButton(ns("downloadData"), "Download")
+    downloadButton(ns("downloadData"), "Download"),
+    textOutput("result")
   )
 )
