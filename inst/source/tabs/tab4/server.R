@@ -10,5 +10,5 @@ output$downloadData <- downloadHandler(
   }
 )
 
-output$result <- renderText({(paste("config", tempdir()))})
+# output$result <- renderText({(paste("config", tempdir()))})
 
