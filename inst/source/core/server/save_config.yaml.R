@@ -14,9 +14,11 @@ save_config.yaml <- function(input, output, session){
   temp_config$FooterText <- input$FooterTextInput
   temp_config$ShinyWizzardTheme <- input$`shinytheme-selector`
   
+  stop(temp_config)
+  
   TempProjPath <- paste0(tempdir(),"/SWTempProj/")
   dir.create(TempProjPath, showWarnings = FALSE)
-  summary(temp_config)
+
   yaml::write_yaml(temp_config, paste0(TempProjPath,"config.yaml"))
    
 }
