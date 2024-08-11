@@ -8,7 +8,7 @@ observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
-                                 textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
+                                 layout_columns(textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                label = paste("Tab ",tabIndex(), "ui.R"),
                                                value = "",
                                                  
@@ -31,7 +31,7 @@ textAreaInput(inputId = paste0("tab3-server",tabIndex()),
               width = "50%",
               height = "100%",
               resize = "both")
-                              ), select=TRUE)
+                              )), select=TRUE)
 })
 
 # Delete Tab --- >
@@ -39,7 +39,7 @@ observeEvent(input$removeTab, {
     
     ask_confirmation(
     inputId = "DelTabConfirmation",
-    title = paste("Want to",as.character(input$EditTabs)," delete ?")
+    title = paste("Are you sure to delete ",as.character(input$EditTabs)," ?")
   )
 })
 
