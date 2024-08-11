@@ -8,7 +8,7 @@ observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
-                                 layout_columns(textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
+                                 bslib::layout_columns(textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                label = paste("Tab ",tabIndex(), "ui.R"),
                                                value = "",
                                                  
