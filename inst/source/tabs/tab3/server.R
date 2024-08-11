@@ -11,17 +11,17 @@ observeEvent(input$newTab, {
                                  bslib::layout_columns(
                                    textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "ui.R"),
-                                                 value = "",
+                                                 value = paste("# --- Navigation ---",
+                                                         paste0("# TabName: Tab", tabIndex()),
+                                                         "# TabIcon: file",
+                                                         "# --- Next/Prev buttons",
+                                                         "# ShowButtons: TRUE",
+                                                         "# ButtonsAlignment: center",
+                                                         "# --- Info ---",
+                                                         paste0("# InfoTitle: Tab", tabIndex()),
+                                                         "# InfoMessage: Info about tab",
+                                                         sep="\n"),     
                                                  
-# paste("# --- Navigation ---",
-# paste0("\n# TabName: Tab", tabIndex()),
-# "\n# TabIcon: file
-# \n# --- Next/Prev buttons
-# # ShowButtons: TRUE
-# # ButtonsAlignment: center
-# \n# --- Info ---",
-# paste0("\n# InfoTitle: Tab", tabIndex()),
-# "\n# InfoMessage: Info about tab"),
                                                   width = "1000%",
                                                   height = "100%",
                                                   resize = "both"),
