@@ -20,6 +20,7 @@ observeEvent(input$newTab, {
                                                          "# --- Info ---",
                                                          paste0("# InfoTitle: Tab", tabIndex()),
                                                          "# InfoMessage: Info about tab",
+                                                         "print('Hello World !')"
                                                          sep="\n"),     
                                                  
                                                   width = "1000%",
