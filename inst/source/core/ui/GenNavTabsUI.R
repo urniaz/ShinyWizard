@@ -27,7 +27,7 @@ GenNavTabsUI <- function(){
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
       # Rebuild file
-      pre <- paste0("ns <- NS('tab",i,"')")
+      pre <- cat(paste0("ns <- NS('tab",i,"')", "\n'"))
       temp <- tempfile()
       write_file(paste0(pre,FileContent),temp)
       
