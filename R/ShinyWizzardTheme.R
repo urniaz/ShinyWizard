@@ -28,7 +28,8 @@ ShinyWizzardThemeSelector <- function() {
   fluidRow(align="center",
     selectInput("tab2-shinytheme-selector", "Theme",
                 c(allThemes()),
-                selectize = FALSE
+                selectize = FALSE,
+                selected = "flatly",
                ),
     
     tags$script(
