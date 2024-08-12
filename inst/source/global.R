@@ -17,5 +17,4 @@ if (any(installed_packages == FALSE)) {
 invisible(lapply(packages, library, character.only = TRUE))
 
 # ShinyWizard
-
 library("ShinyWizard")
