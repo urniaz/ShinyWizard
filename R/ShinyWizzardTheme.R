@@ -29,7 +29,7 @@ ShinyWizzardThemeSelector <- function() {
     selectInput("tab2-shinytheme-selector", "Theme",
                 c(allThemes()),
                 selectize = FALSE,
-                selected = "flatly",
+                selected = "flatly", # starting theme
                ),
     
     tags$script(
