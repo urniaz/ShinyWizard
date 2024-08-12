@@ -13,7 +13,7 @@
 ## Quick Run 
 
 ```r
-devtools::install_github("urniaz/ShinyWizard", ref="package", force = TRUE)
+devtools::install_github("urniaz/ShinyWizard", ref="alfa", force = TRUE)
 library("ShinyWizard")
 ShinyWizard::RunShinyWizard()
 ```
