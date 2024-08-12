@@ -1,23 +1,4 @@
-![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/108904994aa84de89b5f933b0f33bc67)](https://app.codacy.com/gh/urniaz/ShinyWizard/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![CRAN/METACRAN License](https://img.shields.io/cran/l/ShinyWizard)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/ShinyWizard)
-
-
-[![Circle CI Badge](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)](https://app.codacy.com/gh/urniaz/ShinyWizard/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-
-[![Circle CI Badge](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)](https://app.codacy.com/gh/urniaz/ShinyWizard/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-
-https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci
-
-# Template:
-[![<ORG_NAME>](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg)](<LINK>)
-
-# Example:
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
-
-# Example for specific branch:
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/?branch=teesloane-patch-5)
-
-
-
+![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/108904994aa84de89b5f933b0f33bc67)](https://app.codacy.com/gh/urniaz/ShinyWizard/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci) [![Circle CI Badge](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)](https://app.circleci.com/pipelines/github/urniaz?circle-token=79db963de7c13c1570f70cb8ac1c77a5) ![CRAN/METACRAN License](https://img.shields.io/cran/l/ShinyWizard)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/ShinyWizard)
 
 # ShinyWizard : interactive presentation of any R package 
 
