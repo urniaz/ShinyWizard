@@ -31,3 +31,4 @@ vignettes/*.pdf
 .Rproj.user
 # Priv notebooks
 ShinyWizard.Rmd
+ShinyWizard.Rproj
