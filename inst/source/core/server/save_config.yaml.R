@@ -11,9 +11,7 @@ save_config.yaml <- function(input, output, session){
   temp_config$AppSubTitle <- input$AppSubTitleInput
   temp_config$LogoFilePath <- input$LogoFilePathInput
   temp_config$FooterText <- input$FooterTextInput
-  temp_config$ShinyWizzardTheme <- 'flatly' # input$`shinytheme-selector`
-  
-  print(input$`shinytheme-selector`$value)
+  temp_config$ShinyWizzardTheme <- input$`shinytheme-selector`$value #'flatly' # input$`shinytheme-selector`
   
   TempProjPath <- paste0(tempdir(),"/SWTempProj/")
   dir.create(TempProjPath, showWarnings = FALSE)
