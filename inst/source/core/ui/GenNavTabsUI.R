@@ -27,9 +27,10 @@ GenNavTabsUI <- function(){
     if ((file.info(FilePath)$size != 0) && (trimws(na.omit(FileContent )) != "")){
       
       # Rebuild file
-      pre <- cat(paste0("ns <- NS('tab",i,"')", "\n'"))
+      pre <- paste0("ns <- NS('tab",i,"')")
       temp <- tempfile()
-      write_file(paste0(pre,FileContent),temp)
+      write_file(pre,temp)
+      write_file(FileContent,temp, append = TRUE)
       
       # Generate tabs
       tabs[[i]] <-  tabPanel(if(is.na(TabName)){paste0("Tab",i)}else{TabName},
