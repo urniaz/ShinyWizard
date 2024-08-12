@@ -30,7 +30,8 @@ GenNavTabsUI <- function(){
       pre <- paste0("ns <- NS('tab",i,"')")
       temp <- tempfile()
       write_file(pre,temp)
-      cat(' ',temp, append = TRUE, sep = "\n")
+      cat('# yolo',temp, append = TRUE, sep = "\n")
+      write('# yolo2',temp, append = TRUE, sep = "\n")
       write_file(FileContent,temp, append = TRUE)
       
       # Generate tabs
