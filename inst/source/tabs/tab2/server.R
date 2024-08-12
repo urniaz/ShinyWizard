@@ -7,11 +7,6 @@ observeEvent(input$LogoFilePathInput, { save_config.yaml(input, output, session)
 observeEvent(input$FooterTextInput, { save_config.yaml(input, output, session)}) 
 observeEvent(input$`shinytheme-selector`, { save_config.yaml(input, output, session)}) 
 
-print(input, 
-      input$AppTitleInput, 
-      input$AppSubTitleInput, 
-      input$LogoFilePathInput, 
-      input$FooterTextInput,
-      input$`shinytheme-selector`)
+print(input)
 
 
