@@ -45,8 +45,10 @@ fluidPage(
                document.getElementById('",ns("FooterTextInput"),"').addEventListener('input', function() {
                document.getElementById('FooterText').textContent = document.getElementById('",ns("FooterTextInput"),"').value;});")),
 
+
 # Theme selector
    ShinyWizard::ShinyWizzardThemeSelector()
+
   )
 )
 
