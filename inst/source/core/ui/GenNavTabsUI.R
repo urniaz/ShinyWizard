@@ -38,7 +38,7 @@ GenNavTabsUI <- function(){
                              # Value
                              value = paste0("tab", i),
                              # Load code
-                             try(source(temp, local = TRUE)$value),
+                             try(source(temp, local = TRUE)$value), # $value to not show TRUE text in console
                              # Generate buttons
                              div(style = "position: fixed; padding: 10px 30px 50px 10px; bottom: 0; width: 100%; background: inherited;", if (ShowButtons){ next_prev_button(i, length(TabsFiles), ButtonsAlignment)} ),
                              # Generate info button

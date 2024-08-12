@@ -13,6 +13,8 @@ save_config.yaml <- function(input, output, session){
   temp_config$FooterText <- input$FooterTextInput
   temp_config$ShinyWizzardTheme <- 'flatly' # input$`shinytheme-selector`
   
+  print(input$`shinytheme-selector`)
+  
   TempProjPath <- paste0(tempdir(),"/SWTempProj/")
   dir.create(TempProjPath, showWarnings = FALSE)
 
