@@ -32,7 +32,7 @@ ShinyWizzardThemeSelector <- function() {
                ),
     
     tags$script(
-      "$('#shinytheme-selector')
+      "$('#tab2-shinytheme-selector')
   .on('change', function(el) {
     var allThemes = $(this).find('option').map(function() {
       if ($(this).val() === 'default')
