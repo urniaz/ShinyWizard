@@ -21,7 +21,7 @@ observeEvent(input$newTab, {
                                                          paste0("# InfoTitle: Tab", tabIndex()),
                                                          "# InfoMessage: Info about tab",
                                                          'fluidPage(
-  selectInput("dataset", label = "Dataset", choices = ls("package:datasets")),
+  selectInput(ns("dataset"), label = "Dataset", choices = ls("package:datasets")),
   verbatimTextOutput(ns("summary")),
   tableOutput(ns("table"))
 )',
