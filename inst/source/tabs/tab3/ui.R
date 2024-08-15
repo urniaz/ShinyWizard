@@ -12,8 +12,7 @@
 
 
 fluidPage(
-  fluidRow(card(
-    card_header("Buttons"),
+  fluidRow(
     selectInput(
       "select",
       "Select option",
@@ -26,5 +25,4 @@ fluidPage(
   ),
   tags$br(),
   tabsetPanel(id=ns("EditTabs"), type="pills")
-  )
 )
