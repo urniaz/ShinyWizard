@@ -20,7 +20,11 @@ observeEvent(input$newTab, {
                                                          "# --- Info ---",
                                                          paste0("# InfoTitle: Tab", tabIndex()),
                                                          "# InfoMessage: Info about tab",
-                                                         "print('Hello World !')",
+                                                         'fluidPage(
+  selectInput("dataset", label = "Dataset", choices = ls("package:datasets")),
+  verbatimTextOutput(ns("summary")),
+  tableOutput(ns("table"))
+)',
                                                          sep="\n"),     
                                                  
                                                   width = "1000%",
@@ -29,7 +33,15 @@ observeEvent(input$newTab, {
 
 textAreaInput(inputId = paste0("tab3-server",tabIndex()),
               label = paste("Tab ",tabIndex(), "server.R"),
-              value = "",
+              value = '  output$summary <- renderPrint({
+    dataset <- get(input$dataset, "package:datasets")
+    summary(dataset)
+  })
+  
+  output$table <- renderTable({
+    dataset <- get(input$dataset, "package:datasets")
+    dataset
+  })',
               width = "100%",
               height = "100%",
               resize = "both")
