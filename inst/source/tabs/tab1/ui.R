@@ -19,6 +19,8 @@ fluidPage(
       <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
   
       '),
+     next_prev_button(1,2)
+     ,
      sidebarLayout(
        sidebarPanel(
          fileInput(ns("file1"), "Choose CSV File", accept = ".csv"),

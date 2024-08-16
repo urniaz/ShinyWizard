@@ -59,7 +59,7 @@ GenNavTabsUI <- function(){
 }
 
 #' Generate next prev buttons 
-next_prev_button <- function(i, len, ButtonsAlignment){
+next_prev_button <- function(i, len, ButtonsAlignment = ""){
   
   PrevButton <- NULL
   PrevButton <- if (i > 1) actionButton(NS("NavBar", paste0("go_", i, "_", i-1)), "Prev")
