@@ -82,7 +82,7 @@ observeEvent(input$DelTabConfirmation, {
 })
 # <---
 
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes))})
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", isolate(currentTabIndexes)))})
 
 
 # Run project
