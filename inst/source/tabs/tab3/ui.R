@@ -16,7 +16,7 @@ fluidPage(
     actionButton(ns("newTab"), "Add", icon = icon("plus")),
     actionButton(ns("removeTab"), "Remove", icon = icon("minus")),
     actionButton(ns("SaveTab"), "Save", icon = icon("floppy-disk")),
-    actionButton(ns("SaveTabs"), "Save all", icon = icon("disk")),
+    actionButton(ns("SaveTabs"), "Save all", icon = icon("floppy-saved", lib="glyphicon")),
     actionButton(ns("runTabs"), "Run", icon = icon("play"))
   ),
   tags$br(),
