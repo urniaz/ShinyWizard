@@ -51,9 +51,9 @@ textAreaInput(inputId = paste0("tab3-server",tabIndex()),
 # Delete Tab --- >
 observeEvent(input$removeTab, {
     
-    ask_confirmation(
-    inputId = "DelTabConfirmation",
-    title = paste("Are you sure to delete ",as.character(input$EditTabs)," ?")
+    shinyWidgets::ask_confirmation(
+        inputId = "DelTabConfirmation",
+        title = paste("Are you sure to delete ",as.character(input$EditTabs)," ?")
   )
 })
 
