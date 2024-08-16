@@ -12,7 +12,7 @@
 fluidPage(
   fluidRow(
      HTML('<center><h1>Welcome!</h1>
-      <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of next step, below.
+      <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of the option.
       <br />
       <br />
       <div class="card">
@@ -23,11 +23,9 @@ fluidPage(
               <h5 class="card-title">Special title treatment</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
               <a href="#!" class="btn btn-primary">Go somewhere</a>
+              
               <button id="NavBar-go_1_2" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
             </div>
-          </div>
-           <div class="example z-depth-1">
-            .z-depth-1
         </div>
       '),
      sidebarLayout(
