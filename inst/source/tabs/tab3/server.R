@@ -58,7 +58,7 @@ observeEvent(input$removeTab, {
 })
 
 observeEvent(input$DelTabConfirmation, {
-    unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE)
+    unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE, force = TRUE)
     removeTab("EditTabs", target=input$EditTabs)
 })
 # <---
