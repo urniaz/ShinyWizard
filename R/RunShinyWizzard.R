@@ -6,7 +6,7 @@
 
 RunShinyWizard <- function(loc = NULL){
   
-  if (is.null(loc)){
+  if (is.null(loc)){ # Run creator
     
     # Copy source code to temp
     TempPath <- tempdir()
@@ -20,8 +20,12 @@ RunShinyWizard <- function(loc = NULL){
     
   }else{
     
-    # is zip? file.exists(directory) && !dir.exists(directory) => FALSE // file.exists(file) && !dir.exists(file) => TRUE jak file to true jak dir to false 
+        # is loc = <.zip file with project> Run app from zip -> copy, extract to temp, rerun with loc dir to temp
+        # is zip? file.exists(directory) && !dir.exists(directory) => FALSE // file.exists(file) && !dir.exists(file) => TRUE jak file to true jak dir to false 
     
+    
+    
+    # is loc = <tempDir> Run temp app
     # Copy all original files
     file.copy(system.file("source/core", package = "ShinyWizard"), loc, recursive=TRUE)
     file.copy(system.file("source/global.R", package = "ShinyWizard"), loc, recursive=TRUE)
