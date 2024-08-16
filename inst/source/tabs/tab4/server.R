@@ -6,7 +6,7 @@ output$DownloadShinyWizardZIP <- downloadHandler(
     paste("ShinyWizard-", Sys.Date(), ".zip", sep="")
   },
   content = function(file) {
-    utils::zip(file, list.files(config$TempProjPathTabs))
+    utils::zip(file, list.files(paste0(config$TempProjPath,"config.yml"),config$TempProjPathTabs))
   }
 )
 
