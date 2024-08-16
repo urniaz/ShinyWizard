@@ -96,7 +96,7 @@ if (tabIndex() >=1){
    for (i in currentTabIndexes()){
    
      try({
-       tabs_dir_n <- paste0(tabs_dir,"tab", i,"/")
+       tabs_dir_n <- paste0(config$TempProjPathTabs,"tab", i,"/")
        dir.create(tabs_dir_n, showWarnings = FALSE)
        write_file(isolate(input[[paste0("ui",i)]]), paste0(tabs_dir_n, "/ui.R"))
        write_file(isolate(input[[paste0("server",i)]]),paste0(tabs_dir_n, "/server.R"))
