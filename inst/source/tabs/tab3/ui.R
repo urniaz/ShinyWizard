@@ -15,9 +15,8 @@ fluidPage(
   fluidRow(
     actionButton(ns("newTab"), "Append tab", icon = icon("plus")),
     actionButton(ns("removeTab"), "Remove current tab", icon = icon("minus")),
-    actionButton(ns("runTabs"), "Run tabs", icon = icon("play")),
-    tabsetPanel(id=ns("EditTabs"), type="pills")
-  ) #,
-  #tags$br(),
-  #tabsetPanel(id=ns("EditTabs"), type="pills")
+    actionButton(ns("runTabs"), "Run tabs", icon = icon("play"))
+  ),
+  tags$br(),
+  tabsetPanel(id=ns("EditTabs"), type="pills")
 )
