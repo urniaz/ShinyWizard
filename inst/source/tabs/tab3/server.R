@@ -21,30 +21,46 @@ observeEvent(input$newTab, {
                                                          paste0("# InfoTitle: Tab", tabIndex()),
                                                          "# InfoMessage: Info about tab",
                                                          'fluidPage(
-  selectInput(ns("dataset"), label = "Dataset", choices = ls("package:datasets")),
-  verbatimTextOutput(ns("summary")),
-  tableOutput(ns("table"))
-)',
+                                                          selectInput(ns("dataset"), label = "Dataset", choices = ls("package:datasets")),
+                                                          verbatimTextOutput(ns("summary")),
+                                                          tableOutput(ns("table"))
+                                                          )',
                                                          sep="\n"),     
                                                  
                                                   width = "1000%",
                                                   height = "100%",
                                                   resize = "both"),
 
-textAreaInput(inputId = paste0("tab3-server",tabIndex()),
-              label = paste("Tab ",tabIndex(), "server.R"),
-              value = '  output$summary <- renderPrint({
-    dataset <- get(input$dataset, "package:datasets")
-    summary(dataset)
-  })
+                                    textAreaInput(inputId = paste0("tab3-server",tabIndex()),
+                                                  label = paste("Tab ",tabIndex(), "server.R"),
+                                                  value = '  output$summary <- renderPrint({
+                                                          dataset <- get(input$dataset, "package:datasets")
+                                                          summary(dataset)
+                                                          })
   
-  output$table <- renderTable({
-    dataset <- get(input$dataset, "package:datasets")
-    dataset
-  })',
-              width = "100%",
-              height = "100%",
-              resize = "both")
+                                                          output$table <- renderTable({
+                                                          dataset <- get(input$dataset, "package:datasets")
+                                                          dataset
+                                                          })',
+                                                  width = "100%",
+                                                  height = "100%",
+                                                  resize = "both"),
+                                   
+                                   textAreaInput(inputId = paste0("tab3-config",tabIndex()),
+                                                 label = paste("Tab ",tabIndex(), "server.R"),
+                                                 value = '  output$summary <- renderPrint({
+                                                          dataset <- get(input$dataset, "package:datasets")
+                                                          summary(dataset)
+                                                          })
+  
+                                                          output$table <- renderTable({
+                                                          dataset <- get(input$dataset, "package:datasets")
+                                                          dataset
+                                                          })',
+                                                 width = "100%",
+                                                 height = "100%",
+                                                 resize = "both"),
+                                   
                               )), select=TRUE)
 })
 
@@ -58,7 +74,8 @@ observeEvent(input$removeTab, {
 })
 
 observeEvent(input$DelTabConfirmation, {
-    unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE, force = TRUE)
+    # unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE, force = TRUE) # <-?
+    
     removeTab("EditTabs", target=input$EditTabs)
 })
 # <---
