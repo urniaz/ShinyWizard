@@ -18,5 +18,6 @@ fluidPage(
     actionButton(ns("runTabs"), "Run", icon = icon("play"))
   ),
   tags$br(),
-  tabsetPanel(id=ns("EditTabs"), type="pills")
+  tabsetPanel(id=ns("EditTabs"), type="pills"),
+  verbatimTextOutput(outputId = ns("result"))
 )
