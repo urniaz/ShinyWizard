@@ -1,9 +1,7 @@
 
 # Current tab index
 tabIndex <- reactiveVal(0)
-currentTabIndexes <- reactiveVal("a")
-
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes()))})
+currentTabIndexes <- reactiveVal()
 
 
 
@@ -113,4 +111,8 @@ if (tabIndex() >=1){
 
 }
 })
+
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes()))})
+
+
 
