@@ -3,7 +3,7 @@
 tabIndex <- reactiveVal(0)
 currentTabIndexes <- reactiveVal("a")
 
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes))})
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes()))})
 
 
 
