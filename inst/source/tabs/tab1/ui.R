@@ -15,17 +15,9 @@ fluidPage(
       <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of the option.
       <br />
       <br />
-      <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#!" class="btn btn-primary">Go somewhere</a>
-              
+     
+              <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">Next</button>
               <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
-            </div>
         </div>
       '),
      sidebarLayout(
