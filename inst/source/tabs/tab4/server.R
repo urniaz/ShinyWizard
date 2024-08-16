@@ -13,5 +13,5 @@ output$DownloadShinyWizardZIP <- downloadHandler(
 )
 
 
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes))})
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath))})
 
