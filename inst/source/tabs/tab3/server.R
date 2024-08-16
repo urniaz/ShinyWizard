@@ -12,7 +12,7 @@ observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   
   # Add current tab 
-  currentTabIndexes <- c(currentTabIndexes(),tabIndex())
+  currentTabIndexes(c(currentTabIndexes(),tabIndex()))
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
                                  bslib::layout_columns(min_height = "10vw", 
