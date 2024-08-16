@@ -20,6 +20,8 @@ RunShinyWizard <- function(loc = NULL){
     
   }else{
     
+    # is zip? file.exists(directory) && !dir.exists(directory) => FALSE // file.exists(file) && !dir.exists(file) => TRUE jak file to true jak dir to false 
+    
     # Copy all original files
     file.copy(system.file("source/core", package = "ShinyWizard"), loc, recursive=TRUE)
     file.copy(system.file("source/global.R", package = "ShinyWizard"), loc, recursive=TRUE)
