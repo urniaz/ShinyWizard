@@ -23,6 +23,7 @@ shinyServer(function(input, output, session) {
     # onSessionEnded
     session$onSessionEnded(function() { 
       shinyWidgets::show_alert("Session has ended. The app will be closed.")
+      wait(5000)
       stopApp() 
     })
     
