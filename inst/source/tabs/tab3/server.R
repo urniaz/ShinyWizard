@@ -66,11 +66,13 @@ observeEvent(input$DelTabConfirmation, {
 observeEvent(input$runTabs, {
   
 if (tabIndex() >=1){
+  # Copy source code to temp
+  TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
   
   #save_config.yaml(input, output, session) <- # done on trigger function
   
   # Temp dir tabs
-  tabs_dir <- paste0(config$TempProjPath,"tabs/")
+  tabs_dir <- paste0(TempProjPath,"tabs/")
   dir.create(tabs_dir, showWarnings = FALSE)
   
    for (i in 1:tabIndex()){
