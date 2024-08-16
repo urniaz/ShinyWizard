@@ -18,7 +18,7 @@ fluidPage(
      
               <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">Next</button>
               <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
-        </div>
+    
       '),
      sidebarLayout(
        sidebarPanel(
