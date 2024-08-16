@@ -89,8 +89,8 @@ observeEvent(input$runTabs, {
   
 if (tabIndex() >=1){
  
-  # Temp dir tabs
-  tabs_dir <- paste0(config$TempProjPathTabs)
+  # Temp dir tabs clear and save current
+  unlink(config$TempProjPathTabs)
   dir.create(tabs_dir, showWarnings = FALSE)
   
    for (i in currentTabIndexes()){
