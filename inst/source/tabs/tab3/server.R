@@ -93,7 +93,7 @@ if (tabIndex() >=1){
   tabs_dir <- paste0(config$TempProjPathTabs)
   dir.create(tabs_dir, showWarnings = FALSE)
   
-   for (i in 1:tabIndex()){
+   for (i in currentTabIndexes()){
    
      try({
        tabs_dir_n <- paste0(tabs_dir,"tab", i,"/")
