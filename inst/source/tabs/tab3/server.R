@@ -3,8 +3,6 @@
 tabIndex <- reactiveVal(0)
 currentTabIndexes <- reactiveVal()
 
-
-
 # Add Tab
 observeEvent(input$newTab, {
   
@@ -75,10 +73,11 @@ observeEvent(input$removeTab, {
 observeEvent(input$DelTabConfirmation, {
     
     # read current
-   # temp <- currentTabIndexes()
-    
+      temp <- currentTabIndexes()
+      temp <- temp[ !temp == input$EditTab]
+      
     # exclude deleted
-   # currentTabIndexes()
+      currentTabIndexes(temp)
     
     removeTab("EditTabs", target=input$EditTabs)
 })
