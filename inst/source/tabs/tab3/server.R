@@ -14,10 +14,10 @@ observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   
   # Add current tab 
-  currentTabIndexes <- c(currentTabIndexes,tabIndex())
+  currentTabIndexes <- c(currentTabIndexes(),tabIndex())
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
-                                 bslib::layout_columns(min_height = "36vw", 
+                                 bslib::layout_columns(min_height = "10vw", 
                                    textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "ui.R"),
                                                  value = paste("# --- Navigation ---",
@@ -37,7 +37,7 @@ observeEvent(input$newTab, {
                                                          sep="\n"),     
                                                  
                                                   width = "1000%",
-                                                  height = "100%",
+                                                  height = "10vw",
                                                   resize = "both"),
 
                                     textAreaInput(inputId = paste0("tab3-server",tabIndex()),
@@ -52,14 +52,14 @@ observeEvent(input$newTab, {
                                                           dataset
                                                           })',
                                                   width = "100%",
-                                                  height = "100%",
+                                                  height = "10vw",
                                                   resize = "both"),
                                    
                                    textAreaInput(inputId = paste0("tab3-config",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "config.yml"),
                                                  value = ' conf',
                                                  width = "100%",
-                                                 height = "100%",
+                                                 height = "10vw",
                                                  resize = "both"),
                                    
                               )), select=TRUE)
