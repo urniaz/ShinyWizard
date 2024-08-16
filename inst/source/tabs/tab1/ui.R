@@ -16,9 +16,6 @@ fluidPage(
       <br />
       <br />
       <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
             <div class="card-body">
               
               <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
