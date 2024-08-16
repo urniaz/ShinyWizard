@@ -1,11 +1,16 @@
 
 # Current tab index
 tabIndex <- reactiveVal(0)
+currentTabIndexes <- reactiveVal(NULL)
 
 # Add Tab
 observeEvent(input$newTab, {
   
+  # Update tab index
   tabIndex(tabIndex() + 1)
+  
+  # Add current tab 
+  currentTabIndexes(c(currentTabIndexes,tabIndex()))
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
                                  bslib::layout_columns(
@@ -66,7 +71,12 @@ observeEvent(input$removeTab, {
 })
 
 observeEvent(input$DelTabConfirmation, {
-    # unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE, force = TRUE) # <-?
+    
+    # read current
+    temp <- currentTabIndexes()
+    
+    # exclude deleted
+    currentTabIndexes()
     
     removeTab("EditTabs", target=input$EditTabs)
 })
