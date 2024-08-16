@@ -15,9 +15,9 @@ fluidPage(
       <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of the option.
       <br />
       <br />
-      <div class="card">
+   
               <button id="NavBar-go_2_3" type="button" class="btn btn-default action-button shiny-bound-input">New Project</button>
-        </div>
+  
       '),
      sidebarLayout(
        sidebarPanel(
