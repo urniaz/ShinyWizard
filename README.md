@@ -1,10 +1,10 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/108904994aa84de89b5f933b0f33bc67)](https://app.codacy.com/gh/urniaz/ShinyWizard/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Circle CI Badge](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)](https://app.circleci.com/pipelines/github/urniaz?circle-token=79db963de7c13c1570f70cb8ac1c77a5) ![CRAN/METACRAN License](https://img.shields.io/cran/l/ShinyWizard)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/ShinyWizard)
 
-# ShinyWizard : interactive presentation of any R package 
+# ShinyWizard : an interactive presentation of any R package 
 
 <table width="100%" border="0">
   <tbody><tr>
-    <td width="80%">ShinyWizard is a <b>Shiny App</b> to build an <b>interactive DEMO presentations</b> for any R package. <br><br>ShinyWizard installs and runs as a standard R package.</td>
+    <td width="80%">ShinyWizard is <b>Shiny App</b> to build an <b>interactive presentation</b> for any R package. <br><br>ShinyWizard installs as standard R package and runs as Shiny app. </td>
     <td width="20%"><img src="https://github.com/urniaz/ShinyWizard/blob/alfa/inst/source/www/img/logo.png"></td>
   </tr>
 </tbody></table>
