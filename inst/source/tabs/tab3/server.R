@@ -1,7 +1,7 @@
 
 # Current tab index
 tabIndex <- reactiveVal(0)
-currentTabIndexes <- reactiveVal(NULL)
+currentTabIndexes <- reactiveVal(-1)
 
 # Add Tab
 observeEvent(input$newTab, {

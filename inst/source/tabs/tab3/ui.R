@@ -19,5 +19,6 @@ fluidPage(
   ),
   tags$br(),
   tabsetPanel(id=ns("EditTabs"), type="pills"),
+  
   verbatimTextOutput(outputId = ns("result"))
 )
