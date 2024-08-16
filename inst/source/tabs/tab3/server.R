@@ -67,12 +67,13 @@ observeEvent(input$removeTab, {
 
 observeEvent(input$DelTabConfirmation, {
     # unlink(paste0(config$TempProjPath, "tabs/tab", input$EditTabs), recursive=TRUE, force = TRUE) # <-?
-    
+    input[[paste0("ui",i)]] <- NULL
+    input[[paste0("server",i)]] <- NULL
     removeTab("EditTabs", target=input$EditTabs)
 })
 # <---
 
-# Run projects
+# Run project
 observeEvent(input$runTabs, {
   
 if (tabIndex() >=1){
