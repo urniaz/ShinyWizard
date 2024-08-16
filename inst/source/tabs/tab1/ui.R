@@ -16,17 +16,8 @@ fluidPage(
       <br />
       <br />
       '),
-     next_prev_button(1,2, NextName = "New Project")
-     ,
-     sidebarLayout(
-       sidebarPanel(
-         fileInput(ns("file1"), "Choose CSV File", accept = ".csv"),
-         checkboxInput(ns("header"), "Header", TRUE)
-       ),
-       mainPanel(
-         tableOutput(ns("contents"))
-       )
-     ),
+     next_prev_button(1,2, NextName = "New Project"),
+     fileInput(ns("ProjectFile"), "Choose ZIP File", accept = ".zip"),
      HTML("</center>")
  )
 )
