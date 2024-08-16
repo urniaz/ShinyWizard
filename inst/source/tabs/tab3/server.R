@@ -90,7 +90,7 @@ observeEvent(input$runTabs, {
 if (tabIndex() >=1){
  
   # Temp dir tabs clear and save current
-  unlink(config$TempProjPathTabs)
+  unlink(config$TempProjPathTabs, recursive = TRUE, force = TRUE)
   dir.create(config$TempProjPathTabs, showWarnings = FALSE)
   
    for (i in currentTabIndexes()){
