@@ -13,7 +13,7 @@ observeEvent(input$newTab, {
   currentTabIndexes <- c(currentTabIndexes,tabIndex())
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
-                                 bslib::layout_columns(
+                                 bslib::layout_columns(min_height = "100%", 
                                    textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "ui.R"),
                                                  value = paste("# --- Navigation ---",
