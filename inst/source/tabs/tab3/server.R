@@ -10,7 +10,7 @@ observeEvent(input$newTab, {
   tabIndex(tabIndex() + 1)
   
   # Add current tab 
-  currentTabIndexes(c(currentTabIndexes,tabIndex()))
+  currentTabIndexes <- c(currentTabIndexes,tabIndex())
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
                                  bslib::layout_columns(
@@ -73,10 +73,10 @@ observeEvent(input$removeTab, {
 observeEvent(input$DelTabConfirmation, {
     
     # read current
-    temp <- currentTabIndexes()
+   # temp <- currentTabIndexes()
     
     # exclude deleted
-    currentTabIndexes()
+   # currentTabIndexes()
     
     removeTab("EditTabs", target=input$EditTabs)
 })
