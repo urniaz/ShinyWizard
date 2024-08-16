@@ -1,7 +1,11 @@
 
 # Current tab index
 tabIndex <- reactiveVal(0)
-currentTabIndexes <- reactiveVal()
+currentTabIndexes <- reactiveVal("a")
+
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes))})
+
+
 
 # Add Tab
 observeEvent(input$newTab, {
@@ -13,7 +17,7 @@ observeEvent(input$newTab, {
   currentTabIndexes <- c(currentTabIndexes,tabIndex())
   
   appendTab("EditTabs", tabPanel(tabIndex(), 
-                                 bslib::layout_columns(min_height = "100%", 
+                                 bslib::layout_columns(min_height = "36vw", 
                                    textAreaInput(inputId = paste0("tab3-ui",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "ui.R"),
                                                  value = paste("# --- Navigation ---",
@@ -81,8 +85,6 @@ observeEvent(input$DelTabConfirmation, {
     removeTab("EditTabs", target=input$EditTabs)
 })
 # <---
-
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ "))})
 
 
 # Run project
