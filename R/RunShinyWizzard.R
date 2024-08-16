@@ -20,23 +20,26 @@ RunShinyWizard <- function(loc = NULL){
     
   }else{
     
-        # is loc = <.zip file with project> Run app from zip -> copy, extract to temp, rerun with loc dir to temp
-        # is zip? file.exists(directory) && !dir.exists(directory) => FALSE // file.exists(file) && !dir.exists(file) => TRUE jak file to true jak dir to false 
+    if (file.exists(loc) && !dir.exists(loc)){ #TRUE => file, unzip & rerun 
+      
+        # is loc = <.zip file with project> 
+        utils::unzip(loc, exdir = config$TempProjPath)
+        RunShinyWizard(loc = config$TempProjPath)
+      
+    } esle { #FALSE => directory, run app
+      
+        # is loc = <tempDir> Run temp app
+        # Copy all original files
+        file.copy(system.file("source/core", package = "ShinyWizard"), loc, recursive=TRUE)
+        file.copy(system.file("source/global.R", package = "ShinyWizard"), loc, recursive=TRUE)
+        file.copy(system.file("source/server.R", package = "ShinyWizard"), loc, recursive=TRUE)
+        file.copy(system.file("source/ui.R", package = "ShinyWizard"), loc, recursive=TRUE)
+        file.copy(system.file("source/www", package = "ShinyWizard"), loc, recursive=TRUE)
     
-    
-    
-    # is loc = <tempDir> Run temp app
-    # Copy all original files
-    file.copy(system.file("source/core", package = "ShinyWizard"), loc, recursive=TRUE)
-    file.copy(system.file("source/global.R", package = "ShinyWizard"), loc, recursive=TRUE)
-    file.copy(system.file("source/server.R", package = "ShinyWizard"), loc, recursive=TRUE)
-    file.copy(system.file("source/ui.R", package = "ShinyWizard"), loc, recursive=TRUE)
-    file.copy(system.file("source/www", package = "ShinyWizard"), loc, recursive=TRUE)
-    
-    # Run project
-    write(paste0("shiny::runApp('", loc,"', launch.browser = TRUE)"), paste0(loc, "run.R"))
-    rstudioapi::jobRunScript(paste0(loc, "run.R"))
-    
+      # Run project
+      write(paste0("shiny::runApp('", loc,"', launch.browser = TRUE)"), paste0(loc, "run.R"))
+      rstudioapi::jobRunScript(paste0(loc, "run.R"))
+    }
   }
   
 }
