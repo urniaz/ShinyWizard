@@ -112,7 +112,7 @@ if (tabIndex() >=1){
 }
 })
 
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", currentTabIndexes()))})
+output$result <- renderText({(paste(currentTabIndexes()))})
 
 
 
