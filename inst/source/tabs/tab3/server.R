@@ -106,7 +106,7 @@ if (tabIndex() >=1){
   
   # Run project
   
-  ShinyWizard::RunShinyWizard(loc = TempProjPath)
+  ShinyWizard::RunShinyWizard(loc = config$TempProjPath)
 
 }
 })
