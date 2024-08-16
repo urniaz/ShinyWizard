@@ -1,7 +1,7 @@
 
 # Current tab index
 tabIndex <- reactiveVal(0)
-currentTabIndexes <- reactiveVal(-1)
+currentTabIndexes <- reactiveVal()
 
 # Add Tab
 observeEvent(input$newTab, {
@@ -82,7 +82,7 @@ observeEvent(input$DelTabConfirmation, {
 })
 # <---
 
-output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ ", isolate(currentTabIndexes)))})
+output$result <- renderText({(paste("config", tempdir(), " /+/ ", config$TempProjPath, " /+/ "))})
 
 
 # Run project
