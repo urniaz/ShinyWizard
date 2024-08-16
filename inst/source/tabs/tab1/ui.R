@@ -12,12 +12,16 @@
 fluidPage(
   fluidRow(
      HTML('<center><h1>Welcome!</h1>
-      <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. <strong>Congratulations!</strong> </p>Now please choose one of the option.
-      <br />
-      <br />
+      <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. 
+      <strong>Congratulations!</strong> 
+      </p>Now please choose one of the option:
       '),
-     next_prev_button(1,2, NextName = "New Project"),
-     fileInput(ns("ProjectFile"), "Choose ZIP File", accept = ".zip"),
+     br(),
+     br(),
+        next_prev_button(1,2, NextName = "New Project"),
+     br(),
+     br(),
+        fileInput(ns("ProjectFile"), "Edit existing project (*.zip)", accept = ".zip"),
      HTML("</center>")
  )
 )
