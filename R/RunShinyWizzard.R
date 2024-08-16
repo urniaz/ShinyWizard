@@ -26,7 +26,7 @@ RunShinyWizard <- function(loc = NULL){
         utils::unzip(loc, exdir = config$TempProjPath)
         RunShinyWizard(loc = config$TempProjPath)
       
-    } esle { #FALSE => directory, run app
+    } else { #FALSE => directory, run app
       
         # is loc = <tempDir> Run temp app
         # Copy all original files
