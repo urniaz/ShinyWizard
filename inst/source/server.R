@@ -18,13 +18,10 @@ shinyServer(function(input, output, session) {
     
     # Observe Events on Next Prev Buttons
     observe_event_next_prev_buttons(input, output, session)
-    
       
+    
+    
     # onSessionEnded
-    session$onSessionEnded(function() { 
-      shinyWidgets::show_alert("Session has ended. The app will be closed.")
-      wait(5000)
-      stopApp() 
-    })
+    session$onSessionEnded(function() { stopApp() })
     
 })

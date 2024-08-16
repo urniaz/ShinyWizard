@@ -13,7 +13,7 @@
 
 fluidPage(
   fluidRow(
-    downloadButton(ns("downloadData"), "Download")
+    downloadButton(ns("DownloadShinyWizardZIP"), "Download")
     ,verbatimTextOutput(outputId = ns("result"))
   )
 )

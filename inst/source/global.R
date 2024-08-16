@@ -4,6 +4,9 @@ rm(list = ls(all.names = TRUE))
 # Load configuration file
 config <- yaml::yaml.load_file('config.yaml')
 
+# Additional config
+config$TempProjPath <- paste0(tempdir(),"/SWTempProj/") 
+
 # Package names
 packages <- c("devtools", "shiny", "shinythemes", "shinydashboard", "shinyjs", "yaml", "readr", "stringr", "shinyWidgets", "bslib")
 
