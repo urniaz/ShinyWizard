@@ -7,7 +7,7 @@ output$DownloadShinyWizardZIP <- downloadHandler(
   },
   content = function(file) {
     # save all files  
-    utils::zip(file, list.files(paste0(config$TempProjPath,"config.yml"), config$TempProjPathTabs))
+    utils::zip(file, list.files( config$TempProjPathTabs))
   }
 )
 
