@@ -47,16 +47,8 @@ observeEvent(input$newTab, {
                                                   resize = "both"),
                                    
                                    textAreaInput(inputId = paste0("tab3-config",tabIndex()),
-                                                 label = paste("Tab ",tabIndex(), "server.R"),
-                                                 value = '  output$summary <- renderPrint({
-                                                          dataset <- get(input$dataset, "package:datasets")
-                                                          summary(dataset)
-                                                          })
-  
-                                                          output$table <- renderTable({
-                                                          dataset <- get(input$dataset, "package:datasets")
-                                                          dataset
-                                                          })',
+                                                 label = paste("Tab ",tabIndex(), "config.yml"),
+                                                 value = ' conf',
                                                  width = "100%",
                                                  height = "100%",
                                                  resize = "both"),
