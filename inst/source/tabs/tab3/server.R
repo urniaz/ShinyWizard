@@ -77,7 +77,7 @@ observeEvent(input$DelTabConfirmation, {
       temp <- temp[ !temp == input$EditTab]
       
     # exclude deleted
-      currentTabIndexes(temp)
+      currentTabIndexes(c(temp))
     
     removeTab("EditTabs", target=input$EditTabs)
 })
