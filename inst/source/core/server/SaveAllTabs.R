@@ -1,12 +1,12 @@
 #' Save all tabs
 
-SaveAllTabs <- function(input, output, session){
+SaveAllTabs <- function(input, output, session, currentTabIndexes){
   
   # Temp dir tabs clear and save current
   unlink(config$TempProjPathTabs, recursive = TRUE, force = TRUE)
   dir.create(config$TempProjPathTabs, showWarnings = FALSE)
   
-  for (i in currentTabIndexes()){
+  for (i in currentTabIndexes){
     
     try({
       tabs_dir_n <- paste0(config$TempProjPathTabs,"tab", i,"/")

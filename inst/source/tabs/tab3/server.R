@@ -90,7 +90,7 @@ observeEvent(input$runTabs, {
 #if (tabIndex() >=1){
  
   # Save all tabs
-  SaveAllTabs(input, output, session)
+  SaveAllTabs(input, output, session, currentTabIndexes())
     
   # Run project
   ShinyWizard::RunShinyWizard(loc = config$TempProjPath)
