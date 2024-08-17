@@ -1,6 +1,6 @@
 # --- Navigation ---
-# TabName: Tabs
-# TabIcon: file
+# TabName: Download & deploy
+# TabIcon: download
 
 # --- Next/Prev buttons
 # ShowButtons: TRUE
