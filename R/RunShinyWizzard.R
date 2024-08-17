@@ -22,11 +22,10 @@ RunShinyWizard <- function(loc = NULL){
     
     if (file.exists(loc) && !dir.exists(loc)){ #TRUE => file, unzip & rerun 
       
-     # config$TempProjPath
         # is loc = <.zip file with project> zip file contains only tabs
-        utils::unzip(loc, exdir = tempdir(), overwrite = TRUE)
+        utils::unzip(loc, exdir = config$TempProjPath, overwrite = TRUE)
         # Sys.sleep(1)
-        RunShinyWizard(loc = tempdir())
+        RunShinyWizard(loc = config$TempProjPath)
       
     } else { #FALSE => directory, run app
       
