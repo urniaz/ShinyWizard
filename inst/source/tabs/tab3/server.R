@@ -83,6 +83,8 @@ observeEvent(input$DelTabConfirmation, {
 })
 # <---
 
+# Save all tabs
+SaveAllTabs(input, output, session, currentTabIndexes())
 
 # Run project
 observeEvent(input$runTabs, {
