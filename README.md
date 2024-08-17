@@ -24,6 +24,7 @@ ShinyWizard::RunShinyWizard()
 
 [2. Documentation](#2-documentation)
 - [2.1 Functions](#21-functions)
+  - [2.1.1 RunShinyWizard](#211-RunShinyWizard)
 - [2.2 Examples](#22-examples)
 - [2.3 Tutorials](#23-tutorials)
     
@@ -59,6 +60,11 @@ The documentation for package including user guides, package vignettes, descript
 # To show the manual and functions' descriptions 
 help(package = "ShinyWizard")
 ```
+#### 2.1.1 RunShinyWizard
+
+RunShinyWizard(loc = NULL, devMode = FALSE)
+
+devMode - when TRUE the developer mode is used. It means all tasks run by separate background jobs thus console is not blocked. It works by R Studio API so works only in R studio. It is mode only for development facilitate. Should not be used for production. 
 
 ### 2.2 Examples
 

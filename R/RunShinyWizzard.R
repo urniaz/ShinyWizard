@@ -4,7 +4,7 @@
 #' 
 #' @export
 
-RunShinyWizard <- function(loc = NULL){
+RunShinyWizard <- function(loc = NULL, devMode = FALSE){
   
   if (is.null(loc)){ # Run creator
     
@@ -16,8 +16,14 @@ RunShinyWizard <- function(loc = NULL){
     
     # Run project
     write(paste0("shiny::runApp('",paste0(TempPath, "/source/"),"', launch.browser = TRUE)"), paste0(TempPath, "/run.R"))
-    system2("Rscript", paste0(TempPath, "/run.R"))
-    # rstudioapi::jobRunScript(paste0(TempPath, "/run.R"))
+    
+    # Dev Mode uses rstudioapi
+    if (devMode){
+      rstudioapi::jobRunScript(paste0(TempPath, "/run.R"))
+    }else{
+      system2("Rscript", paste0(TempPath, "/run.R"))
+    }
+    
     
   }else{
     
@@ -40,8 +46,14 @@ RunShinyWizard <- function(loc = NULL){
     
       # Run project
       write(paste0("shiny::runApp('", loc,"', launch.browser = TRUE)"), paste0(loc, "run.R"))
-      system2("Rscript", paste0(loc, "run.R"))
-      # rstudioapi::jobRunScript(paste0(loc, "run.R"))
+      
+      # Dev Mode uses rstudioapi
+      if (devMode){
+        rstudioapi::jobRunScript(paste0(loc, "run.R"))
+      }else{
+        system2("Rscript", paste0(loc, "run.R"))
+      }
+      
     }
   }
   
