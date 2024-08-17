@@ -21,7 +21,7 @@ fluidPage(
     downloadButton(ns("DownloadShinyWizardZIP"), "Download")
   ),
   HTML('<center>
-      <p> 
+      <p>      <br /> <br />
                 Downloaded file can be simply deployed as,... 
                 <br /> <br /> ... <b>separate file</b> ... <br /><br /> 
                 <code>ShinyWizard::RunShinyWizard(<Path to downloaded zip file>)</code>
@@ -30,7 +30,7 @@ fluidPage(
                   <br /> <br />
                   Copy zip file to the <code>inst</code> folder of your package and provide the path to the zip file 
                   <br /> <br />
-                <code>ShinyWizard::RunShinyWizard(paste0(system.file(package = "<name of your package>"), <downloaded zip filename>)</code>
+                <code>ShinyWizard::RunShinyWizard(paste0(system.file(package = "/<name of your package/>"), /<downloaded zip filename/>)</code>
       </p>
       <center>'),
   verbatimTextOutput(outputId = ns("result")),
