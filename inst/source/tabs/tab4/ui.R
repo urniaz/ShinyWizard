@@ -6,10 +6,6 @@
 # ShowButtons: TRUE
 # ButtonsAlignment: center
 
-# --- Info ---
-# InfoTitle: tir
-# InfoMessage: mes
-
 
 fluidPage(
   fluidRow(

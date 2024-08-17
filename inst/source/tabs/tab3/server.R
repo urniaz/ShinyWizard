@@ -35,7 +35,7 @@ observeEvent(input$newTab, {
                                                          sep="\n"),     
                                                  
                                                   width = "1000%",
-                                                  height = "20vw",
+                                                  height = "18vw",
                                                   resize = "both"),
 
                                     textAreaInput(inputId = paste0("tab3-server",tabIndex()),
@@ -50,14 +50,23 @@ observeEvent(input$newTab, {
                                                           dataset
                                                           })',
                                                   width = "100%",
-                                                  height = "20vw",
+                                                  height = "18vw",
                                                   resize = "both"),
                                    
                                    textAreaInput(inputId = paste0("tab3-config",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "config.yml"),
-                                                 value = ' conf',
+                                                 value = ' # --- Navigation ---
+# TabName: Welcome
+# TabIcon: home
+
+# --- Next/Prev buttons
+# ShowButtons: FALSE
+
+# --- Info ---
+# InfoTitle: tir
+# InfoMessage: mes',
                                                  width = "100%",
-                                                 height = "20vw",
+                                                 height = "18vw",
                                                  resize = "both"),
                                    
                               )), select=TRUE)
