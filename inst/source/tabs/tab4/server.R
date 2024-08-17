@@ -10,7 +10,7 @@ output$DownloadShinyWizardZIP <- downloadHandler(
     temp <- getwd()
     setwd(config$TempProjPath)
     # save all files  
-    utils::zip(file, c('config.yml', '/tabs/'))
+    utils::zip(file, c('config.yml', '/tabs'))
     setwd(temp)
   }
 )
