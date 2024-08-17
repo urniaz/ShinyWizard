@@ -16,16 +16,17 @@ RunShinyWizard <- function(loc = NULL){
     
     # Run project
     write(paste0("shiny::runApp('",paste0(TempPath, "/source/"),"', launch.browser = TRUE)"), paste0(TempPath, "/run.R"))
-    rstudioapi::jobRunScript(paste0(TempPath, "/run.R"))
+    system2("Rscript", paste0(TempPath, "/run.R"))
+    # rstudioapi::jobRunScript(paste0(TempPath, "/run.R"))
     
   }else{
     
     if (file.exists(loc) && !dir.exists(loc)){ #TRUE => file, unzip & rerun 
       
         # is loc = <.zip file with project> zip file contains only tabs
-        utils::unzip(loc, exdir = config$TempProjPath, overwrite = TRUE)
-        # Sys.sleep(1)
-        RunShinyWizard(loc = config$TempProjPath)
+        # config$TempProjPath
+        utils::unzip(loc, exdir = tempdir(), overwrite = TRUE)
+        RunShinyWizard(loc = tempdir())
       
     } else { #FALSE => directory, run app
       
@@ -39,7 +40,8 @@ RunShinyWizard <- function(loc = NULL){
     
       # Run project
       write(paste0("shiny::runApp('", loc,"', launch.browser = TRUE)"), paste0(loc, "run.R"))
-      rstudioapi::jobRunScript(paste0(loc, "run.R"))
+      system2("Rscript", paste0(loc, "run.R"))
+      # rstudioapi::jobRunScript(paste0(loc, "run.R"))
     }
   }
   
