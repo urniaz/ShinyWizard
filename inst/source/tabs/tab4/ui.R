@@ -23,7 +23,7 @@ fluidPage(
     layout_columns(
       col_width = 3,
       card(
-        card_header(HTML("<b>Running in terminal</b>"),
+        card_header(HTML("<b>Running in terminal</b>")),
         HTML(
           '<br />Open text editor, write command <code> ShinyWizard::RunShinyWizard(&#60;Path to downloaded zip file&#62;)</code><br /> save file as <code>run.R</code> and run from console by command<br /> <code>Rscript run.R</code>'
         )
@@ -45,4 +45,4 @@ fluidPage(
   
   verbatimTextOutput(outputId = ns("result")),
 
-))
+)
