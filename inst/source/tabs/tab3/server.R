@@ -86,8 +86,6 @@ observeEvent(input$DelTabConfirmation, {
 
 # Run project
 observeEvent(input$runTabs, {
-  
-#if (tabIndex() >=1){
  
   # Save all tabs
   SaveAllTabs(input, output, session, currentTabIndexes())
@@ -95,7 +93,6 @@ observeEvent(input$runTabs, {
   # Run project
   ShinyWizard::RunShinyWizard(loc = config$TempProjPath)
 
-#}
 })
 
 output$result <- renderText({(paste(currentTabIndexes()))})
