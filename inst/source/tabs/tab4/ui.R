@@ -30,7 +30,7 @@ fluidPage(
                   <br /> <br />
                   Copy zip file to the <code>inst</code> folder of your package and provide the path to the zip file 
                   <br /> <br />
-                <code>ShinyWizard::RunShinyWizard(paste0(system.file(package = "\<name of your package\>"), \<downloaded zip filename\>)</code>
+                <code>ShinyWizard::RunShinyWizard(paste0(system.file(package = "&#60;name of your package&#62;"), &#60;downloaded zip filename&#62;)</code>
       </p>
       <center>'),
   verbatimTextOutput(outputId = ns("result")),
