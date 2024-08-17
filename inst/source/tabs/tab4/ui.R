@@ -12,26 +12,24 @@
 
 
 fluidPage(
-  fluidRow(HTML('<center><h1>Download & Deploy Your Project !</h1>
-      <p> Now it is time for download and deploy your project.
-      <br /> <br />
-      </p>
-      '),
+  fluidRow(
+    
+    HTML('<center><h1>Download & Deploy Your Project !</h1><br /> <br />'),
            
     downloadButton(ns("DownloadShinyWizardZIP"), "Download"),
     
-    HTML('Downloaded file can be simply deployed by,... '),
+    HTML('<br /> <br /> Downloaded file can be simply deployed by,... '),
     
     layout_columns(
       col_width = 3,
       card(
-        card_header("Running in terminal"),
+        card_header(HTML("<b>Running in terminal</b>"),
         HTML(
-          'Open text editor, write command <br /><br /><code> ShinyWizard::RunShinyWizard(&#60;Path to downloaded zip file&#62;)</code><br /><br /> save file as <code>run.R</code> and run from console by command<br /><br /><code>Rscript run.R</code>'
+          '<br />Open text editor, write command <code> ShinyWizard::RunShinyWizard(&#60;Path to downloaded zip file&#62;)</code><br /> save file as <code>run.R</code> and run from console by command<br /> <code>Rscript run.R</code>'
         )
       ),
       card(
-        card_header("Running in R studio console"),
+        card_header(HTML("<b>Running in R studio console</b>")),
         HTML(
           'Open R studio, write command to console <br /><br /><code> ShinyWizard::RunShinyWizard(&#60;Path to downloaded zip file&#62;)</code><br /><br /> and click enter.'
         )

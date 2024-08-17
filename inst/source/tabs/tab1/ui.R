@@ -14,15 +14,14 @@ fluidPage(
      HTML('<center><h1>Welcome!</h1>
       <p>If you\'re seeing this page, that means Shiny Wizard is installed and running. 
       <strong>Congratulations!</strong> 
-      </p>Now please choose one of the option:
+      </p>Start new project 
       '),
      br(),
      br(),
         next_prev_button(1,2, NextName = "New Project"),
      br(),
      br(),
-     p("Edit existing project (*.zip)"),
-     br(),
+     p("or edit an existing (*.zip)"),
      br(),
         fileInput(ns("ProjectFile"), NULL, accept = ".zip"),
      HTML("</center>")
