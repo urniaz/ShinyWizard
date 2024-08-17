@@ -20,7 +20,7 @@ ShinyWizzardTheme <- function(name = ""){
    }
 }
 
-#' 
+#' ShinyWizzardThemeSelector
 #'
 #' @export
 
