@@ -14,7 +14,7 @@
 fluidPage(
   fluidRow(
     
-    HTML('<center><h1>Download & Deploy Your Project !</h1><br /> <br />'),
+    HTML('<center><h1>Download & Deploy Your Project !</h1><br />'),
            
     downloadButton(ns("DownloadShinyWizardZIP"), "Download"),
     
