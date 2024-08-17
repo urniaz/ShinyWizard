@@ -1,9 +1,11 @@
 
-# Current tab index
+# -- Current tab index --- >
 tabIndex <- reactiveVal(0)
 currentTabIndexes <- reactiveVal()
 
-# Add Tab
+
+# -- Add Tab --- >
+
 observeEvent(input$newTab, {
   
   # Update tab index
@@ -61,7 +63,8 @@ observeEvent(input$newTab, {
                               )), select=TRUE)
 })
 
-# Delete Tab --- >
+# -- Delete Tab --- >
+
 observeEvent(input$removeTab, {
     
     shinyWidgets::ask_confirmation(
@@ -81,12 +84,10 @@ observeEvent(input$DelTabConfirmation, {
     
     removeTab("EditTabs", target=input$EditTabs)
 })
-# <---
 
-# Save all tabs
-SaveAllTabs(input, output, session, currentTabIndexes())
 
-# Run project
+# -- Run project --- >
+
 observeEvent(input$runTabs, {
  
   # Save all tabs
@@ -97,7 +98,27 @@ observeEvent(input$runTabs, {
 
 })
 
+
+# -- Download --- >
+
+output$DownloadShinyWizardZIP <- downloadHandler(
+  filename = function() {
+    paste("ShinyWizard-", Sys.Date(), ".zip", sep="")
+  },
+  content = function(file) {
+    # change wd
+    temp <- getwd()
+    setwd(config$TempProjPath)
+    # save all files  
+    utils::zip(file, c('config.yaml', 'tabs'))
+    setwd(temp)
+  }
+)
+
+
+
 output$result <- renderText({(paste(currentTabIndexes()))})
+output$result2 <- renderText({(paste(config$TempProjPathTabs, "/ + /", getwd()))})
 
 
 
