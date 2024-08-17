@@ -61,6 +61,9 @@ observeEvent(input$newTab, {
                                                  resize = "both"),
                                    
                               )), select=TRUE)
+  
+  # Save all tabs
+  SaveAllTabs(input, output, session, currentTabIndexes())
 })
 
 # -- Delete Tab --- >
@@ -82,9 +85,21 @@ observeEvent(input$DelTabConfirmation, {
     # exclude deleted
       currentTabIndexes(c(temp))
     
+    # Save all tabs
+    SaveAllTabs(input, output, session, currentTabIndexes())
+      
     removeTab("EditTabs", target=input$EditTabs)
 })
 
+
+# -- Save project --- >
+
+observeEvent(input$saveTabs, {
+  
+  # Save all tabs
+  SaveAllTabs(input, output, session, currentTabIndexes())
+  
+})
 
 # -- Run project --- >
 
