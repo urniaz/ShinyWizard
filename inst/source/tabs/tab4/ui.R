@@ -24,7 +24,7 @@ fluidPage(
       <p>      <br /> <br />
                 Downloaded file can be simply deployed as,... 
                 <br /> <br /> ... <b>separate file</b> ... <br /><br /> 
-                <code>ShinyWizard::RunShinyWizard(<Path to downloaded zip file>)</code>
+                <code>ShinyWizard::RunShinyWizard(&#60;Path to downloaded zip file&#62;)</code>
                   <br /> <br /> 
                   ... or a <b> part of your package</b> 
                   <br /> <br />
