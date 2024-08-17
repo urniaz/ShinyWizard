@@ -20,7 +20,7 @@ fluidPage(
       '),
     downloadButton(ns("DownloadShinyWizardZIP"), "Download")
   ),
-  HTML('<center><h1>Welcome!</h1>
+  HTML('<center>
       <p> 
                 Downloaded file can be simply deployed as,... 
                 <br /> <br /> ... <b>separate file</b> ... <br /><br /> 
