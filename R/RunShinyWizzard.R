@@ -24,7 +24,7 @@ RunShinyWizard <- function(loc = NULL){
       
         # is loc = <.zip file with project> zip file contains only tabs
         utils::unzip(loc, exdir = config$TempProjPath)
-        Sys.sleep(1000)
+        Sys.sleep(1)
         RunShinyWizard(loc = config$TempProjPath)
       
     } else { #FALSE => directory, run app
