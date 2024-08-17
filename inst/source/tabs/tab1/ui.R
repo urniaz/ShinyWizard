@@ -21,7 +21,10 @@ fluidPage(
         next_prev_button(1,2, NextName = "New Project"),
      br(),
      br(),
-        fileInput(ns("ProjectFile"), "Edit existing project (*.zip)", accept = ".zip"),
+     p("Edit existing project (*.zip)"),
+     br(),
+     br(),
+        fileInput(ns("ProjectFile"), NULL, accept = ".zip"),
      HTML("</center>")
  )
 )
