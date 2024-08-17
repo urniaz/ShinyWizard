@@ -123,7 +123,7 @@ observeEvent(input$runTabs, {
 })
 
 
-output$result <- renderText({(paste(currentTabIndexes()))})
+# output$result <- renderText({(paste(currentTabIndexes()))})
 
 
 
