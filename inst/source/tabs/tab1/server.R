@@ -18,6 +18,10 @@ output$contents <- renderText({
   file.copy(paste0(path,'/config.yaml'), config$TempProjPath, recursive=TRUE)
   file.copy(paste0(path,'/tabs'), config$TempProjPath, recursive=TRUE)
   
+  # Load config
+  load_config.yaml(input, output, session)
+  
+  # Load tabs
   as.character(paste0(path,"/+/" ,config$TempProjPath))
   
 })
