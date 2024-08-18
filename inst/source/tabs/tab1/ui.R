@@ -25,17 +25,9 @@ fluidPage(
      br(),
         fileInput(ns("UploadProjectFile"), NULL, accept = ".zip", multiple = FALSE),
      HTML("</center>"),
-     
-     sidebarLayout(
-       sidebarPanel(
-         fileInput(ns("file1"), "Choose CSV File", accept = ".csv"),
-         checkboxInput("header", "Header", TRUE)
-       ),
-       mainPanel(
-         tableOutput(ns("contents"))
-       )
-     )
  )
 )
+
+verbatimTextOutput(ns('contents'))
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
