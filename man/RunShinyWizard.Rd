@@ -4,10 +4,12 @@
 \alias{RunShinyWizard}
 \title{Run ShinyWizard app}
 \usage{
-RunShinyWizard(loc = "")
+RunShinyWizard(loc = NULL, devMode = FALSE)
 }
 \arguments{
-\item{loc}{directory to external tabs, when NULL run demo}
+\item{loc}{directory to external tabs, project zip file, when NULL run builder}
+
+\item{devMode}{when TRUE the developer mode is used. It means all tasks run by separate background jobs thus console is not blocked. It works by R Studio API so works only in R studio. It is mode only for development facilitate. Should not be used for production.}
 }
 \description{
 Run ShinyWizard app

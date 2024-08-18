@@ -20,19 +20,22 @@ ShinyWizzardTheme <- function(name = ""){
    }
 }
 
-#' ShinyWizzardThemeSelector
+#' @title ShinyWizzardThemeSelector
 #'
+#' @description
+#' A short description...
+#' 
 #' @export
 
 ShinyWizzardThemeSelector <- function() { 
-  fluidRow(align="center",
-    selectInput("tab2-shinytheme-selector", "Theme",
+  shiny::fluidRow(align="center",
+  shiny::selectInput("tab2-shinytheme-selector", "Theme",
                 c(allThemes()),
                 selectize = FALSE,
                 selected = "flatly", # starting theme
                ),
     
-    tags$script(
+  shiny::tags$script(
       "$('#tab2-shinytheme-selector')
   .on('change', function(el) {
     var allThemes = $(this).find('option').map(function() {

@@ -23,9 +23,11 @@ fluidPage(
      br(),
      p("or edit an existing (*.zip)"),
      br(),
-        fileInput(ns("ProjectFile"), NULL, accept = ".zip"),
+        fileInput(ns("UploadProjectFile"), NULL, accept = ".zip", multiple = FALSE),
      HTML("</center>")
  )
 )
+
+shiny::verbatimTextOutput(ns("contents"))
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
