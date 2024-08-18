@@ -2,13 +2,12 @@
 
 
 # Upload Project File
-output$contents <- renderText({
-  
-  file <- input$UploadProjectFile
+output$contents <- renderTable({
+  file <- input$file1
   ext <- tools::file_ext(file$datapath)
-  req(file)
-  validate(need(ext == "zip", "Please upload a zip file"))
   
-  paste("gfdcvbhg")
-
+  req(file)
+  validate(need(ext == "csv", "Please upload a csv file"))
+  
+  read.csv(file$datapath, header = input$header)
 })

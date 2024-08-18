@@ -28,6 +28,16 @@ fluidPage(
  )
 )
 
-verbatimTextOutput(ns("contents"))
+fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      fileInput("file1", "Choose CSV File", accept = ".csv"),
+      checkboxInput("header", "Header", TRUE)
+    ),
+    mainPanel(
+      tableOutput("contents")
+    )
+  )
+)
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
