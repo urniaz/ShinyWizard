@@ -25,9 +25,9 @@ fluidPage(
      br(),
         fileInput(ns("UploadProjectFile"), NULL, accept = ".zip", multiple = FALSE),
      HTML("</center>"),
+     verbatimTextOutput(ns('contents'))
  )
 )
 
-verbatimTextOutput(ns('contents'))
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
