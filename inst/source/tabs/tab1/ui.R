@@ -24,20 +24,18 @@ fluidPage(
      p("or edit an existing (*.zip)"),
      br(),
         fileInput(ns("UploadProjectFile"), NULL, accept = ".zip", multiple = FALSE),
-     HTML("</center>")
+     HTML("</center>"),
+     
+     sidebarLayout(
+       sidebarPanel(
+         fileInput(ns("file1"), "Choose CSV File", accept = ".csv"),
+         checkboxInput("header", "Header", TRUE)
+       ),
+       mainPanel(
+         tableOutput(ns("contents"))
+       )
+     )
  )
-)
-
-fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      fileInput("file1", "Choose CSV File", accept = ".csv"),
-      checkboxInput("header", "Header", TRUE)
-    ),
-    mainPanel(
-      tableOutput("contents")
-    )
-  )
 )
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
