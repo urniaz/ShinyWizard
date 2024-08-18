@@ -9,6 +9,6 @@ output$contents <- renderText({
   req(file)
   validate(need(ext == "zip", "Please upload a zip file"))
   
-  paste(file)
+  paste("gfdcvbhg")
 
 })

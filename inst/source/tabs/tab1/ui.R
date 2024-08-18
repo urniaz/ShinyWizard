@@ -28,6 +28,6 @@ fluidPage(
  )
 )
 
-shiny::verbatimTextOutput(ns("contents"))
+verbatimTextOutput(ns("contents"))
 
 # zawsze ns() do id !!!!! lacznie z output każdy id z ns() !!!!!
