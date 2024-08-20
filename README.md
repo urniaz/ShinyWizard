@@ -5,14 +5,14 @@
 <table width="100%" border="0">
   <tbody><tr>
     <td width="80%">ShinyWizard is <b>Shiny App</b> to build an <b>interactive presentation</b> for any R package. <br><br>ShinyWizard installs as standard R package and runs as Shiny app. </td>
-    <td width="20%"><img src="https://github.com/urniaz/ShinyWizard/blob/dev/inst/source/www/img/logo.png"></td>
+    <td width="20%"><img src="https://github.com/urniaz/ShinyWizard/blob/Version-1.0.3.36-dev/ShinyWizard/inst/source/www/img/logo.png"></td>
   </tr>
 </tbody></table>
 
 ## Quick Run 
 
 ```r
-devtools::install_github("urniaz/ShinyWizard", ref="dev", force = TRUE)
+devtools::install_github("urniaz/ShinyWizard/ShinyWizard", ref="dev", force = TRUE)
 library("ShinyWizard")
 ShinyWizard::RunShinyWizard()
 ```
