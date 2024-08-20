@@ -1,10 +1,10 @@
 Package: ShinyWizard
-Title: ShinyWizard : an interactive presentation of any R package
+Title: ShinyWizard - an interactive presentation of any R package
 Version: 1.0.3.36
 Authors@R: 
     person("Rafal", "Urniaz", , "rafal.urniaz@cantab.net", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0192-2165"))
-Description: Shiny wizard to build an interactive presentation of any R package 
+Description: Shiny wizard to build an interactive presentation of any R package. 
 License: GPL (>= 3)
 Encoding: UTF-8
 Imports:

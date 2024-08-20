@@ -7,5 +7,5 @@
 ShinyWizzardThemeSelector()
 }
 \description{
-A short description...
+Shiny selector for themes, generate the code
 }

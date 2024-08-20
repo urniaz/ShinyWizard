@@ -1,14 +1,12 @@
-#' Run ShinyWizard app
+#' ShinyWizzardIncludeCSSAndTheme
 #'
-#' @param name the theme name to be applied. None argument provided returns all available themes.
-#' 
 # @export
 
 ShinyWizzardIncludeCSSAndTheme <- function(){
   
    if(config$ShinyWizzardTheme != ""){
       includeCSS(ShinyWizzardTheme(config$ShinyWizzardTheme))
-   }else{cat("no tempate")}
+   }else{cat("config$ShinyWizzardTheme is empty!")}
    
   
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ShinyWizzardTheme.R
 \name{ShinyWizzardTheme}
 \alias{ShinyWizzardTheme}
-\title{Return dir / show available ShinyWizard templates}
+\title{ShinyWizzardTheme}
 \usage{
 ShinyWizzardTheme(name = "")
 }

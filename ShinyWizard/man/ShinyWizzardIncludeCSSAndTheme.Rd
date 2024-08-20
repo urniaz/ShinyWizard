@@ -2,13 +2,10 @@
 % Please edit documentation in R/ShinyWizzardIncludeCSSAndTheme.R
 \name{ShinyWizzardIncludeCSSAndTheme}
 \alias{ShinyWizzardIncludeCSSAndTheme}
-\title{Run ShinyWizard app}
+\title{ShinyWizzardIncludeCSSAndTheme}
 \usage{
 ShinyWizzardIncludeCSSAndTheme()
 }
-\arguments{
-\item{name}{the theme name to be applied. None argument provided returns all available themes.}
-}
 \description{
-Run ShinyWizard app
+ShinyWizzardIncludeCSSAndTheme
 }

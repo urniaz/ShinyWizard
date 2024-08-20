@@ -1,3 +1,6 @@
+#' ShinyWizzardTheme
+#' 
+#' @description
 #' Return dir / show available ShinyWizard templates
 #'
 #' @param name the theme name to be applied. None argument provided returns all available themes.
@@ -20,10 +23,10 @@ ShinyWizzardTheme <- function(name = ""){
    }
 }
 
-#' @title ShinyWizzardThemeSelector
+#' ShinyWizzardThemeSelector
 #'
 #' @description
-#' A short description...
+#' Shiny selector for themes, generate the code 
 #' 
 #' @export
 
@@ -65,6 +68,12 @@ ShinyWizzardThemeSelector <- function() {
   )  
   
 }
+
+#' allThemes
+#'
+#' @description
+#' List all available themes 
+#' 
 
 allThemes <- function() {
   themes <- dir(system.file("shinythemes/css", package = "shinythemes"),
