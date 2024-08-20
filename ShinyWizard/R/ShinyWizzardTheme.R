@@ -9,17 +9,17 @@
 
 ShinyWizzardTheme <- function(name = ""){
   
-  templatesPath <- system.file("templates", package = "ShinyWizard")
-  templatesList <- list.files(paste0(templatesPath, "/css/"))
+  templatesPath <- base::system.file("templates", package = "ShinyWizard")
+  templatesList <- base::list.files(paste0(templatesPath, "/css/"))
   # Ext only names
-  templatesList <- substr(templatesList, 1, nchar(templatesList)-8)
+  templatesList <- base::substr(templatesList, 1, base::nchar(templatesList)-8)
    if ( name == ""){
      return(templatesList)
    }else{
-     if(file.exists(paste0(templatesPath, "/css/", name, ".min.css"))){
+     if(base::file.exists(paste0(templatesPath, "/css/", name, ".min.css"))){
        return(paste0(templatesPath, "/css/", name, ".min.css"))
      }else{ 
-       stop("The template name '", name, "' is not avaliable. Please use one of ", paste(ShinyWizzardTheme(), collapse=", "))}
+       stop("The template name '", name, "' is not avaliable. Please use one of ", base::paste(ShinyWizzardTheme(), collapse=", "))}
    }
 }
 
@@ -76,7 +76,7 @@ ShinyWizzardThemeSelector <- function() {
 #' 
 
 allThemes <- function() {
-  themes <- dir(system.file("shinythemes/css", package = "shinythemes"),
+  themes <- base::dir(base::system.file("shinythemes/css", package = "shinythemes"),
                 ".+\\.min.css")
-  sub(".min.css", "", themes)
+  base::sub(".min.css", "", themes)
 }

@@ -4,7 +4,10 @@
 \alias{ShinyWizzardIncludeCSSAndTheme}
 \title{ShinyWizzardIncludeCSSAndTheme}
 \usage{
-ShinyWizzardIncludeCSSAndTheme()
+ShinyWizzardIncludeCSSAndTheme(ShinyWizzardTheme)
+}
+\arguments{
+\item{ShinyWizzardTheme}{ShinyWizzard theme name returned by config$ShinyWizzardTheme}
 }
 \description{
 ShinyWizzardIncludeCSSAndTheme

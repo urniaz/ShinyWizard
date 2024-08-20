@@ -8,7 +8,13 @@ Description: Shiny wizard to build an interactive presentation of any R package.
 License: GPL (>= 3)
 Encoding: UTF-8
 Imports:
+    base,
     shiny,
+    rstudioapi
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0),
     devtools,
     shinythemes,
     shinydashboard,
@@ -18,10 +24,5 @@ Imports:
     readr, 
     stringr,
     bslib,
-    reshape2,
-    rstudioapi
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Suggests: 
-    testthat (>= 3.0.0)
+    reshape2
 Config/testthat/edition: 3
