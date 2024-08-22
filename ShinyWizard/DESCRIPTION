@@ -1,6 +1,6 @@
 Package: ShinyWizard
-Title: ShinyWizard - an interactive presentation of any R package
-Version: 1.0.3.36
+Title: An Interactive Presentation of any R Package
+Version: 1.0.4.89
 Authors@R: 
     person("Rafal", "Urniaz", , "rafal.urniaz@cantab.net", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0192-2165"))

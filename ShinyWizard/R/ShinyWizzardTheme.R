@@ -1,9 +1,9 @@
-#' ShinyWizzardTheme
+#' @title ShinyWizzard themes
 #' 
 #' @description
-#' Return dir / show available ShinyWizard templates
+#' Load one of available themes for ShinyWizard project
 #'
-#' @param name the theme name to be applied. None argument provided returns all available themes.
+#' @param name theme name to be applied. No argument returns all available themes.
 #' 
 # @export
 
@@ -23,10 +23,10 @@ ShinyWizzardTheme <- function(name = ""){
    }
 }
 
-#' ShinyWizzardThemeSelector
+#' ShinyWizzard themes selector
 #'
 #' @description
-#' Shiny selector for themes, generate the code 
+#' Shiny selector for themes. It returns a shiny ui code. 
 #' 
 #' @export
 
@@ -69,7 +69,7 @@ ShinyWizzardThemeSelector <- function() {
   
 }
 
-#' allThemes
+#' @title  All available themes
 #'
 #' @description
 #' List all available themes 

@@ -2,13 +2,13 @@
 % Please edit documentation in R/ShinyWizzardTheme.R
 \name{ShinyWizzardTheme}
 \alias{ShinyWizzardTheme}
-\title{ShinyWizzardTheme}
+\title{ShinyWizzard themes}
 \usage{
 ShinyWizzardTheme(name = "")
 }
 \arguments{
-\item{name}{the theme name to be applied. None argument provided returns all available themes.}
+\item{name}{theme name to be applied. No argument returns all available themes.}
 }
 \description{
-Return dir / show available ShinyWizard templates
+Load one of available themes for ShinyWizard project
 }

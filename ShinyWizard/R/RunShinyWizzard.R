@@ -1,7 +1,20 @@
-#' Run ShinyWizard app
-#'
-#' @param loc directory to external tabs, project zip file, when NULL run builder
-#' @param devMode when TRUE the developer mode is used. It means all tasks run by separate background jobs thus console is not blocked. It works by R Studio API so works only in R studio. It is mode only for development facilitate. Should not be used for production. 
+#' @title Run ShinyWizard builder or project app
+#' 
+#' @description
+#' Function executes ShinyWizard builder or project when project zip file location is provided.   
+#' 
+#' @param loc external directory to project zip file, when NULL runs builder
+#' @param devMode when TRUE the developer mode is used. It means all tasks run by separate background jobs thus the console is not blocked. It works by R Studio API so works only with R studio. It is mode only for development facilitate. Should not be used for production. 
+#' 
+#' @examples
+#' 
+#' \dontrun{
+#' # Run to execute ShinyWizard builder
+#'   RunShinyWizard()
+#' 
+#' # Run to execute saved project as zip file
+#'   RunShinyWizard("Path-to-project-file") 
+#' }
 #' 
 #' @export
 

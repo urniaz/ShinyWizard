@@ -1,6 +1,6 @@
 # --- App Titles ---
-AppTitle: Shiny Wizard App    # when "" is not displayed !!!
-AppSubTitle: Shiny Wizard App # when "" is not displayed !!!
+AppTitle: Shiny Wizard    # when "" is not displayed !!!
+AppSubTitle: 'NULL' # when "" is not displayed !!!
 # --- CSS style ---
 ShinyWizzardTheme: flatly
 # --- Logo ---

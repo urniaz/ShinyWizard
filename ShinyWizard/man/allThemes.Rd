@@ -2,7 +2,7 @@
 % Please edit documentation in R/ShinyWizzardTheme.R
 \name{allThemes}
 \alias{allThemes}
-\title{allThemes}
+\title{All available themes}
 \usage{
 allThemes()
 }

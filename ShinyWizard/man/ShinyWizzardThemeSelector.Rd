@@ -2,10 +2,10 @@
 % Please edit documentation in R/ShinyWizzardTheme.R
 \name{ShinyWizzardThemeSelector}
 \alias{ShinyWizzardThemeSelector}
-\title{ShinyWizzardThemeSelector}
+\title{ShinyWizzard themes selector}
 \usage{
 ShinyWizzardThemeSelector()
 }
 \description{
-Shiny selector for themes, generate the code
+Shiny selector for themes. It returns a shiny ui code.
 }
