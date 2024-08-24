@@ -25,7 +25,6 @@ load_config.yaml <- function(input, output, session){
   # Assign Theme
   shinyjs::runjs(paste0("document.getElementById('tab2-shinytheme-selector').dispatchEvent(new Event('change'));"))
   
-
 }
 
 
