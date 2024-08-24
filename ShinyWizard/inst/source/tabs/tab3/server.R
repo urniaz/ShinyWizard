@@ -56,15 +56,13 @@ observeEvent(input$newTab, {
                                    textAreaInput(inputId = paste0("tab3-config",tabIndex()),
                                                  label = paste("Tab ",tabIndex(), "config.yml"),
                                                  value = ' # --- Navigation ---
-# TabName: Welcome
-# TabIcon: home
-
-# --- Next/Prev buttons
-# ShowButtons: FALSE
-
-# --- Info ---
-# InfoTitle: tir
-# InfoMessage: mes',
+                                                           # TabName: Tab Name
+                                                           # TabIcon: paper
+                                                           # --- Next/Prev buttons
+                                                           # ShowButtons: TRUE
+                                                           # --- Info ---
+                                                           # InfoTitle: Information
+                                                           # InfoMessage: Some info text',
                                                  width = "100%",
                                                  height = "18vw",
                                                  resize = "both"),

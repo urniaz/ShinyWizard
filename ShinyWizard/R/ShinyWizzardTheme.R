@@ -38,7 +38,7 @@ ShinyWizzardThemeSelector <- function() {
                 selected = "flatly", # starting theme
                ),
     
-  shiny::tags$script(
+  shiny::tags$script(               # ---- TO-DO: rewrite 
       "$('#tab2-shinytheme-selector')
   .on('change', function(el) {
     var allThemes = $(this).find('option').map(function() {
@@ -64,7 +64,7 @@ ShinyWizzardThemeSelector <- function() {
     // Set it to the correct path
     $link.attr('href', curThemePath);
   });"
-    )
+    ),
   )  
   
 }

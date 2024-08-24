@@ -40,6 +40,6 @@ fluidPage(
   )
   )
   
-  # ,verbatimTextOutput(outputId = ns("result")),
+   ,verbatimTextOutput(outputId = ns("result")),
 
 )

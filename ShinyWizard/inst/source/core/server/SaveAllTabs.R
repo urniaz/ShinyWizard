@@ -13,6 +13,7 @@ SaveAllTabs <- function(input, output, session, currentTabIndexes){
       dir.create(tabs_dir_n, showWarnings = FALSE)
       write_file(isolate(input[[paste0("ui",i)]]), paste0(tabs_dir_n, "/ui.R"))
       write_file(isolate(input[[paste0("server",i)]]),paste0(tabs_dir_n, "/server.R"))
+      write_file(isolate(input[[paste0("config",i)]]),paste0(tabs_dir_n, "/config.yaml"))
     })
   }
 }
