@@ -2,6 +2,8 @@
 
 # ShinyWizard : an interactive presentation of any R package  
 
+Rafal Urniaz, PhD
+
 <table width="100%" border="0">
   <tbody><tr>
     <td width="80%">ShinyWizard is <b>Shiny App</b> to build an <b>interactive presentation</b> for any R package. <br><br>ShinyWizard installs as standard R package and runs as Shiny app. </td>
