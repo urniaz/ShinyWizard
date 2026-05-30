@@ -2,7 +2,7 @@
 
 # ShinyWizard : an interactive presentation of any R package  
 
-Rafal Urniaz, PhD
+**Rafal Urniaz, PhD** [![ORCID](https://img.shields.io/badge/ORCID-0000--0003--0192--2165-A6CE39?logo=orcid&logoColor=FFFFFF)](https://orcid.org/0000-0003-0192-2165) 
 
 <table width="100%" border="0">
   <tbody><tr>
